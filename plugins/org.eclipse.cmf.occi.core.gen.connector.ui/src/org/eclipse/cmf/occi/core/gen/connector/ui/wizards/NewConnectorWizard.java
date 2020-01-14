@@ -20,11 +20,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.*;
+import java.nio.file.Files;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.OcciCoreConstants;
 import org.eclipse.cmf.occi.core.gen.connector.services.GenUtils;
@@ -226,7 +227,10 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 		libFolder.create(false, true, null);
 		IFile jarLib = PDEProject.getBundleRelativeFile(connectorProject, new Path("lib/JavaBIP-Framework").addFileExtension("jar"));
 		try {
-			jarLib.create(new FileInputStream(new File("lib/JavaBIP-Framework.jar")), true, monitor);
+			jarLib.create(new ByteArrayInputStream(readFileToByteArray(new File("lib/JavaBIP-Framework.jar"))), true, monitor);
+//			jarLib.create(new FileInputStream(new File("lib/JavaBIP-Framework.jar")), true, monitor);
+			
+//			jarLib.create(new ByteArrayInputStream(convertUsingJavaNIO(new File("lib/JavaBIP-Framework.jar"))), true, monitor);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -434,4 +438,32 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
         }
         return bArray;
     }
+	
+	public static byte[] convertUsingTraditionalWay(File file)
+	{
+	    byte[] fileBytes = new byte[(int) file.length()]; 
+	    try(FileInputStream inputStream = new FileInputStream(file))
+	    {
+	        inputStream.read(fileBytes);
+	    }
+	    catch (Exception ex) 
+	    {
+	        ex.printStackTrace();
+	    }
+	    return fileBytes;
+	}
+	
+	public static byte[] convertUsingJavaNIO(File file)
+	{
+	    byte[] fileBytes = null;
+	    try
+	    {
+	        fileBytes = Files.readAllBytes(file.toPath());
+	    }
+	    catch (Exception ex) 
+	    {
+	        ex.printStackTrace();
+	    }
+	    return fileBytes;
+	}
 }

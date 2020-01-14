@@ -431,7 +431,7 @@ public class [toU1Case(extension.name)/]Test
     
     public void running() {
     	
-    	BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuider().build();
+    	BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuilder().build();
     	
     	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
     	

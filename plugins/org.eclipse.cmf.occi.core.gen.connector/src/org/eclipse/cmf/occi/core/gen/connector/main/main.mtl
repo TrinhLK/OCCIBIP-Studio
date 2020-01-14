@@ -4,6 +4,8 @@
 [template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [comment @main /]
 [generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
+[generateGlueBuilder(extension, targetPackageName, extendedPackageName)/]
+[generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
 [generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/for]
@@ -338,6 +340,129 @@ public class [kindClassName/]Connector extends [extendedPackageName/].impl.[kind
 [/if]
 	}
 [/template]
+
+
+[template public generateGlueBuilder(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('GlueBuilder.java'), false, 'UTF-8')]
+/**
+ * Copyright (c) 2016-2017 Inria
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * - Philippe Merle <philippe.merle@inria.fr>
+ * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
+ *
+ * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
+ */
+package [targetPackageName/];
+
+import org.javabip.glue.GlueBuilder;
+
+public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
+{
+	@Override
+	public void configure() {
+	}
+}
+[/file]
+[/template]
+
+[template public generateMainTestFile(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('Test.java'), false, 'UTF-8')]
+/**
+ * Copyright (c) 2016-2017 Inria
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * - Philippe Merle <philippe.merle@inria.fr>
+ * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
+ *
+ * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
+ */
+package [targetPackageName/];
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import org.javabip.api.BIPActor;
+import org.javabip.api.BIPEngine;
+import org.javabip.api.BIPGlue;
+import org.javabip.engine.factory.EngineFactory;
+import org.javabip.glue.GlueBuilder;
+import akka.actor.ActorSystem;
+
+public class [toU1Case(extension.name)/]Test
+{
+	private ActorSystem system;
+    private EngineFactory engineFactory;
+    
+    private void initialize() {
+        system = ActorSystem.create("MySystem");
+        engineFactory = new EngineFactory(system);
+    }
+    
+    private void cleanup() {
+        system.shutdown();
+    }
+    
+    private BIPGlue createGlue(String bipGlueFilename) {
+		BIPGlue bipGlue = null;
+
+		InputStream inputStream;
+		try {
+			inputStream = new FileInputStream(bipGlueFilename);
+
+			bipGlue = GlueBuilder.fromXML(inputStream);
+
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		return bipGlue;
+	}
+    
+    public void running() {
+    	
+    	BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuider().build();
+    	
+    	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
+    	
+    	// TODO Declare Instances and BIPActor here
+    	
+		engine.specifyGlue(bipGlue);
+		engine.start();
+		
+		engine.execute();
+		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		engine.stop();
+		engineFactory.destroy(engine);
+		
+    }
+    
+    public static void main (String args) {
+    	[toU1Case(extension.name)/]Test testTP = new [toU1Case(extension.name)/]Test();
+		testTP.initialize();
+		testTP.running();
+		testTP.cleanup();
+    }
+}
+[/file]
+[/template]
+
 
 [comment the following query returns a set of states which are target of transitions containing the action "action"/]
 [query public getTargetStatesFromAnAction(action : Action) : Set(State) = getSourceStatesFromAnAction(action)->collect(sourceState|sourceState.oclAsType(State).outgoingTransition)->flatten()->select(tr|tr.oclAsType(Transition).action=action)->flatten()->collect(tr|tr.oclAsType(Transition).target)->asSet() /]

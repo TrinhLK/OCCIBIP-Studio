@@ -15,6 +15,7 @@ package org.eclipse.cmf.occi.core.gen.connector.ui.wizards;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -215,11 +216,30 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 
 		// Add JRE System Library.
 		entries[0] = JavaRuntime.getDefaultJREContainerEntry();
-
+		
 		// (3) We have not yet the source folder created:
 		IFolder sourceFolder = connectorProject.getFolder("src-gen");
 		sourceFolder.create(false, true, null);
-
+		
+		// Generate JavaBIP-Framework.
+		IFolder libFolder = connectorProject.getFolder("lib");
+		libFolder.create(false, true, null);
+		IFile jarLib = PDEProject.getBundleRelativeFile(connectorProject, new Path("lib/JavaBIP-Framework").addFileExtension("jar"));
+		try {
+			jarLib.create(new FileInputStream(new File("lib/JavaBIP-Framework.jar")), true, monitor);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+//		try {
+//			IFolder libFolder = connectorProject.getFolder("lib");
+//			libFolder.create(false, true, null);
+//			libFolder.getFile("JavaBIP-FW.jar").create(new FileInputStream(new File("lib/JavaBIP-Framework.jar")), true, monitor);
+//		} catch (Exception e2) {
+//			// TODO Auto-generated catch block
+//			System.err.println("Cannot CREATE JAR LIB");
+//		}
+		
 		// (4) Now the created source folder should be added to the class entries of the project, otherwise compilation will fail:
 		IPackageFragmentRoot root = javaProject.getPackageFragmentRoot(sourceFolder);
 		entries[1] = JavaCore.newSourceEntry(root.getPath());
@@ -227,27 +247,6 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
         // Add the extension project.
 		if(requireProject.exists()) {
 			entries[2] = JavaCore.newSourceEntry(requireProject.getFullPath());
-		}
-
-		// (4.1) Add external libs
-		InputStream is;
-		try {
-			is = new BufferedInputStream(new FileInputStream("lib/JavaBIP-Framework.jar"));
-			ArrayList<IClasspathEntry> libraries = new ArrayList<IClasspathEntry>();
-		    IFile file = connectorProject.getFile("JavaBIP-Framework.jar");
-		    file.create(is, false, null);
-		    
-		    IPath path = file.getFullPath();
-		    libraries.add(JavaCore.newLibraryEntry(path, null, null));
-		    //add libs to project class path
-		    try {
-		       javaProject.setRawClasspath(libraries.toArray(new IClasspathEntry[libraries.size()]), null);
-		    } catch (JavaModelException e1) {
-		       e1.printStackTrace();
-		    }
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 				
 		// (5) Set the Java build path.
@@ -269,7 +268,9 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 			"Bundle-Name: " + connectorProjectName + "\n" +
 			"Bundle-SymbolicName: " + connectorProjectName + ";singleton:=true\n" +
 			"Bundle-Version: 1.0.0.qualifier\n" +
-			"Bundle-ClassPath: .\n" +
+			"Bundle-ClassPath: ." +
+			",\n" + 
+			" lib/JavaBIP-Framework.jar\n" + 
 			"Bundle-Vendor: OCCIware\n" +
 //			"Bundle-Localization: plugin\n" + // FIXME generate plugin.properties
 			"Bundle-RequiredExecutionEnvironment: JavaSE-1.8\n" +
@@ -307,9 +308,9 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 				"\n" +
 				"source.. = src-gen/\n" +
 				"output.. = bin/\n" +
-				"bin.includes = META-INF/, plugin.xml, .\n";
+				"bin.includes = META-INF/, plugin.xml, ., lib/JavaBIP-Framework.jar \n";
 		build.setContents(new ByteArrayInputStream(buildContent.getBytes()), true, false, monitor);
-
+		
 		// Generate plugin.xml
 		IFile pluginXML = PDEProject.getPluginXml(connectorProject);
 		String pluginContent =
@@ -365,6 +366,7 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 				"log4j.appender.A1.layout.ConversionPattern=%-4r [%t]  %-5p %c %x - %m%n";
 		logger.create(new ByteArrayInputStream(loggerContent.getBytes()), true, monitor);
 		
+		
 		// Generate Java code for the connector.
 		try {
 			URI modelURI = URI.createURI(extensionFile, true);
@@ -416,4 +418,20 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 		newProjectPage.setDescription(Messages.NewConnectorWizard_PageDescription);
 		addPage(newProjectPage);
 	}
+	
+	private static byte[] readFileToByteArray(File file){
+        FileInputStream fis = null;
+        // Creating a byte array using the length of the file
+        // file.length returns long which is cast to int
+        byte[] bArray = new byte[(int) file.length()];
+        try{
+            fis = new FileInputStream(file);
+            fis.read(bArray);
+            fis.close();        
+            
+        }catch(IOException ioExp){
+            ioExp.printStackTrace();
+        }
+        return bArray;
+    }
 }

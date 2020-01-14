@@ -217,7 +217,7 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 		entries[0] = JavaRuntime.getDefaultJREContainerEntry();
 
 		// (3) We have not yet the source folder created:
-		IFolder sourceFolder = connectorProject.getFolder("src-trinhlk");
+		IFolder sourceFolder = connectorProject.getFolder("src-gen");
 		sourceFolder.create(false, true, null);
 
 		// (4) Now the created source folder should be added to the class entries of the project, otherwise compilation will fail:
@@ -305,7 +305,7 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 				"# - Le Khanh Trinh <trinh.le-khanh@inria.fr>\n" +
 				"#\n" +
 				"\n" +
-				"source.. = src/\n" +
+				"source.. = src-gen/\n" +
 				"output.. = bin/\n" +
 				"bin.includes = META-INF/, plugin.xml, .\n";
 		build.setContents(new ByteArrayInputStream(buildContent.getBytes()), true, false, monitor);
@@ -370,7 +370,7 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 			URI modelURI = URI.createURI(extensionFile, true);
 			
 			// Generate Java code for the connector.
-			IContainer target = connectorProject.getFolder("src");
+			IContainer target = connectorProject.getFolder("src-gen");
 			
 			// Compute the arguments of the generator.
 			ArrayList<String> arguments = new ArrayList<String>();

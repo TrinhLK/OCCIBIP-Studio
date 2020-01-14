@@ -141,7 +141,7 @@ public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(exte
  * Contributors:
  * - Philippe Merle <philippe.merle@inria.fr>
  * - Faiez Zalila <faiez.zalila@inria.fr>
- * - Le Khanh Trinh <trinh.le-khanh@inria.fr>
+ * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
  *
  * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
  */

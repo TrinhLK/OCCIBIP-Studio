@@ -322,7 +322,7 @@
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="generateConnectorClass" visibility="Public">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/**&#xA; * Copyright (c) 2016-2017 Inria&#xA; *  &#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v1.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v10.html&#xA; * &#xA; * Contributors:&#xA; * - Philippe Merle &lt;philippe.merle@inria.fr>&#xA; * - Faiez Zalila &lt;faiez.zalila@inria.fr>&#xA; * - Le Khanh Trinh &lt;trinh.le-khanh@inria.fr>&#xA; *&#xA; * Generated at "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/**&#xA; * Copyright (c) 2016-2017 Inria&#xA; *  &#xA; * All rights reserved. This program and the accompanying materials&#xA; * are made available under the terms of the Eclipse Public License v1.0&#xA; * which accompanies this distribution, and is available at&#xA; * http://www.eclipse.org/legal/epl-v10.html&#xA; * &#xA; * Contributors:&#xA; * - Philippe Merle &lt;philippe.merle@inria.fr>&#xA; * - Faiez Zalila &lt;faiez.zalila@inria.fr>&#xA; * - Lê Khánh Trình &lt;trinh.le-khanh@inria.fr>&#xA; *&#xA; * Generated at "/>
         <body xsi:type="mtl:QueryInvocation" definition="/0/getNow">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/70">

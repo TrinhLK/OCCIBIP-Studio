@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.*;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -81,6 +82,7 @@ import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
  * The wizard to create a new OCCI connector project.
  *
  * @author Philippe Merle - Inria
+ * @author Lê Khánh Trình - Inria
  */
 public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 
@@ -176,6 +178,8 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 	{
 		String extensionFile = OcciRegistry.getInstance().getFileURI(extensionScheme);
 		String[] args = extensionFile.split("\\/");
+//		String curProjectPath = "/Volumes/Setup/Workstation/OCCIBIP-Studio/";
+		String curProjectPath = "";
 		
 		//Added to get the extension and thus convert the extension name to epackage name
 		//if(EPackage.Registry.INSTANCE.getEPackage(Occi2Ecore.convertOcciScheme2EcoreNamespace(extensionScheme))==null)
@@ -226,14 +230,18 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 		IFolder libFolder = connectorProject.getFolder("lib");
 		libFolder.create(false, true, null);
 		IFile jarLib = PDEProject.getBundleRelativeFile(connectorProject, new Path("lib/JavaBIP-Framework").addFileExtension("jar"));
+		String path = Paths.get("").toAbsolutePath().toString();
+		
 		try {
-			jarLib.create(new ByteArrayInputStream(readFileToByteArray(new File("lib/JavaBIP-Framework.jar"))), true, monitor);
-//			jarLib.create(new FileInputStream(new File("lib/JavaBIP-Framework.jar")), true, monitor);
-			
+//			jarLib.create(new ByteArrayInputStream(readFileToByteArray(new File("org.eclipse.cmf.occi.core.gen.connector.ui/lib/JavaBIP-Framework.jar"))), true, monitor);
+			jarLib.create(new FileInputStream(new File(curProjectPath+"lib/JavaBIP-Framework.jar")), true, monitor);
+			System.out.println("Done reading file");
+			System.out.println("Working Directory = " + path);
 //			jarLib.create(new ByteArrayInputStream(convertUsingJavaNIO(new File("lib/JavaBIP-Framework.jar"))), true, monitor);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			System.out.println("CANNOT read FILE");
+	        System.out.println("Working Directory = " + path);
 		}
 //		try {
 //			IFolder libFolder = connectorProject.getFolder("lib");

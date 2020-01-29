@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import org.eclipse.cmf.occi.core.gen.design.*;
+
 import org.eclipse.cmf.occi.core.Extension;
 import org.eclipse.cmf.occi.core.OCCIFactory;
 import org.eclipse.cmf.occi.core.design.utils.WizardUtils;

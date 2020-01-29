@@ -453,7 +453,7 @@ public class [toU1Case(extension.name)/]Test
 		
     }
     
-    public static void main (String args) {
+    [createMainFunc()/]
     	[toU1Case(extension.name)/]Test testTP = new [toU1Case(extension.name)/]Test();
 		testTP.initialize();
 		testTP.running();
@@ -494,7 +494,7 @@ public class [toU1Case(extension.name)/]Test
 	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
 	'getFilePath(org.eclipse.cmf.occi.core.Extension)', 
 	Sequence{extension})/] 
-
+[query public createMainFunc() : String = 'public static void main (String[] args){'/]
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
 
 [query public getJavaTypeName(attribute : Attribute) : String

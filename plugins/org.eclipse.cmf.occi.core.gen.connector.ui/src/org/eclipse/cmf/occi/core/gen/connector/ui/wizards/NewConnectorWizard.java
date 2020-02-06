@@ -178,8 +178,8 @@ public class NewConnectorWizard extends BasicNewProjectResourceWizard {
 	{
 		String extensionFile = OcciRegistry.getInstance().getFileURI(extensionScheme);
 		String[] args = extensionFile.split("\\/");
-//		String curProjectPath = "/Volumes/Setup/Workstation/OCCIBIP-Studio/";
-		String curProjectPath = "";
+		String curProjectPath = "/Volumes/Setup/Workstation/OCCIBIP-Studio/";
+//		String curProjectPath = "";
 		
 		//Added to get the extension and thus convert the extension name to epackage name
 		//if(EPackage.Registry.INSTANCE.getEPackage(Occi2Ecore.convertOcciScheme2EcoreNamespace(extensionScheme))==null)

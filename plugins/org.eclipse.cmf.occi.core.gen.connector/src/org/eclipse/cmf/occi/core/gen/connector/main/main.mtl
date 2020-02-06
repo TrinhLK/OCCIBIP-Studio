@@ -4,10 +4,14 @@
 [template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [comment @main /]
 [generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
-[generateGlueBuilder(extension, targetPackageName, extendedPackageName)/]
 [generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
-[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
+[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
+	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
+[/if]
+[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder'))]
+	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
+[/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [generateConnectorClass(mixin, extension, targetPackageName, extendedPackageName)/]
@@ -106,7 +110,9 @@ package [targetPackageName/];
 public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(extension.name.toLowerCase())/]FactoryImpl
 {
 [for (kind : Kind | extension.kinds)]
+[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
+[/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
@@ -342,7 +348,7 @@ public class [kindClassName/]Connector extends [extendedPackageName/].impl.[kind
 [/template]
 
 
-[template public generateGlueBuilder(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[template public generateGlueBuilder(type : Type, extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('GlueBuilder.java'), false, 'UTF-8')]
 /**
  * Copyright (c) 2016-2017 Inria
@@ -366,6 +372,24 @@ public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
 {
 	@Override
 	public void configure() {
+		[for (anno : Annotation | type.annotations)]
+			[let arrayConnectors : Sequence(String) = anno.value.tokenize('+').trim()]
+				[for (connector : String | arrayConnectors)]
+					[let listPort : Sequence(String) =  connector.tokenize('-')]
+						[for (porti : String | listPort)]
+							[for (portj : String | listPort)]
+								[if not (porti.equalsIgnoreCase(portj))]
+		port[getPortContent(porti)/].requires[getPortContent(portj)/];
+		port[getPortContent(porti)/].accepts[getPortContent(portj)/];
+								[/if]
+								
+								
+							[/for]
+						[/for]
+					[/let]
+				[/for]
+			[/let]
+		[/for]
 	}
 }
 [/file]
@@ -476,6 +500,9 @@ public class [toU1Case(extension.name)/]Test
 [query public toU1Case(string : String) : String = string.substring(1,1).toUpperCase() + string.substring(2) /]
 
 [query public getAllDependsOnMixins (m: Mixin) : Sequence(Mixin) = if(m.depends->size() > 0 ) then Sequence{m}->union(depends->collect(m2|m2.oclAsType(Mixin).getAllDependsOnMixins())) else Sequence{m} endif/]
+
+[query public getPortContent(port : String) : String
+	= port.substring(1, port.indexOf('.')) + 'class, \"' + port.substring(port.indexOf('.')+1, port.indexOf(')')-1) + '\"' + port.substring(port.indexOf(')'))/]
 
 [query public getNow() : String
 	= invoke(

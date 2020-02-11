@@ -377,14 +377,35 @@ public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
 				[for (connector : String | arrayConnectors)]
 					[let listPort : Sequence(String) =  connector.tokenize('-')]
 						[for (porti : String | listPort)]
+			[if not porti.contains('`')]
 							[for (portj : String | listPort)]
 								[if not (porti.equalsIgnoreCase(portj))]
+									[if not (portj.contains('`'))]
 		port[getPortContent(porti)/].requires[getPortContent(portj)/];
 		port[getPortContent(porti)/].accepts[getPortContent(portj)/];
+									[/if]
+									[if (portj.contains('`'))]
+		port[getPortContent(porti)/].requires[getPortContent(portj.replaceAll('`', ''))/];
+		port[getPortContent(porti)/].accepts[getPortContent(portj.replaceAll('`', ''))/];
+									[/if]
 								[/if]
-								
-								
 							[/for]
+			[/if]
+			
+			[if porti.contains('`')]
+				[let tempPortI : String = porti.replaceAll('`', '')]
+		port[getPortContent(tempPortI)/].requires();
+		port[getPortContent(tempPortI)/].accepts(
+							[for (portj : String | listPort)]
+								[if not (porti.equalsIgnoreCase(portj) or (portj.contains('`')))]
+									[let tempPortj : String = removeBarrack(portj)]
+			[getPortContentWithoutBarrack(tempPortj)/],
+									[/let]
+								[/if]
+							[/for]
+			[getPortContentWithoutBarrack(removeBarrack(tempPortI))/]);
+				[/let]
+			[/if]
 						[/for]
 					[/let]
 				[/for]
@@ -503,6 +524,13 @@ public class [toU1Case(extension.name)/]Test
 
 [query public getPortContent(port : String) : String
 	= port.substring(1, port.indexOf('.')) + 'class, \"' + port.substring(port.indexOf('.')+1, port.indexOf(')')-1) + '\"' + port.substring(port.indexOf(')'))/]
+
+[query public removeBarrack(port : String) : String
+	= port.replaceAll('[()]', '')
+/]
+
+[query public getPortContentWithoutBarrack(port : String) : String
+	= port.substring(1, port.indexOf('.')) + 'class, \"' + port.substring(port.indexOf('.')+1, port.size()) + '\"'/]
 
 [query public getNow() : String
 	= invoke(

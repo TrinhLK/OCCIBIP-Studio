@@ -1745,7 +1745,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="action" referredVariable="/0/generateActionMethod/action">
             <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Action"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/term"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" this "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
@@ -1753,7 +1753,7 @@
           <source xsi:type="ocl.ecore:VariableExp" name="type" referredVariable="/0/generateActionMethod/type">
             <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Type"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/term"/>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/name"/>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".&#xA;"/>
         <ifExpr xsi:type="ocl.ecore:OperationCallExp">
@@ -1776,7 +1776,7 @@
                 <source xsi:type="ocl.ecore:VariableExp" name="type" referredVariable="/0/generateActionMethod/type">
                   <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Type"/>
                 </source>
-                <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/term"/>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://schemas.ogf.org/occi/core/ecore#//Category/name"/>
               </source>
             </body>
             <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" State Machine.&#xA;&#x9;&#x9;switch(get"/>

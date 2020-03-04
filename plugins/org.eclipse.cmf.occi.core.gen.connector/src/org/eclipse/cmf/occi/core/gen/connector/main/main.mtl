@@ -10,6 +10,7 @@
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder'))]
+	[generateListConnector(kind, targetPackageName)/]
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [/for]
@@ -17,6 +18,16 @@
 [generateConnectorClass(mixin, extension, targetPackageName, extendedPackageName)/]
 [/for]
 [generateLoggerProperties(targetPackageName)/]
+[/template]
+
+[template public generateListConnector(type : Type, targetPackageName : String)]
+[file (getPackagePath(targetPackageName).concat('ListConnectors.java'), false, 'UTF-8')]
+[for (anno : Annotation | type.annotations)]
+//[anno.value/]
+
+[genMacroAnnotation(anno)/]
+[/for]
+[/file]
 [/template]
 
 [template public generateLoggerProperties(targetPackageName : String)]
@@ -570,6 +581,10 @@ public class [toU1Case(extension.name)/]Test
 	'org.eclipse.cmf.occi.core.gen.connector.services.GenUtils', 
 	'getFilePath(org.eclipse.cmf.occi.core.Extension)', 
 	Sequence{extension})/] 
+
+[query public genMacroAnnotation(annotation : Annotation) : String
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+
 [query public createMainFunc() : String = 'public static void main (String[] args){'/]
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
 

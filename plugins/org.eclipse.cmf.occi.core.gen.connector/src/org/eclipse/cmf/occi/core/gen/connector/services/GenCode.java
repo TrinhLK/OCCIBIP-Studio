@@ -3,12 +3,14 @@ package org.eclipse.cmf.occi.core.gen.connector.services;
 import java.util.ArrayList;
 import java.util.Stack;
 import org.eclipse.cmf.occi.core.Annotation;
+import org.eclipse.cmf.occi.core.Kind;
 
 public class GenCode {
 	
 	ArrayList<String> listConnectors;
 	ArrayList<Element> aConnector;
 	ArrayList<SimpleConnector> listSeparatedConnectors;
+
 	
 	public GenCode() {
 		// TODO Auto-generated constructor stub
@@ -139,7 +141,7 @@ public class GenCode {
 //		
 //	}
 	
-	public void getAllConnector(String annotation) {
+	public void getAllConnector(String annotation, String annoId) {
 		
 		readAnnotations(annotation);
 		for (String con : listConnectors) {
@@ -149,15 +151,29 @@ public class GenCode {
 //			aConnector.print();
 			listSeparatedConnectors.add(aConnector);
 		}
-		
+		for (int i=0 ; i<listSeparatedConnectors.size() ; i++) {
+			listSeparatedConnectors.get(i).setName("Connector" + annoId + (i+1));
+		}
 	}
 	
-	public String generatingMacroCode(String annotation) {
-		getAllConnector(annotation);
+	public String generatingMacroCode(String annotation, String annoId) {
+		getAllConnector(annotation, annoId);
 		String rs = "";
 		for (SimpleConnector sc : listSeparatedConnectors) {
 			rs += sc.generateMacroCode() + "\n";
 		}
+		return rs;
+	}
+	
+	public String generatingDataTransfer(Annotation annotation) {
+		//data: int x: Tracker-Peer
+		String input = annotation.getValue();
+		String rs = "";
+		String[] parts = input.split(":");
+		String[] varInfor = parts[1].trim().split(" ");
+		String[] dataClasses = parts[2].trim().split("-");
+		rs += "\t\tdata(" + dataClasses[0].trim() + "Connector.class, \"" + varInfor[1] + "\").to(" + dataClasses[1].trim() + "Connector.class, \"" + varInfor[1] + "\");\n";
+		System.out.println(rs);
 		return rs;
 	}
 	
@@ -167,7 +183,7 @@ public class GenCode {
 		aConnector = new ArrayList<Element>();
 		listSeparatedConnectors = new ArrayList<SimpleConnector>();
 		
-		getAllConnector(annotation.getValue());
+		getAllConnector(annotation.getValue(), annotation.getKey());
 		String rs = "";
 		for (SimpleConnector sc : listSeparatedConnectors) {
 			rs += sc.generateMacroCode() + "\n";
@@ -175,13 +191,71 @@ public class GenCode {
 		return rs;
 	}
 	
+	/**
+	 * BIP Models
+	 * */
+	//Gen code for connector
+	public String generatingConnectorList(Annotation annotation) {
+		listConnectors = new ArrayList<String>();
+		aConnector = new ArrayList<Element>();
+		listSeparatedConnectors = new ArrayList<SimpleConnector>();
+		
+		getAllConnector(annotation.getValue(), annotation.getKey());
+		String rs = "";
+		for (int i=0 ; i<listSeparatedConnectors.size() ; i++) {
+			rs += "connector type " + listSeparatedConnectors.get(i).getName() + "(";
+//			listSeparatedConnectors.get(i).setName("Connector" + (i+1));
+			for (int j=0 ; j<listSeparatedConnectors.get(i).listElements.size()-1 ; j++) {
+				rs += "Port p" + (j+1) + ", ";
+			}
+			rs += "Port p" + (listSeparatedConnectors.get(i).listElements.size()) + ")\n\tdefine [ ";
+			
+			for (int j=0 ; j<listSeparatedConnectors.get(i).listElements.size() ; j++) {
+				rs += "p" + (j+1) + " ";
+			}
+			rs += "]\nend\n";
+		}
+		
+		return rs;
+	}
+	
+	public String generatingConnectorCode(Kind kind) {
+		
+		String rs = "";
+		if (kind.getFsm() == null && !kind.getName().equalsIgnoreCase("Connectors") && !kind.getName().equalsIgnoreCase("Connectors")) {
+			Kind parent = kind.getParent();
+			rs += "\tcomponent " + parent.getName() + " " + kind.getName();
+		}
+		return rs;
+	}
+	
+	public String generatingDetailConnector(Annotation annotation) {
+		listConnectors = new ArrayList<String>();
+		aConnector = new ArrayList<Element>();
+		listSeparatedConnectors = new ArrayList<SimpleConnector>();
+		
+		getAllConnector(annotation.getValue(), annotation.getKey());
+		String rs = "";
+		for (int i=0 ; i<listSeparatedConnectors.size() ; i++) {
+			rs += "\tconnector " + listSeparatedConnectors.get(i).getName() + " " + listSeparatedConnectors.get(i).getName() + "_Detail(";
+//			listSeparatedConnectors.get(i).setName("Connector" + (i+1));
+			ArrayList<Element> listElem = listSeparatedConnectors.get(i).listElements;
+			for (int j=0 ; j<listElem.size()-1 ; j++) {
+				String temp = listElem.get(j).content.replaceAll("`|\\*", "");
+				rs += temp + ",";
+			}
+			rs += listElem.get(listElem.size()-1).content.replaceAll("`|\\*", "") + ")\n";
+		}
+		return rs;
+	}
+	
 	public static void main(String[] args) {
 		GenCode test = new GenCode();
 //		test.getAllConnector("listConnectors.txt");
-		String anno[] = {"(LightA.switchon)-(LightB.switchoff) + (Light.switchon)-(LightA.switchoff)", "(LightB.switchon)`-(LightA.switchoff)-(Light.switchon)"};
-		for (int i=0 ; i<anno.length ; i++) {
-			System.out.println(test.generatingMacroCode(anno[i]));
-		}
+//		String anno[] = {"(LightA.switchon)-(LightB.switchoff) + (Light.switchon)-(LightA.switchoff)", "(LightB.switchon)`-(LightA.switchoff)-(Light.switchon)"};
+//		for (int i=0 ; i<anno.length ; i++) {
+//			System.out.println(test.generatingMacroCode(anno[i]));
+//		}
 //		System.out.println(test.generatingMacroCode("(LightA.switchon)-(LightB.switchoff) + (Light.switchon)-(LightA.switchoff)"));
 //		System.out.println(test.generatingMacroCode("(LightB.switchon)`-(LightA.switchoff)-(Light.switchon)"));
 		//System.out.println(test.listSeparatedConnectors.size());

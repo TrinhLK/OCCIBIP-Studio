@@ -4,13 +4,14 @@
 [template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [comment @main /]
 [generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
+[generateBIPModel(extension, targetPackageName, extendedPackageName)/]
 [generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
 [if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder'))]
-	[generateListConnector(kind, targetPackageName)/]
+[comment]	[generateListConnector(kind, targetPackageName)/][/comment]
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [/for]
@@ -20,14 +21,81 @@
 [generateLoggerProperties(targetPackageName)/]
 [/template]
 
-[template public generateListConnector(type : Type, targetPackageName : String)]
-[file (getPackagePath(targetPackageName).concat('ListConnectors.java'), false, 'UTF-8')]
-[for (anno : Annotation | type.annotations)]
-//[anno.value/]
+[comment]Generate BIP Model[/comment]
+[template public generateBIPModel(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(extendedPackageName).concat('BIPModel.bip'), false, 'UTF-8')]
+model [targetPackageName/]
 
-[genMacroAnnotation(anno)/]
+[for (kind : Kind | extension.kinds)]
+[for (myfsm : FSM | kind.fsm)]
+[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
+[generateAtomBIP(kind)/]
+[/if]
 [/for]
+[/for]
+
+[for (mixin : Mixin | extension.mixins)]
+[for (myfsm : FSM | mixin.fsm)]
+[if not (mixin.term.equalsIgnoreCase('connectors') or (mixin.term.equalsIgnoreCase('gluebuilder'))) ]
+[generateAtomBIP(mixin)/]
+[/if]
+[/for]
+[/for]
+
+[for (kind : Kind | extension.kinds)]
+[for (annotation : Annotation | kind.annotations)]
+[genConnectorTypeList(annotation)/]
+[/for]
+[/for]
+
+compound type [toU1Case(extendedPackageName)/]System
+[for (kind : Kind | extension.kinds)]
+[genCompoundCode(kind)/]
+[/for]
+
+[for (kind : Kind | extension.kinds)]
+[for (anno : Annotation | kind.annotations)]
+[genConnectorDetail(anno)/]
+[/for]
+[/for]
+end
+
+component [toU1Case(extendedPackageName)/]System test
+end
 [/file]
+[/template]
+
+[comment]Generate FSM as Atom for BIP Model[/comment]
+[template public generateAtomBIP(type : Type)]
+atomic type [type.name/]Connector
+[for (myfsm : FSM | type.fsm)]
+	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+	[for (trans : Transition | lisTrans)]
+	export port Port [trans.action.term/]
+	[/for]
+	[/let]
+[/for]
+[for (attribute : Attribute | type.attributes)]
+	data [attribute.type.name/] [attribute.name.toString()/]
+[/for]
+[for (myfsm : FSM | type.fsm)]
+	[let listStates : OrderedSet(State) =  myfsm.ownedState]
+	place [for (state : State | listStates) separator(', ')][state.literal.name/][/for]
+	[/let]
+[/for]
+	initial to[for (myfsm : FSM | type.fsm)]
+	[let listStates : OrderedSet(State) =  myfsm.ownedState]
+	[for (state : State | listStates)][if (state.initial)] [state.literal.name/][/if][/for]
+	[/let]
+[/for]
+[for (myfsm : FSM | type.fsm)]
+	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+	[for (trans : Transition | lisTrans)]
+		on [trans.action.term/] from [trans.source.literal.name/] to [trans.target.literal.name/]
+	[/for]
+	[/let]
+[/for]
+end
 [/template]
 
 [template public generateLoggerProperties(targetPackageName : String)]
@@ -403,43 +471,11 @@ public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
 	@Override
 	public void configure() {
 		[for (anno : Annotation | type.annotations)]
-			[let arrayConnectors : Sequence(String) = anno.value.tokenize('+').trim()]
-				[for (connector : String | arrayConnectors)]
-					[let listPort : Sequence(String) =  connector.tokenize('-')]
-						[for (porti : String | listPort)]
-			[if not porti.contains('`')]
-							[for (portj : String | listPort)]
-								[if not (porti.equalsIgnoreCase(portj))]
-									[if not (portj.contains('`'))]
-		port[getPortContent(porti)/].requires[getPortContent(portj)/];
-		port[getPortContent(porti)/].accepts[getPortContent(portj)/];
-									[/if]
-									[if (portj.contains('`'))]
-		port[getPortContent(porti)/].requires[getPortContent(portj.replaceAll('`', ''))/];
-		port[getPortContent(porti)/].accepts[getPortContent(portj.replaceAll('`', ''))/];
-									[/if]
-								[/if]
-							[/for]
-			[/if]
-			
-			[if porti.contains('`')]
-				[let tempPortI : String = porti.replaceAll('`', '')]
-		port[getPortContent(tempPortI)/].requires();
-		port[getPortContent(tempPortI)/].accepts(
-							[for (portj : String | listPort)]
-								[if not (porti.equalsIgnoreCase(portj) or (portj.contains('`')))]
-									[let tempPortj : String = removeBarrack(portj)]
-			[getPortContentWithoutBarrack(tempPortj)/],
-									[/let]
-								[/if]
-							[/for]
-			[getPortContentWithoutBarrack(removeBarrack(tempPortI))/]);
-				[/let]
-			[/if]
-						[/for]
-					[/let]
-				[/for]
-			[/let]
+		//[anno.value/]
+[genMacroAnnotation(anno)/]
+[if (anno.value.contains('data:'))]
+[genDataTransfer(anno)/]
+[/if]
 		[/for]
 	}
 }
@@ -584,6 +620,18 @@ public class [toU1Case(extension.name)/]Test
 
 [query public genMacroAnnotation(annotation : Annotation) : String
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+
+[query public genDataTransfer(annotation : Annotation) : String
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+
+[query public genCompoundCode(kind : Kind) : String
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorCode(org.eclipse.cmf.occi.core.Kind)', Sequence{kind})/] 
+
+[query public genConnectorTypeList(annotation : Annotation) : String
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorList(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+
+[query public genConnectorDetail(annotation : Annotation) : String
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
 
 [query public createMainFunc() : String = 'public static void main (String[] args){'/]
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]

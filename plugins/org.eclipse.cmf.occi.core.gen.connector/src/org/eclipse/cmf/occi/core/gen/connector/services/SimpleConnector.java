@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class SimpleConnector {
 
+	String name;
 	ArrayList<Element> listElements; 
 	ConnectorKind kind;
 	ArrayList<Element> listTriggers; 
@@ -21,6 +22,14 @@ public class SimpleConnector {
 		listSynchronizes = getSynchs();
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public ArrayList<Element> getListElements() {
 		return listElements;
 	}
@@ -104,12 +113,12 @@ public class SimpleConnector {
 		String result = "";
 		for (int i=0 ; i<listElements.size() ; i++) {
 			String portI = listElements.get(i).content.replaceAll("`", "");
-			result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+			result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
 					+ ".accepts(";
 			for (int j=0 ; j<listElements.size() ; j++) {
 				if (i != j) {
 					String portJ = listElements.get(j).content.replaceAll("`", "");
-					String s = portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
+					String s = portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
 					if (i != listElements.size() - 1) {
 						if (j != listElements.size() - 1) {
 							result += s + ", ";
@@ -148,13 +157,13 @@ public class SimpleConnector {
 					String trigger = trig.content.replaceAll("`", "");
 					for (int i=0 ; i<listElemsAtMax.size() ; i++) {
 						String portI = listElemsAtMax.get(i).content;
-						result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+						result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
 								+ ".requires(";
 						for (int j=0 ; j<listElemsAtMax.size() ; j++) {
 							if (i != j) {
 								String portJ = listElemsAtMax.get(j).content;
-								result += portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\", ";
-								result += trigger.substring(0, trigger.indexOf(".")+1) + "class, \"" + trigger.substring(trigger.indexOf(".") + 1) + "\");\n";
+								result += portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\", ";
+								result += trigger.substring(0, trigger.indexOf(".")) + "Connector.class, \"" + trigger.substring(trigger.indexOf(".") + 1) + "\");\n";
 							}
 						}
 					}
@@ -172,8 +181,8 @@ public class SimpleConnector {
 				
 				for (Element triggers : listTrigsAtMax) {
 					String portJ = triggers.content.replaceAll("`", "");
-					result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
-							+ ".requires(" + portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
+					result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+							+ ".requires(" + portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
 				}
 			}
 			
@@ -184,8 +193,8 @@ public class SimpleConnector {
 					
 					for (Element cause : listTrigsAboveMax) {
 						String portJ = cause.content.replaceAll("`", "");
-						result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
-								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
+						result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
 					}
 				}
 			}
@@ -204,8 +213,8 @@ public class SimpleConnector {
 					for (Element triggers : listTrigsAtMax) {
 						String portJ = triggers.content.replaceAll("`", "");
 						portJ = triggers.content.replaceAll("*", "");
-						result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
-								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
+						result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
 					}
 				}
 				
@@ -216,20 +225,20 @@ public class SimpleConnector {
 					for (Element triggers : listTrigsAtMax) {
 						String portJ = triggers.content.replaceAll("`", "");
 						portJ = triggers.content.replaceAll("*", "");
-						result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
-								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
+						result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+								+ ".requires(" + portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
 					}
 				}
 			} else {
 				//All Synch
 				for (int i=0 ; i<listSyncsAtMax.size() ; i++) {
 					String portI = listSyncsAtMax.get(i).content;
-					result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+					result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
 							+ ".requires(";
 					for (int j=0 ; j<listSyncsAtMax.size() ; j++) {
 						if (i != j) {
 							String portJ = listSyncsAtMax.get(j).content;
-							String s = portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
+							String s = portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
 							if (i != listSyncsAtMax.size() - 1) {
 								if (j != listSyncsAtMax.size() - 1) {
 									result += s + ", ";
@@ -250,11 +259,11 @@ public class SimpleConnector {
 				ArrayList<Element> listSynchsAboveMax = SynchsAtLv(maxLv-1);
 				for (Element synch : listSynchsAboveMax) {
 					String portI = synch.content;
-					result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+					result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
 							+ ".requires(";
 					for (int j=0 ; j<listSyncsAtMax.size() ; j++) {
 						String portJ = listSyncsAtMax.get(j).content;
-						String s = portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
+						String s = portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
 						if (j < listSyncsAtMax.size()-1) {
 							result += s + ", ";
 						}else {
@@ -282,12 +291,12 @@ public class SimpleConnector {
 		String result = "";
 		for (int i=0 ; i<listElements.size() ; i++) {
 			String portI = listElements.get(i).content;
-			result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+			result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
 					+ ".requires(";
 			for (int j=0 ; j<listElements.size() ; j++) {
 				if (i != j) {
 					String portJ = listElements.get(j).content;
-					String s = portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
+					String s = portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\"";
 					if (i != listElements.size() - 1) {
 						if (j != listElements.size() - 1) {
 							result += s + ", ";
@@ -319,8 +328,8 @@ public class SimpleConnector {
 			
 			for (Element triggers : getTriggers()) {
 				String portJ = triggers.content.replaceAll("`", "");
-				result += "port(" + portI.substring(0, portI.indexOf(".") + 1) + "class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
-						+ ".requires(" + portJ.substring(0, portJ.indexOf(".")+1) + "class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
+				result += "\t\tport(" + portI.substring(0, portI.indexOf(".")) + "Connector.class, \"" + portI.substring(portI.indexOf(".") + 1) + "\")"
+						+ ".requires(" + portJ.substring(0, portJ.indexOf(".")) + "Connector.class, \"" + portJ.substring(portJ.indexOf(".") + 1) + "\");\n";
 			}
 		}
 		

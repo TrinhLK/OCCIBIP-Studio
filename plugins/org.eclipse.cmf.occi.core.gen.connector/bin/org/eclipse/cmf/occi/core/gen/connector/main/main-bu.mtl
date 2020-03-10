@@ -4,98 +4,13 @@
 [template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [comment @main /]
 [generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
-[generateBIPModel(extension, targetPackageName, extendedPackageName)/]
-[generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
-	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
-[/if]
-[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder'))]
-[comment]	[generateListConnector(kind, targetPackageName)/][/comment]
-	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
-[/if]
+[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [generateConnectorClass(mixin, extension, targetPackageName, extendedPackageName)/]
 [/for]
 [generateLoggerProperties(targetPackageName)/]
-[/template]
-
-[comment]Generate BIP Model[/comment]
-[template public generateBIPModel(extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(extendedPackageName).concat('BIPModel.bip'), false, 'UTF-8')]
-model [targetPackageName/]
-
-[for (kind : Kind | extension.kinds)]
-[for (myfsm : FSM | kind.fsm)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
-[generateAtomBIP(kind)/]
-[/if]
-[/for]
-[/for]
-
-[for (mixin : Mixin | extension.mixins)]
-[for (myfsm : FSM | mixin.fsm)]
-[if not (mixin.term.equalsIgnoreCase('connectors') or (mixin.term.equalsIgnoreCase('gluebuilder'))) ]
-[generateAtomBIP(mixin)/]
-[/if]
-[/for]
-[/for]
-
-[for (kind : Kind | extension.kinds)]
-[for (annotation : Annotation | kind.annotations)]
-[genConnectorTypeList(annotation)/]
-[/for]
-[/for]
-
-compound type [toU1Case(extendedPackageName)/]System
-[for (kind : Kind | extension.kinds)]
-[genCompoundCode(kind)/]
-[/for]
-
-[for (kind : Kind | extension.kinds)]
-[for (anno : Annotation | kind.annotations)]
-[genConnectorDetail(anno)/]
-[/for]
-[/for]
-end
-
-component [toU1Case(extendedPackageName)/]System test
-end
-[/file]
-[/template]
-
-[comment]Generate FSM as Atom for BIP Model[/comment]
-[template public generateAtomBIP(type : Type)]
-atomic type [type.name/]Connector
-[for (myfsm : FSM | type.fsm)]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-	export port Port [trans.action.term/]
-	[/for]
-	[/let]
-[/for]
-[for (attribute : Attribute | type.attributes)]
-	data [attribute.type.name/] [attribute.name.toString()/]
-[/for]
-[for (myfsm : FSM | type.fsm)]
-	[let listStates : OrderedSet(State) =  myfsm.ownedState]
-	place [for (state : State | listStates) separator(', ')][state.literal.name/][/for]
-	[/let]
-[/for]
-	initial to[for (myfsm : FSM | type.fsm)]
-	[let listStates : OrderedSet(State) =  myfsm.ownedState]
-	[for (state : State | listStates)][if (state.initial)] [state.literal.name/][/if][/for]
-	[/let]
-[/for]
-[for (myfsm : FSM | type.fsm)]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-		on [trans.action.term/] from [trans.source.literal.name/] to [trans.target.literal.name/]
-	[/for]
-	[/let]
-[/for]
-end
 [/template]
 
 [template public generateLoggerProperties(targetPackageName : String)]
@@ -189,9 +104,7 @@ package [targetPackageName/];
 public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(extension.name.toLowerCase())/]FactoryImpl
 {
 [for (kind : Kind | extension.kinds)]
-[if not (kind.name.equalsIgnoreCase('connectors') or (kind.name.equalsIgnoreCase('gluebuilder'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
-[/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
@@ -210,13 +123,13 @@ public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(exte
 	@Override
 [let kindClassName : String = toU1Case(kind.term)]
 	public [extendedPackageName/].[kindClassName/] create[kindClassName/]() {
-		return new [kind.name/]Connector();
+		return new [kindClassName/]Connector();
 	}
 [/let]
 [/template]
 
 [template public generateConnectorClass(type : Type, extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(type.name).concat('Connector.java'), false, 'UTF-8')]
+[file (getPackagePath(targetPackageName).concat(toU1Case(type.term)).concat('Connector.java'), false, 'UTF-8')]
 /**
  * Copyright (c) 2016-2017 Inria
  *  
@@ -228,7 +141,6 @@ public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(exte
  * Contributors:
  * - Philippe Merle <philippe.merle@inria.fr>
  * - Faiez Zalila <faiez.zalila@inria.fr>
- * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
  *
  * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
  */
@@ -236,14 +148,7 @@ package [targetPackageName/];
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.javabip.annotations.ComponentType;
-import org.javabip.annotations.Data;
-import org.javabip.annotations.Guard;
-import org.javabip.annotations.Port;
-import org.javabip.annotations.Ports;
-import org.javabip.annotations.Transition;
-import org.javabip.api.PortType;
-import org.javabip.api.DataOut.AccessType;
+
 [let stateAttribute : Attribute = getStateAttribute(type)]
 import [extendedPackageName/].[stateAttribute.type.name/];
 [/let]
@@ -274,34 +179,18 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
  * - title: [type.title/]
  */
 [let kindClassName : String = toU1Case(type.term)]
-@Ports({
-[if (type.oclIsTypeOf(Kind))]
-[for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions))) separator(', ')]
-@Port(name = "[action.term/]", type = PortType.enforceable)
-[/for]
-[else]
-[for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions)) separator(', ')]
-@Port(name = "[action.term/]", type = PortType.enforceable)
-[/for][/if]})
-[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
-	[for (aState : State | myfsm.ownedState)]
-		[if (aState.initial)]
-@ComponentType(initial = "[aState.literal.name/]", name = "[targetPackageName/].[type.name/]")
-		[/if]
-	[/for]
-[/for]
-public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClassName/]Impl
+public class [kindClassName/]Connector extends [extendedPackageName/].impl.[kindClassName/]Impl
 {
 	/**
 	 * Initialize the logger.
 	 */
-	private static Logger LOGGER = LoggerFactory.getLogger([type.name/]Connector.class);
+	private static Logger LOGGER = LoggerFactory.getLogger([kindClassName/]Connector.class);
 
 	// [protected (kindClassName.concat('connector_constructor'))]
 	/**
 	 * Constructs a [type.term/] connector.
 	 */
-	[type.name/]Connector()
+	[kindClassName/]Connector()
 	{
 		LOGGER.debug("Constructor called on " + this);
 		// TODO: Implement this constructor.
@@ -314,7 +203,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	
 	// [protected (kindClassName.concat('occiCreate'))]
 	/**
-	 * Called when this [type.name/] instance is completely created.
+	 * Called when this [kindClassName/] instance is completely created.
 	 */
 	@Override
 	public void occiCreate()
@@ -326,7 +215,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 	// [protected (kindClassName.concat('_occiRetrieve_method'))]
 	/**
-	 * Called when this [type.name/] instance must be retrieved.
+	 * Called when this [kindClassName/] instance must be retrieved.
 	 */
 	@Override
 	public void occiRetrieve()
@@ -338,7 +227,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 	// [protected (kindClassName.concat('_occiUpdate_method'))]
 	/**
-	 * Called when this [type.name/] instance is completely updated.
+	 * Called when this [kindClassName/] instance is completely updated.
 	 */
 	@Override
 	public void occiUpdate()
@@ -350,7 +239,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 	// [protected (kindClassName.concat('occiDelete_method'))]
 	/**
-	 * Called when this [type.name/] instance will be deleted.
+	 * Called when this [kindClassName/] instance will be deleted.
 	 */
 	@Override
 	public void occiDelete()
@@ -361,7 +250,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	// [/protected]
 
 	//
-	// [type.name/] actions.
+	// [kindClassName/] actions.
 	//
 [/if]
 
@@ -391,25 +280,16 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
      * - term: [action.term/]
      * - title: [action.title/]
 	 */
-	[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-		[if (trans.action.term.equalsIgnoreCase(action.term))]
-	@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]")
-		[/if]
-	[/for]
-	[/let]
-	[/for]
 	@Override
 	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
 		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
 
 [if (getStateAttribute(type).oclIsUndefined())]
-		// TODO: Implement how to [action.name/] this [type.name/].
+		// TODO: Implement how to [action.term/] this [type.term/].
 [else]
 [let stateAttribute : Attribute = getStateAttribute(type)]
-		// [type.name.toUpperFirst()/] State Machine.
+		// [type.term.toUpperFirst()/] State Machine.
 		switch(get[getJavaAttributeName(stateAttribute).toString().toU1Case()/]().getValue()) {
 [for (eEnumLiteral : EnumerationLiteral | getSourceStatesFromAnAction(action)->collect(state|state.oclAsType(State).literal))]
 
@@ -445,136 +325,6 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	}
 [/template]
 
-
-[template public generateGlueBuilder(type : Type, extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('GlueBuilder.java'), false, 'UTF-8')]
-/**
- * Copyright (c) 2016-2017 Inria
- *  
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- * - Philippe Merle <philippe.merle@inria.fr>
- * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
- *
- * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
- */
-package [targetPackageName/];
-
-import org.javabip.glue.GlueBuilder;
-
-public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
-{
-	@Override
-	public void configure() {
-		[for (anno : Annotation | type.annotations)]
-		//[anno.value/]
-[genMacroAnnotation(anno)/]
-[if (anno.value.contains('data:'))]
-[genDataTransfer(anno)/]
-[/if]
-		[/for]
-	}
-}
-[/file]
-[/template]
-
-[template public generateMainTestFile(extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('Test.java'), false, 'UTF-8')]
-/**
- * Copyright (c) 2016-2017 Inria
- *  
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- * - Philippe Merle <philippe.merle@inria.fr>
- * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
- *
- * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
- */
-package [targetPackageName/];
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import org.javabip.api.BIPActor;
-import org.javabip.api.BIPEngine;
-import org.javabip.api.BIPGlue;
-import org.javabip.engine.factory.EngineFactory;
-import org.javabip.glue.GlueBuilder;
-import akka.actor.ActorSystem;
-
-public class [toU1Case(extension.name)/]Test
-{
-	private ActorSystem system;
-    private EngineFactory engineFactory;
-    
-    private void initialize() {
-        system = ActorSystem.create("MySystem");
-        engineFactory = new EngineFactory(system);
-    }
-    
-    private void cleanup() {
-        system.shutdown();
-    }
-    
-    private BIPGlue createGlue(String bipGlueFilename) {
-		BIPGlue bipGlue = null;
-
-		InputStream inputStream;
-		try {
-			inputStream = new FileInputStream(bipGlueFilename);
-
-			bipGlue = GlueBuilder.fromXML(inputStream);
-
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
-		return bipGlue;
-	}
-    
-    public void running() {
-    	
-    	BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuilder().build();
-    	
-    	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
-    	
-    	// TODO Declare Instances and BIPActor here
-    	
-		engine.specifyGlue(bipGlue);
-		engine.start();
-		
-		engine.execute();
-		
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		engine.stop();
-		engineFactory.destroy(engine);
-		
-    }
-    
-    [createMainFunc()/]
-    	[toU1Case(extension.name)/]Test testTP = new [toU1Case(extension.name)/]Test();
-		testTP.initialize();
-		testTP.running();
-		testTP.cleanup();
-    }
-}
-[/file]
-[/template]
-
-
 [comment the following query returns a set of states which are target of transitions containing the action "action"/]
 [query public getTargetStatesFromAnAction(action : Action) : Set(State) = getSourceStatesFromAnAction(action)->collect(sourceState|sourceState.oclAsType(State).outgoingTransition)->flatten()->select(tr|tr.oclAsType(Transition).action=action)->flatten()->collect(tr|tr.oclAsType(Transition).target)->asSet() /]
 [comment the following query returns a set of states which are source of transitions containing the action "action"/]
@@ -586,19 +336,7 @@ public class [toU1Case(extension.name)/]Test
 
 [query public toU1Case(string : String) : String = string.substring(1,1).toUpperCase() + string.substring(2) /]
 
-[query public toU2Case(string : String) : String = string.substring(1,2).toUpperCase() + string.substring(3) /]
-
 [query public getAllDependsOnMixins (m: Mixin) : Sequence(Mixin) = if(m.depends->size() > 0 ) then Sequence{m}->union(depends->collect(m2|m2.oclAsType(Mixin).getAllDependsOnMixins())) else Sequence{m} endif/]
-
-[query public getPortContent(port : String) : String
-	= port.substring(1, port.indexOf('.')-1) + 'Connector.class, \"' + port.substring(port.indexOf('.')+1, port.indexOf(')')-1) + '\"' + port.substring(port.indexOf(')'))/]
-
-[query public removeBarrack(port : String) : String
-	= port.replaceAll('[()]', '')
-/]
-
-[query public getPortContentWithoutBarrack(port : String) : String
-	= port.substring(1, port.indexOf('.')-1) + 'Connector.class, \"' + port.substring(port.indexOf('.')+1, port.size()) + '\"'/]
 
 [query public getNow() : String
 	= invoke(
@@ -618,22 +356,6 @@ public class [toU1Case(extension.name)/]Test
 	'getFilePath(org.eclipse.cmf.occi.core.Extension)', 
 	Sequence{extension})/] 
 
-[query public genMacroAnnotation(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
-
-[query public genDataTransfer(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
-
-[query public genCompoundCode(kind : Kind) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorCode(org.eclipse.cmf.occi.core.Kind)', Sequence{kind})/] 
-
-[query public genConnectorTypeList(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorList(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
-
-[query public genConnectorDetail(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
-
-[query public createMainFunc() : String = 'public static void main (String[] args){'/]
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
 
 [query public getJavaTypeName(attribute : Attribute) : String

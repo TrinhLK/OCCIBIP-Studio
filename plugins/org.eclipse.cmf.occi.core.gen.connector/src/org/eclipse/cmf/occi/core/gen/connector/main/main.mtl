@@ -4,13 +4,14 @@
 [template public main(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [comment @main /]
 [generateConnectorFactory(extension, targetPackageName, extendedPackageName)/]
-[generateBIPModel(extension, targetPackageName, extendedPackageName)/]
+[generateExtensionData(extension, targetPackageName)/]
+[comment][generateBIPModel(extension, targetPackageName, extendedPackageName)/][/comment]
 [generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
+[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.contains('scenario'))) ]
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
-[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder'))]
+[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('policies'))]
 [comment]	[generateListConnector(kind, targetPackageName)/][/comment]
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
@@ -22,7 +23,7 @@
 [/template]
 
 [comment]Generate BIP Model[/comment]
-[template public generateBIPModel(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[comment][template public generateBIPModel(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [file (getPackagePath(targetPackageName).concat(extendedPackageName).concat('BIPModel.bip'), false, 'UTF-8')]
 model [targetPackageName/]
 
@@ -96,7 +97,7 @@ atomic type [type.name/]Connector
 	[/let]
 [/for]
 end
-[/template]
+[/template][/comment]
 
 [template public generateLoggerProperties(targetPackageName : String)]
 [file (getPackagePath(targetPackageName).concat('Activator.java'), false, 'UTF-8')]
@@ -189,12 +190,14 @@ package [targetPackageName/];
 public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(extension.name.toLowerCase())/]FactoryImpl
 {
 [for (kind : Kind | extension.kinds)]
-[if not (kind.name.equalsIgnoreCase('connectors') or (kind.name.equalsIgnoreCase('gluebuilder'))) ]
+[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.contains('scenario'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
 [/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
+[if not (mixin.term.equalsIgnoreCase('connectors') or (mixin.term.equalsIgnoreCase('gluebuilder')) or (mixin.term.contains('scenario'))) ]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
+[/if]
 [/for]
 }
 [/file]
@@ -236,12 +239,7 @@ package [targetPackageName/];
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.javabip.annotations.ComponentType;
-import org.javabip.annotations.Data;
-import org.javabip.annotations.Guard;
-import org.javabip.annotations.Port;
-import org.javabip.annotations.Ports;
-import org.javabip.annotations.Transition;
+import org.javabip.annotations.*;
 import org.javabip.api.PortType;
 import org.javabip.api.DataOut.AccessType;
 [let stateAttribute : Attribute = getStateAttribute(type)]
@@ -367,16 +365,16 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 [if (type.oclIsTypeOf(Kind))]
 [for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions)))]
-	// [protected (kindClassName.concat('_Kind_').concat(action.name).concat('_action'))]
+[comment]	// [protected (kindClassName.concat('_Kind_').concat(action.name).concat('_action'))][/comment]
 [generateActionMethod(action, type, extendedPackageName)/]
-	// [/protected]
+[comment]	// [/protected][/comment]
 [/for]
 [else]
 
 [for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions))]
-	// [protected (kindClassName.concat('_Mixin_').concat(action.name).concat('_action'))]
+[comment]	// [protected (kindClassName.concat('_Mixin_').concat(action.name).concat('_action'))][/comment]
 [generateActionMethod(action, type, extendedPackageName)/]
-	// [/protected]
+[comment]	// [/protected][/comment]
 [/for][/if]
 }	
 [/let]
@@ -391,16 +389,31 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
      * - term: [action.term/]
      * - title: [action.title/]
 	 */
-	[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-		[if (trans.action.term.equalsIgnoreCase(action.term))]
-	@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]")
-		[/if]
-	[/for]
-	[/let]
-	[/for]
+	@Transitions({
+	[if (type.oclIsTypeOf(Kind))]
+		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[else]
+		[for (myfsm : FSM | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.fsm))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[/if]
+	})
 	@Override
+	//[protected (action.term)]
 	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
 		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
@@ -443,6 +456,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 [/let]
 [/if]
 	}
+	//[/protected]
 [/template]
 
 
@@ -574,6 +588,84 @@ public class [toU1Case(extension.name)/]Test
 [/file]
 [/template]
 
+[template public generateExtensionData(extension : Extension, targetPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(extension.name).concat('.xml'), false, 'UTF-8')]
+<extension name="[extension.name/]">
+[for (mixin : Mixin | extension.mixins)]
+	[generateComponentsInfor(mixin, extension, targetPackageName)/]
+[/for]
+[for (kind : Kind | extension.kinds)]
+	[if not (kind.term.contains('Scenario') or kind.term.contains('scenario') or kind.term.equalsIgnoreCase('policies'))]
+	[generateComponentsInfor(kind, extension, targetPackageName)/]
+	[/if]
+	[if kind.term.equalsIgnoreCase('policies')]
+	<annotations name="policies">
+		[for (anno : Annotation | kind.annotations)]
+			<annotation id="[anno.key/]">[anno.value/]</annotation>
+		[/for]
+	</annotations>
+	[/if]
+[/for]
+</extension>
+[/file]
+[/template]
+
+[template public generateComponentsInfor(type : Type, extension : Extension, targetPackageName : String)]
+[if (type.oclIsTypeOf(Kind))]
+<class name="[type.name/]" parent="[type.oclAsType(Kind).parent.name/]">
+[comment]	<variables>[/comment]
+		[for (var : Attribute | type.oclAsType(Kind).attributes->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.attributes)))]
+		<variable type="[var.type.name/]" name="[var.name/]" value="[var.default/]"/>
+		[/for]
+[comment]	</variables>[/comment]
+[comment]	<actions>[/comment]
+		[for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions)))]
+		<action name="[action.name/]"/>
+		[/for]
+[comment]	</actions>[/comment]
+[comment]	<places>[/comment]
+		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
+[comment]		[let listState : Sequence(State) = myfsm.ownedState][/comment]
+		[for (state : State | myfsm.ownedState)]
+		<place name="[state.literal.name/]" initial="[state.initial/]" final="[state.final/]"/>
+		[/for]
+[comment]		[/let][/comment]
+		[/for]
+[comment]	</places>[/comment]
+[comment]	<fsm>[/comment]
+		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.term/]"/>
+		[/for]
+		[/let]
+		[/for]
+[comment]	</fsm>[/comment]
+</class>
+[else]
+<class name="[type.name/]" parent="[type.oclAsType(Mixin).getAllDependsOnMixins().name/]">
+[comment]	<variables>[/comment]
+		[for (var : Attribute | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.attributes))]
+		<variable type="[var.type.name/]" name="[var.name/]" value="[var.default/]"/>
+		[/for]
+[comment]	</variables>[/comment]
+[comment]	<actions>[/comment]
+		[for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.actions))]
+		<action name="[action.name/]"/>
+		[/for]
+[comment]	</actions>[/comment]
+[comment]	<fsm>[/comment]
+		[for (myfsm : FSM | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.fsm))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.term/]"/>
+		[/for]
+		[/let]
+		[/for]
+[comment]	</fsm>[/comment]
+</class>
+[/if]
+[/template]
 
 [comment the following query returns a set of states which are target of transitions containing the action "action"/]
 [query public getTargetStatesFromAnAction(action : Action) : Set(State) = getSourceStatesFromAnAction(action)->collect(sourceState|sourceState.oclAsType(State).outgoingTransition)->flatten()->select(tr|tr.oclAsType(Transition).action=action)->flatten()->collect(tr|tr.oclAsType(Transition).target)->asSet() /]

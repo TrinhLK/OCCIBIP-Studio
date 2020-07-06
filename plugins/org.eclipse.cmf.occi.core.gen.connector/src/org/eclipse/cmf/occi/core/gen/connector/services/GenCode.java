@@ -97,7 +97,10 @@ public class GenCode {
 
     	if(readLine.contains("data:")) {
     		
-    	}else {
+    	}else if(readLine.contains("prop:")) {
+    		
+    	}
+    	else {
     		if (readLine.contains("+")) {
            	 String[] subConnectors = readLine.split("\\+");
            	 for (String con : subConnectors) {

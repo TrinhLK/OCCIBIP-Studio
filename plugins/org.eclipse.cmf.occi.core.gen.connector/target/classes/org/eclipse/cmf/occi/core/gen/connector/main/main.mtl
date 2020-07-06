@@ -11,7 +11,7 @@
 [if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.contains('scenario'))) ]
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
-[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('policies'))]
+[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('Specification'))]
 [comment]	[generateListConnector(kind, targetPackageName)/][/comment]
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
@@ -595,11 +595,11 @@ public class [toU1Case(extension.name)/]Test
 	[generateComponentsInfor(mixin, extension, targetPackageName)/]
 [/for]
 [for (kind : Kind | extension.kinds)]
-	[if not (kind.term.contains('Scenario') or kind.term.contains('scenario') or kind.term.equalsIgnoreCase('policies'))]
+	[if not (kind.term.contains('Scenario') or kind.term.contains('scenario') or kind.term.equalsIgnoreCase('Specification'))]
 	[generateComponentsInfor(kind, extension, targetPackageName)/]
 	[/if]
-	[if kind.term.equalsIgnoreCase('policies')]
-	<annotations name="policies">
+	[if kind.term.equalsIgnoreCase('Specification')]
+	<annotations name="specification">
 		[for (anno : Annotation | kind.annotations)]
 			<annotation id="[anno.key/]">[anno.value/]</annotation>
 		[/for]

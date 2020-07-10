@@ -4098,7 +4098,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/408">
           <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
         </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenCode">
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.MainTree">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)">
@@ -4124,7 +4124,7 @@
         <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/411">
           <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
         </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenCode">
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.MainTree">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)">
@@ -4141,83 +4141,8 @@
       </expression>
       <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Query" name="genCompoundCode" visibility="Public">
-      <parameter name="kind">
-        <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-      </parameter>
-      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
-        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/414">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-        </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenCode">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generatingConnectorCode(org.eclipse.cmf.occi.core.Kind)">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(Kind)" kind="Sequence">
-          <part xsi:type="ocl.ecore:CollectionItem">
-            <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-            <item xsi:type="ocl.ecore:VariableExp" name="kind" referredVariable="/0/genCompoundCode/kind">
-              <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-            </item>
-          </part>
-        </argument>
-      </expression>
-      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-    </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Query" name="genConnectorTypeList" visibility="Public">
-      <parameter name="annotation">
-        <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-      </parameter>
-      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
-        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/417">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-        </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenCode">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generatingConnectorList(org.eclipse.cmf.occi.core.Annotation)">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(Annotation)" kind="Sequence">
-          <part xsi:type="ocl.ecore:CollectionItem">
-            <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-            <item xsi:type="ocl.ecore:VariableExp" name="annotation" referredVariable="/0/genConnectorTypeList/annotation">
-              <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-            </item>
-          </part>
-        </argument>
-      </expression>
-      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-    </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Query" name="genConnectorDetail" visibility="Public">
-      <parameter name="annotation">
-        <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-      </parameter>
-      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
-        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/420">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-        </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenCode">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:CollectionLiteralExp" eType="/3/Sequence(Annotation)" kind="Sequence">
-          <part xsi:type="ocl.ecore:CollectionItem">
-            <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-            <item xsi:type="ocl.ecore:VariableExp" name="annotation" referredVariable="/0/genConnectorDetail/annotation">
-              <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-            </item>
-          </part>
-        </argument>
-      </expression>
-      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="25799" endPosition="26458" value="[query public genCompoundCode(kind : Kind) : String&#xA;&#x9;= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorCode(org.eclipse.cmf.occi.core.Kind)', Sequence{kind})/] &#xA;&#xA;[query public genConnectorTypeList(annotation : Annotation) : String&#xA;&#x9;= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorList(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] &#xA;&#xA;[query public genConnectorDetail(annotation : Annotation) : String&#xA;&#x9;= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] "/>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="createMainFunc" visibility="Public">
       <expression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public static void main (String[] args){">
@@ -4255,7 +4180,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/427">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/418">
           <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Attribute"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenUtils">
@@ -4281,7 +4206,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/invoke">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/430">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/421">
           <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Attribute"/>
         </source>
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="org.eclipse.cmf.occi.core.gen.connector.services.GenUtils">
@@ -4662,36 +4587,6 @@
           <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
         </eParameters>
       </eOperations>
-      <eOperations name="genCompoundCode">
-        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-          <contents xsi:type="ocl.ecore:Constraint"/>
-        </eAnnotations>
-        <eAnnotations source="MTL" references="/0/genCompoundCode"/>
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="kind">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-        </eParameters>
-      </eOperations>
-      <eOperations name="genConnectorTypeList">
-        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-          <contents xsi:type="ocl.ecore:Constraint"/>
-        </eAnnotations>
-        <eAnnotations source="MTL" references="/0/genConnectorTypeList"/>
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="annotation">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-        </eParameters>
-      </eOperations>
-      <eOperations name="genConnectorDetail">
-        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-          <contents xsi:type="ocl.ecore:Constraint"/>
-        </eAnnotations>
-        <eAnnotations source="MTL" references="/0/genConnectorDetail"/>
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="annotation">
-          <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-        </eParameters>
-      </eOperations>
       <eOperations name="createMainFunc">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
@@ -4786,11 +4681,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="occi_Annotation_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-      </eAnnotations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="occi_Kind_Class">
-      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="occi_Attribute_Class">
@@ -4904,9 +4794,6 @@
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Annotation)" instanceClassName="java.util.List">
       <elementType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Kind)" instanceClassName="java.util.List">
-      <elementType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
     </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
@@ -6137,33 +6024,6 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Extension"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Annotation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://schemas.ogf.org/occi/core/ecore#//Kind"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -13369,7 +13229,7 @@
     </eAnnotations>
     <eAnnotations source="positions.1430" references="/0/genMacroAnnotation">
       <details key="start" value="25340"/>
-      <details key="end" value="25561"/>
+      <details key="end" value="25562"/>
       <details key="line" value="713"/>
     </eAnnotations>
     <eAnnotations source="positions.1431" references="/0/genMacroAnnotation/annotation">
@@ -13379,7 +13239,7 @@
     </eAnnotations>
     <eAnnotations source="positions.1432" references="/0/genMacroAnnotation/%">
       <details key="start" value="25410"/>
-      <details key="end" value="25559"/>
+      <details key="end" value="25560"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1433" references="/0/genMacroAnnotation/%/self">
@@ -13389,37 +13249,37 @@
     </eAnnotations>
     <eAnnotations source="positions.1434" references="/0/genMacroAnnotation/%/%">
       <details key="start" value="25417"/>
-      <details key="end" value="25475"/>
+      <details key="end" value="25476"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1435" references="/0/genMacroAnnotation/%/%.1">
-      <details key="start" value="25477"/>
-      <details key="end" value="25536"/>
+      <details key="start" value="25478"/>
+      <details key="end" value="25537"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1436" references="/0/genMacroAnnotation/%/%.2">
-      <details key="start" value="25538"/>
-      <details key="end" value="25558"/>
+      <details key="start" value="25539"/>
+      <details key="end" value="25559"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1437" references="/0/genMacroAnnotation/%/%.2/%/annotation">
-      <details key="start" value="25547"/>
-      <details key="end" value="25557"/>
+      <details key="start" value="25548"/>
+      <details key="end" value="25558"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1438" references="/0/genDataTransfer">
-      <details key="start" value="25564"/>
-      <details key="end" value="25785"/>
+      <details key="start" value="25565"/>
+      <details key="end" value="25787"/>
       <details key="line" value="716"/>
     </eAnnotations>
     <eAnnotations source="positions.1439" references="/0/genDataTransfer/annotation">
-      <details key="start" value="25594"/>
-      <details key="end" value="25617"/>
+      <details key="start" value="25595"/>
+      <details key="end" value="25618"/>
       <details key="line" value="716"/>
     </eAnnotations>
     <eAnnotations source="positions.1440" references="/0/genDataTransfer/%">
-      <details key="start" value="25631"/>
-      <details key="end" value="25783"/>
+      <details key="start" value="25632"/>
+      <details key="end" value="25785"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1441" references="/0/genDataTransfer/%/self">
@@ -13428,273 +13288,158 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1442" references="/0/genDataTransfer/%/%">
-      <details key="start" value="25638"/>
-      <details key="end" value="25696"/>
+      <details key="start" value="25639"/>
+      <details key="end" value="25698"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1443" references="/0/genDataTransfer/%/%.1">
-      <details key="start" value="25698"/>
-      <details key="end" value="25760"/>
+      <details key="start" value="25700"/>
+      <details key="end" value="25762"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1444" references="/0/genDataTransfer/%/%.2">
-      <details key="start" value="25762"/>
-      <details key="end" value="25782"/>
+      <details key="start" value="25764"/>
+      <details key="end" value="25784"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1445" references="/0/genDataTransfer/%/%.2/%/annotation">
-      <details key="start" value="25771"/>
-      <details key="end" value="25781"/>
+      <details key="start" value="25773"/>
+      <details key="end" value="25783"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1446" references="/0/genCompoundCode">
-      <details key="start" value="25788"/>
-      <details key="end" value="25986"/>
-      <details key="line" value="719"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1447" references="/0/genCompoundCode/kind">
-      <details key="start" value="25818"/>
-      <details key="end" value="25829"/>
-      <details key="line" value="719"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1448" references="/0/genCompoundCode/%">
-      <details key="start" value="25843"/>
-      <details key="end" value="25984"/>
+    <eAnnotations source="positions.1446" references="/0/%.4">
+      <details key="start" value="25790"/>
+      <details key="end" value="26468"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1449" references="/0/genCompoundCode/%/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1450" references="/0/genCompoundCode/%/%">
-      <details key="start" value="25850"/>
-      <details key="end" value="25908"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1451" references="/0/genCompoundCode/%/%.1">
-      <details key="start" value="25910"/>
-      <details key="end" value="25967"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1452" references="/0/genCompoundCode/%/%.2">
-      <details key="start" value="25969"/>
-      <details key="end" value="25983"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1453" references="/0/genCompoundCode/%/%.2/%/kind">
-      <details key="start" value="25978"/>
-      <details key="end" value="25982"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1454" references="/0/genConnectorTypeList">
-      <details key="start" value="25989"/>
-      <details key="end" value="26216"/>
-      <details key="line" value="722"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1455" references="/0/genConnectorTypeList/annotation">
-      <details key="start" value="26024"/>
-      <details key="end" value="26047"/>
-      <details key="line" value="722"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1456" references="/0/genConnectorTypeList/%">
-      <details key="start" value="26061"/>
-      <details key="end" value="26214"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1457" references="/0/genConnectorTypeList/%/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1458" references="/0/genConnectorTypeList/%/%">
-      <details key="start" value="26068"/>
-      <details key="end" value="26126"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1459" references="/0/genConnectorTypeList/%/%.1">
-      <details key="start" value="26128"/>
-      <details key="end" value="26191"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1460" references="/0/genConnectorTypeList/%/%.2">
-      <details key="start" value="26193"/>
-      <details key="end" value="26213"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1461" references="/0/genConnectorTypeList/%/%.2/%/annotation">
-      <details key="start" value="26202"/>
-      <details key="end" value="26212"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1462" references="/0/genConnectorDetail">
-      <details key="start" value="26219"/>
-      <details key="end" value="26446"/>
-      <details key="line" value="725"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1463" references="/0/genConnectorDetail/annotation">
-      <details key="start" value="26252"/>
-      <details key="end" value="26275"/>
-      <details key="line" value="725"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1464" references="/0/genConnectorDetail/%">
-      <details key="start" value="26289"/>
-      <details key="end" value="26444"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1465" references="/0/genConnectorDetail/%/self">
-      <details key="start" value="-1"/>
-      <details key="end" value="-1"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1466" references="/0/genConnectorDetail/%/%">
-      <details key="start" value="26296"/>
-      <details key="end" value="26354"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1467" references="/0/genConnectorDetail/%/%.1">
-      <details key="start" value="26356"/>
-      <details key="end" value="26421"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1468" references="/0/genConnectorDetail/%/%.2">
-      <details key="start" value="26423"/>
-      <details key="end" value="26443"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1469" references="/0/genConnectorDetail/%/%.2/%/annotation">
-      <details key="start" value="26432"/>
-      <details key="end" value="26442"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.1470" references="/0/createMainFunc">
-      <details key="start" value="26449"/>
-      <details key="end" value="26535"/>
+    <eAnnotations source="positions.1447" references="/0/createMainFunc">
+      <details key="start" value="26470"/>
+      <details key="end" value="26556"/>
       <details key="line" value="728"/>
     </eAnnotations>
-    <eAnnotations source="positions.1471" references="/0/createMainFunc/%">
-      <details key="start" value="26491"/>
-      <details key="end" value="26533"/>
+    <eAnnotations source="positions.1448" references="/0/createMainFunc/%">
+      <details key="start" value="26512"/>
+      <details key="end" value="26554"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1472" references="/0/getPackagePath">
-      <details key="start" value="26536"/>
-      <details key="end" value="26641"/>
+    <eAnnotations source="positions.1449" references="/0/getPackagePath">
+      <details key="start" value="26557"/>
+      <details key="end" value="26662"/>
       <details key="line" value="729"/>
     </eAnnotations>
-    <eAnnotations source="positions.1473" references="/0/getPackagePath/packageName">
-      <details key="start" value="26565"/>
-      <details key="end" value="26585"/>
+    <eAnnotations source="positions.1450" references="/0/getPackagePath/packageName">
+      <details key="start" value="26586"/>
+      <details key="end" value="26606"/>
       <details key="line" value="729"/>
     </eAnnotations>
-    <eAnnotations source="positions.1474" references="/0/getPackagePath/%">
-      <details key="start" value="26598"/>
-      <details key="end" value="26638"/>
+    <eAnnotations source="positions.1451" references="/0/getPackagePath/%">
+      <details key="start" value="26619"/>
+      <details key="end" value="26659"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1475" references="/0/getPackagePath/%/%">
-      <details key="start" value="26598"/>
-      <details key="end" value="26632"/>
+    <eAnnotations source="positions.1452" references="/0/getPackagePath/%/%">
+      <details key="start" value="26619"/>
+      <details key="end" value="26653"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1476" references="/0/getPackagePath/%/%/packageName">
-      <details key="start" value="26598"/>
-      <details key="end" value="26609"/>
+    <eAnnotations source="positions.1453" references="/0/getPackagePath/%/%/packageName">
+      <details key="start" value="26619"/>
+      <details key="end" value="26630"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1477" references="/0/getPackagePath/%/%/%">
-      <details key="start" value="26621"/>
-      <details key="end" value="26626"/>
+    <eAnnotations source="positions.1454" references="/0/getPackagePath/%/%/%">
+      <details key="start" value="26642"/>
+      <details key="end" value="26647"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1478" references="/0/getPackagePath/%/%/%.1">
-      <details key="start" value="26628"/>
-      <details key="end" value="26631"/>
+    <eAnnotations source="positions.1455" references="/0/getPackagePath/%/%/%.1">
+      <details key="start" value="26649"/>
+      <details key="end" value="26652"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1479" references="/0/getPackagePath/%/%.1">
-      <details key="start" value="26635"/>
-      <details key="end" value="26638"/>
+    <eAnnotations source="positions.1456" references="/0/getPackagePath/%/%.1">
+      <details key="start" value="26656"/>
+      <details key="end" value="26659"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1480" references="/0/getJavaTypeName">
-      <details key="start" value="26643"/>
-      <details key="end" value="26860"/>
+    <eAnnotations source="positions.1457" references="/0/getJavaTypeName">
+      <details key="start" value="26664"/>
+      <details key="end" value="26881"/>
       <details key="line" value="731"/>
     </eAnnotations>
-    <eAnnotations source="positions.1481" references="/0/getJavaTypeName/attribute">
-      <details key="start" value="26673"/>
-      <details key="end" value="26694"/>
+    <eAnnotations source="positions.1458" references="/0/getJavaTypeName/attribute">
+      <details key="start" value="26694"/>
+      <details key="end" value="26715"/>
       <details key="line" value="731"/>
     </eAnnotations>
-    <eAnnotations source="positions.1482" references="/0/getJavaTypeName/%">
-      <details key="start" value="26708"/>
-      <details key="end" value="26858"/>
+    <eAnnotations source="positions.1459" references="/0/getJavaTypeName/%">
+      <details key="start" value="26729"/>
+      <details key="end" value="26879"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1483" references="/0/getJavaTypeName/%/self">
+    <eAnnotations source="positions.1460" references="/0/getJavaTypeName/%/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1484" references="/0/getJavaTypeName/%/%">
-      <details key="start" value="26717"/>
-      <details key="end" value="26776"/>
+    <eAnnotations source="positions.1461" references="/0/getJavaTypeName/%/%">
+      <details key="start" value="26738"/>
+      <details key="end" value="26797"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1485" references="/0/getJavaTypeName/%/%.1">
-      <details key="start" value="26780"/>
-      <details key="end" value="26834"/>
+    <eAnnotations source="positions.1462" references="/0/getJavaTypeName/%/%.1">
+      <details key="start" value="26801"/>
+      <details key="end" value="26855"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1486" references="/0/getJavaTypeName/%/%.2">
-      <details key="start" value="26838"/>
-      <details key="end" value="26857"/>
+    <eAnnotations source="positions.1463" references="/0/getJavaTypeName/%/%.2">
+      <details key="start" value="26859"/>
+      <details key="end" value="26878"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1487" references="/0/getJavaTypeName/%/%.2/%/attribute">
-      <details key="start" value="26847"/>
-      <details key="end" value="26856"/>
+    <eAnnotations source="positions.1464" references="/0/getJavaTypeName/%/%.2/%/attribute">
+      <details key="start" value="26868"/>
+      <details key="end" value="26877"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1488" references="/0/getJavaAttributeName">
-      <details key="start" value="26862"/>
-      <details key="end" value="27090"/>
+    <eAnnotations source="positions.1465" references="/0/getJavaAttributeName">
+      <details key="start" value="26883"/>
+      <details key="end" value="27111"/>
       <details key="line" value="737"/>
     </eAnnotations>
-    <eAnnotations source="positions.1489" references="/0/getJavaAttributeName/attribute">
-      <details key="start" value="26897"/>
-      <details key="end" value="26918"/>
+    <eAnnotations source="positions.1466" references="/0/getJavaAttributeName/attribute">
+      <details key="start" value="26918"/>
+      <details key="end" value="26939"/>
       <details key="line" value="737"/>
     </eAnnotations>
-    <eAnnotations source="positions.1490" references="/0/getJavaAttributeName/%">
-      <details key="start" value="26933"/>
-      <details key="end" value="27088"/>
+    <eAnnotations source="positions.1467" references="/0/getJavaAttributeName/%">
+      <details key="start" value="26954"/>
+      <details key="end" value="27109"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1491" references="/0/getJavaAttributeName/%/self">
+    <eAnnotations source="positions.1468" references="/0/getJavaAttributeName/%/self">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1492" references="/0/getJavaAttributeName/%/%">
-      <details key="start" value="26942"/>
-      <details key="end" value="27001"/>
+    <eAnnotations source="positions.1469" references="/0/getJavaAttributeName/%/%">
+      <details key="start" value="26963"/>
+      <details key="end" value="27022"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1493" references="/0/getJavaAttributeName/%/%.1">
-      <details key="start" value="27005"/>
-      <details key="end" value="27064"/>
+    <eAnnotations source="positions.1470" references="/0/getJavaAttributeName/%/%.1">
+      <details key="start" value="27026"/>
+      <details key="end" value="27085"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1494" references="/0/getJavaAttributeName/%/%.2">
-      <details key="start" value="27068"/>
-      <details key="end" value="27087"/>
+    <eAnnotations source="positions.1471" references="/0/getJavaAttributeName/%/%.2">
+      <details key="start" value="27089"/>
+      <details key="end" value="27108"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.1495" references="/0/getJavaAttributeName/%/%.2/%/attribute">
-      <details key="start" value="27077"/>
-      <details key="end" value="27086"/>
+    <eAnnotations source="positions.1472" references="/0/getJavaAttributeName/%/%.2/%/attribute">
+      <details key="start" value="27098"/>
+      <details key="end" value="27107"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

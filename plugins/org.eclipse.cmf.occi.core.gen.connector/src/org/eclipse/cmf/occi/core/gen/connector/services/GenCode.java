@@ -28,7 +28,6 @@ public class GenCode {
 
 		int pos = connector.indexOf('[');
 		if (pos == -1) {
-//			int val = Integer.valueOf(s);
 			String[] elems = connector.split("-");
 			for(String e : elems) {
 				String temp = e.trim();
@@ -36,7 +35,6 @@ public class GenCode {
 				if (temp.contains("`")) {
 					kind = 0;
 				}else if (temp.contains("*")) {
-					//System.out.println(e.indexOf("*"));
 					temp = temp.substring(0, temp.indexOf("*")) + temp.substring(temp.indexOf("*") + 1);
 					kind = 2;
 				}else {
@@ -45,8 +43,6 @@ public class GenCode {
 				aConnector.add(new Element(temp, level, kind));
 			}
 			return ;
-//			String val = s;
-//			return new TreeNode(val);
 		}
 	
 		Stack<Character> stack = new Stack<>();

@@ -711,19 +711,19 @@ public class [toU1Case(extension.name)/]Test
 	Sequence{extension})/] 
 
 [query public genMacroAnnotation(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.MainTree', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
 
 [query public genDataTransfer(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.MainTree', 'generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
 
-[query public genCompoundCode(kind : Kind) : String
+[comment][query public genCompoundCode(kind : Kind) : String
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorCode(org.eclipse.cmf.occi.core.Kind)', Sequence{kind})/] 
 
 [query public genConnectorTypeList(annotation : Annotation) : String
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingConnectorList(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
 
 [query public genConnectorDetail(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] [/comment]
 
 [query public createMainFunc() : String = 'public static void main (String[] args){'/]
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]

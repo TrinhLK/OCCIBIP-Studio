@@ -7,11 +7,14 @@
 [generateExtensionData(extension, targetPackageName)/]
 [comment][generateBIPModel(extension, targetPackageName, extendedPackageName)/][/comment]
 [generateMainTestFile(extension, targetPackageName, extendedPackageName)/]
+[generateSingletonConfFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.contains('scenario'))) ]
+[if not (kind.term.equalsIgnoreCase('specification') or (kind.term.equalsIgnoreCase('gluebuilder')) 
+		or (kind.term.contains('scenario')) or (kind.term.contains('specification'))) ]
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
-[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('Specification'))]
+[if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('Specification'))
+	or (kind.term.contains('scenario')) or (kind.term.contains('specification'))]
 [comment]	[generateListConnector(kind, targetPackageName)/][/comment]
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
@@ -22,82 +25,6 @@
 [generateLoggerProperties(targetPackageName)/]
 [/template]
 
-[comment]Generate BIP Model[/comment]
-[comment][template public generateBIPModel(extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(extendedPackageName).concat('BIPModel.bip'), false, 'UTF-8')]
-model [targetPackageName/]
-
-[for (kind : Kind | extension.kinds)]
-[for (myfsm : FSM | kind.fsm)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder'))) ]
-[generateAtomBIP(kind)/]
-[/if]
-[/for]
-[/for]
-
-[for (mixin : Mixin | extension.mixins)]
-[for (myfsm : FSM | mixin.fsm)]
-[if not (mixin.term.equalsIgnoreCase('connectors') or (mixin.term.equalsIgnoreCase('gluebuilder'))) ]
-[generateAtomBIP(mixin)/]
-[/if]
-[/for]
-[/for]
-
-[for (kind : Kind | extension.kinds)]
-[for (annotation : Annotation | kind.annotations)]
-[genConnectorTypeList(annotation)/]
-[/for]
-[/for]
-
-compound type [toU1Case(extendedPackageName)/]System
-[for (kind : Kind | extension.kinds)]
-[genCompoundCode(kind)/]
-[/for]
-
-[for (kind : Kind | extension.kinds)]
-[for (anno : Annotation | kind.annotations)]
-[genConnectorDetail(anno)/]
-[/for]
-[/for]
-end
-
-component [toU1Case(extendedPackageName)/]System test
-end
-[/file]
-[/template]
-
-[comment]Generate FSM as Atom for BIP Model[/comment]
-[template public generateAtomBIP(type : Type)]
-atomic type [type.name/]Connector
-[for (myfsm : FSM | type.fsm)]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-	export port Port [trans.action.term/]
-	[/for]
-	[/let]
-[/for]
-[for (attribute : Attribute | type.attributes)]
-	data [attribute.type.name/] [attribute.name.toString()/]
-[/for]
-[for (myfsm : FSM | type.fsm)]
-	[let listStates : OrderedSet(State) =  myfsm.ownedState]
-	place [for (state : State | listStates) separator(', ')][state.literal.name/][/for]
-	[/let]
-[/for]
-	initial to[for (myfsm : FSM | type.fsm)]
-	[let listStates : OrderedSet(State) =  myfsm.ownedState]
-	[for (state : State | listStates)][if (state.initial)] [state.literal.name/][/if][/for]
-	[/let]
-[/for]
-[for (myfsm : FSM | type.fsm)]
-	[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
-	[for (trans : Transition | lisTrans)]
-		on [trans.action.term/] from [trans.source.literal.name/] to [trans.target.literal.name/]
-	[/for]
-	[/let]
-[/for]
-end
-[/template][/comment]
 
 [template public generateLoggerProperties(targetPackageName : String)]
 [file (getPackagePath(targetPackageName).concat('Activator.java'), false, 'UTF-8')]
@@ -190,12 +117,14 @@ package [targetPackageName/];
 public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(extension.name.toLowerCase())/]FactoryImpl
 {
 [for (kind : Kind | extension.kinds)]
-[if not (kind.term.equalsIgnoreCase('connectors') or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.contains('scenario'))) ]
+[if not (kind.term.equalsIgnoreCase('specification') or (kind.term.equalsIgnoreCase('gluebuilder')) 
+		or (kind.term.contains('scenario')) or (kind.term.contains('specification'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
 [/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
-[if not (mixin.term.equalsIgnoreCase('connectors') or (mixin.term.equalsIgnoreCase('gluebuilder')) or (mixin.term.contains('scenario'))) ]
+[if not (mixin.term.equalsIgnoreCase('specification') or (mixin.term.equalsIgnoreCase('gluebuilder')) 
+		or (mixin.term.contains('scenario')) or (mixin.term.contains('specification'))) ]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
 [/if]
 [/for]
@@ -241,6 +170,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.javabip.annotations.*;
 import org.javabip.api.PortType;
+import org.javabip.api.BIPActor;
 import org.javabip.api.DataOut.AccessType;
 [let stateAttribute : Attribute = getStateAttribute(type)]
 import [extendedPackageName/].[stateAttribute.type.name/];
@@ -264,7 +194,9 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
 [/for]
 [/for]
 [/if]
-
+// [protected ('import')]
+	//Add permanent libs
+// [/protected]
 /**
  * Connector implementation for the OCCI kind:
  * - scheme: [type.scheme/]
@@ -294,6 +226,10 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	 * Initialize the logger.
 	 */
 	private static Logger LOGGER = LoggerFactory.getLogger([type.name/]Connector.class);
+	[toU1Case(extension.name)/]Singleton instance = [toU1Case(extension.name)/]Singleton.getInstance();
+	// [protected ('variables')]
+	// Add permanent variable
+	// [/protected]
 
 	// [protected (kindClassName.concat('connector_constructor'))]
 	/**
@@ -301,6 +237,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	 */
 	[type.name/]Connector()
 	{
+		final BIPActor executor = instance.engine.register(this, getTitle(), true);
 		LOGGER.debug("Constructor called on " + this);
 		// TODO: Implement this constructor.
 	}
@@ -376,6 +313,8 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 [generateActionMethod(action, type, extendedPackageName)/]
 [comment]	// [/protected][/comment]
 [/for][/if]
+	// [protected ('other functions')]
+	// [/protected]
 }	
 [/let]
 [/file]
@@ -383,6 +322,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 
 [template public generateActionMethod(action : Action, type : Type, extendedPackageName : String)]
+	
 	/**
 	 * Implement OCCI action:
      * - scheme: [action.scheme/]
@@ -416,6 +356,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	//[protected (action.term)]
 	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
+		instance.runningConfiguration();
 		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
 
 [if (getStateAttribute(type).oclIsUndefined())]
@@ -461,7 +402,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 
 
 [template public generateGlueBuilder(type : Type, extension : Extension, targetPackageName : String, extendedPackageName : String)]
-[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('GlueBuilder.java'), false, 'UTF-8')]
+[file (getPackagePath(targetPackageName).concat('GlueBuilder_').concat(type.name).concat('.java'), false, 'UTF-8')]
 /**
  * Copyright (c) 2016-2017 Inria
  *  
@@ -471,7 +412,6 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- * - Philippe Merle <philippe.merle@inria.fr>
  * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
  *
  * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
@@ -480,7 +420,7 @@ package [targetPackageName/];
 
 import org.javabip.glue.GlueBuilder;
 
-public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
+public class GlueBuilder_[type.name/] extends GlueBuilder
 {
 	@Override
 	public void configure() {
@@ -491,11 +431,97 @@ public class [toU1Case(extension.name)/]GlueBuilder extends GlueBuilder
 [genDataTransfer(anno)/]
 [/if]
 		[/for]
+		// [protected ('Developer policies')]
+		// TODO Declare fixed policies
+		// [/protected]
 	}
 }
 [/file]
 [/template]
 
+[comment]Generate Singleton class[/comment]
+[template public generateSingletonConfFile(extension : Extension, targetPackageName : String, extendedPackageName : String)]
+[file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('Singleton.java'), false, 'UTF-8')]
+/**
+ * Copyright (c) 2016-2017 Inria
+ *  
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ * - Lê Khánh Trình <trinh.le-khanh@inria.fr>
+ *
+ * Generated at [getNow()/] from [getFilePath(extension)/] by org.eclipse.cmf.occi.core.gen.connector
+ */
+package [targetPackageName/];
+
+import org.javabip.api.BIPEngine;
+import org.javabip.api.BIPGlue;
+import org.javabip.engine.factory.EngineFactory;
+
+import akka.actor.ActorSystem;
+
+public class [toU1Case(extension.name)/]Singleton
+{
+	private static [toU1Case(extension.name)/]Singleton singletonTP = null;
+	private ActorSystem system;
+    private EngineFactory engineFactory;
+    public static BIPEngine engine;
+	private boolean flagRun = false;
+
+	private [toU1Case(extension.name)/]Singleton() {
+    	initialize();
+	}
+    
+    public static [toU1Case(extension.name)/]Singleton getInstance() 
+    { 
+        if (singletonTP == null) 
+        	singletonTP = new [toU1Case(extension.name)/]Singleton(); 
+  
+        return singletonTP; 
+    } 
+    //---
+	public void initialize() {
+        system = ActorSystem.create("MySystem");
+        engineFactory = new EngineFactory(system);
+        
+        //BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuilder().build();
+		BIPGlue bipGlue = new GlueBuilder_Specification().build();
+    	engine = engineFactory.create("myEngine", bipGlue);
+    	engine.specifyGlue(bipGlue);
+    	
+    }
+    
+    public void cleanup() {
+    	engineFactory.destroy(engine);
+        system.shutdown();
+    }
+    
+    public void runningConfiguration() {
+    	if (!flagRun) {
+    		flagRun = true;
+    		engine.start();
+    		System.out.println("[toU1Case(extension.name)/]Engine is starting");
+    		engine.execute();
+    		System.out.println("[toU1Case(extension.name)/]Engine is executing");
+    		
+    		try {
+    			Thread.sleep(1000);
+    			System.out.println("[toU1Case(extension.name)/]Engine finished sleeping");
+    		} catch (InterruptedException e) {
+    			e.printStackTrace();
+    		}
+    		
+    		engine.stop();
+    	}
+    }
+}
+[/file]
+[/template]
+
+[comment]Generate Main Test class[/comment]
 [template public generateMainTestFile(extension : Extension, targetPackageName : String, extendedPackageName : String)]
 [file (getPackagePath(targetPackageName).concat(toU1Case(extension.name)).concat('Test.java'), false, 'UTF-8')]
 /**
@@ -523,10 +549,11 @@ import org.javabip.api.BIPGlue;
 import org.javabip.engine.factory.EngineFactory;
 import org.javabip.glue.GlueBuilder;
 import akka.actor.ActorSystem;
+import org.apache.log4j.PropertyConfigurator;
 
 public class [toU1Case(extension.name)/]Test
 {
-	private ActorSystem system;
+[comment]	private ActorSystem system;
     private EngineFactory engineFactory;
     
     private void initialize() {
@@ -560,8 +587,10 @@ public class [toU1Case(extension.name)/]Test
     	
     	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
     	
-    	// TODO Declare Instances and BIPActor here
     	
+    	// [protected ('BIP Actors')]
+		// TODO Declare Instances and BIPActor here
+		// [/protected]
 		engine.specifyGlue(bipGlue);
 		engine.start();
 		
@@ -576,13 +605,14 @@ public class [toU1Case(extension.name)/]Test
 		engine.stop();
 		engineFactory.destroy(engine);
 		
-    }
+    }[/comment]
     
     [createMainFunc()/]
     	[toU1Case(extension.name)/]Test testTP = new [toU1Case(extension.name)/]Test();
-		testTP.initialize();
+		PropertyConfigurator.configure("log4j.properties");
+[comment]		testTP.initialize();
 		testTP.running();
-		testTP.cleanup();
+		testTP.cleanup();[/comment]
     }
 }
 [/file]
@@ -711,7 +741,7 @@ public class [toU1Case(extension.name)/]Test
 	Sequence{extension})/] 
 
 [query public genMacroAnnotation(annotation : Annotation) : String
-	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.MainTree', 'generatingMacroCode(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
+	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.MainTree', 'generatingMacroCodeAnno(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 
 
 [query public genDataTransfer(annotation : Annotation) : String
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.MainTree', 'generatingDataTransfer(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] 

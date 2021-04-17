@@ -22,6 +22,10 @@ public class MainTree {
 		String connectorString5 = "[(p.1)`-(p.2)]-(p.3)-[(p.4)`-[(p.5)`-(p.6)]]";
 		String connectorString6 = "[(p.1)`-(p.2)]-[(p.3)`-(p.4)]";
 		String connectorString7 = "[(p.1)`-(p.2)]`-(p.3)-[(p.4)-(p.5)]";
+		String connectorString8 = "(p.1)`-(p.2)-[(p.3)`-(p.4)`]";
+		String connectorString9 = "(p.1)-[(p.2)`-(p.3)`]";
+		String connectorString10 = "(p.1)`-[[(p.2)`-[(p.2a)-(p.2b]]-[(p.3)`-(p.3a)]]";
+		String connectorString11 = "(p.1)`-(p.2)`-(p.3)";
 		
 		System.out.println("--- String 1: " + connectorString);
 		System.out.println(genMacroCode(connectorString));
@@ -46,6 +50,18 @@ public class MainTree {
 //		
 		System.out.println("--- String 8: " + connectorString7);
 		System.out.println(genMacroCode(connectorString7));
+//		
+		System.out.println("--- String 9: " + connectorString8);
+		System.out.println(genMacroCode(connectorString8));
+//		
+		System.out.println("--- String 10: " + connectorString9);
+		System.out.println(genMacroCode(connectorString9));
+//		
+		System.out.println("--- String 11: " + connectorString10);
+		System.out.println(genMacroCode(connectorString10));
+//		
+		System.out.println("--- String 12: " + connectorString11);
+		System.out.println(genMacroCode(connectorString11));
 	}
 	
 	public String generatingDataTransfer(Annotation annotation) {
@@ -60,13 +76,23 @@ public class MainTree {
 		return rs;
 	}
 	
-	public String generatingMacroCode(Annotation annotation) {
+//	public String generatingMacroCode(String annotation) {
+//		ArrayList<String> listConnectors = readAnnotations(annotation);
+//		String rs = "";
+//		for (String con : listConnectors) {
+//			rs += genMacroCode(con);
+//		}
+//		return rs;
+//	}
+	
+	public String generatingMacroCodeAnno(Annotation annotation) {
 		ArrayList<String> listConnectors = readAnnotations(annotation.getValue());
+		System.out.println(annotation.getValue());
 		String rs = "";
 		for (String con : listConnectors) {
-//			rs += "\t\t//" + con;
 			rs += genMacroCode(con);
 		}
+		System.out.println("----TEST ANNO: " + rs);
 		return rs;
 	}
 	
@@ -99,8 +125,50 @@ public class MainTree {
 	public String genMacroCode(String connectorString) {
 		TreeNode root = new TreeNode("root.null", false, null);
 		createTree(root, connectorString, 0);
+
 		TreeNode reducedTree = renewTree(root);
-		return reducedTree.printRequireMacro("") + "\n" + reducedTree.printAcceptMacro("");
+//		reducedTree.traversal();
+		return reducedTree.printRequireMacro("") + "\n" + genAcceptsCode(connectorString);
+	}
+	
+	/**
+	 * Gen ACCEPTS Code
+	 * */
+	public String genAcceptsCode(String connectorString) {
+		String rs = "";
+		TreeNode root = new TreeNode("root.null", false, null);
+		createTree(root, connectorString, 0);
+		TreeNode clone = root;
+		clone.markReduceTree();
+		ArrayList<TreeNode> lNodes = tree2List(clone);
+		for (int i=0 ; i<lNodes.size() ; i++) {
+			if (!lNodes.get(i).getContent().contains("null")) {
+				rs += "\t\tport(" + lNodes.get(i).getComponentTypeName() + "Connector.class, \"" + lNodes.get(i).getPortTypeName() + "\")"
+						+ ".accepts(";
+				for (int j=0 ; j<lNodes.size() ; j++) {
+					if (i != j) {
+						TreeNode portJ = lNodes.get(j);
+						if (!portJ.getContent().contains("null")) {
+							String s = portJ.getComponentTypeName() + "Connector.class, \"" + portJ.getPortTypeName() + "\"";
+							if (i != lNodes.size() - 1) {
+								if (j != lNodes.size() - 1) {
+									rs += s + ", ";
+								} else {
+									rs += s + ");\n";
+								}
+							} else {
+								if (j != lNodes.size() - 2) {
+									rs += s + ", ";
+								} else {
+									rs += s + ");\n";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return rs;
 	}
 	
 	public static void main(String[] args) {
@@ -214,6 +282,7 @@ public class MainTree {
 			
 			//after compound
 			if (q + 1 < connectorString.length()) {
+				index = index+10;
 				String remainStr = connectorString.substring(q + 1, connectorString.length());
 				if (remainStr.indexOf("-") == 0) {
 					remainStr = remainStr.substring(1);

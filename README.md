@@ -10,3 +10,8 @@ You can refer to the following materials in order to familiarize with OCCI-Studi
 * The OCCI-Studio tutorial is available <a href="https://drive.google.com/open?id=0B7zqdAuZr708VWZCYVZRZzY3YVE">here</a>.
 * The necessary materials to ensure the hands-on experience with OCCI-Studio are available <a href="https://drive.google.com/file/d/1Y6cESS8v9BXJA4H_I6H8RVE1Xzrrx3x_/view?usp=sharing">here</a>.
 
+# Configuration
+1. Go to "Eclipse/Help/Install New Software", choose the newest update site of Eclipse, install package "Modeling"
+2. Go to "Eclipse/Help/Install New Software", add and install package of "Epsilon"
+3. Go to "Eclipse/Help/Market Place", find and install "OCL"
+4. Right-click on the project, choose "Maven/Update Project"

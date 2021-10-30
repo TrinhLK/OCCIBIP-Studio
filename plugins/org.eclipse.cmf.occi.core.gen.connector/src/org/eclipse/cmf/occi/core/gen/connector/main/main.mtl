@@ -119,13 +119,13 @@ public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(exte
 {
 [for (kind : Kind | extension.kinds)]
 [if not (kind.term.equalsIgnoreCase('specification') or (kind.term.equalsIgnoreCase('gluebuilder')) 
-		or (kind.term.contains('scenario')) or (kind.term.contains('specification'))) ]
+		or (kind.term.contains('scenario')) or (kind.term.contains('specification')) or (kind.term.contains('Spec'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
 [/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [if not (mixin.term.equalsIgnoreCase('specification') or (mixin.term.equalsIgnoreCase('gluebuilder')) 
-		or (mixin.term.contains('scenario')) or (mixin.term.contains('specification'))) ]
+		or (mixin.term.contains('scenario')) or (mixin.term.contains('specification')) or (mixin.term.contains('Spec'))) ]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
 [/if]
 [/for]
@@ -643,9 +643,10 @@ import org.javabip.glue.GlueBuilder;
 import akka.actor.ActorSystem;
 import org.apache.log4j.PropertyConfigurator;
 
+//[protected (toU1Case(extension.name))]
 public class [toU1Case(extension.name)/]Test
 {
-[comment]	private ActorSystem system;
+	private ActorSystem system;
     private EngineFactory engineFactory;
     
     private void initialize() {
@@ -675,7 +676,7 @@ public class [toU1Case(extension.name)/]Test
     
     public void running() {
     	
-    	BIPGlue bipGlue = new [toU1Case(extension.name)/]GlueBuilder().build();
+    	BIPGlue bipGlue = new GlueBuilder_Specification().build();
     	
     	BIPEngine engine = engineFactory.create("myEngine", bipGlue);
     	
@@ -697,16 +698,17 @@ public class [toU1Case(extension.name)/]Test
 		engine.stop();
 		engineFactory.destroy(engine);
 		
-    }[/comment]
+    }
     
     [createMainFunc()/]
     	[toU1Case(extension.name)/]Test testTP = new [toU1Case(extension.name)/]Test();
 		PropertyConfigurator.configure("log4j.properties");
-[comment]		testTP.initialize();
+		testTP.initialize();
 		testTP.running();
-		testTP.cleanup();[/comment]
+		testTP.cleanup();
     }
 }
+//[/protected]
 [/file]
 [/template]
 

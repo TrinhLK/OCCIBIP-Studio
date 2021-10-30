@@ -215,7 +215,7 @@ public class RegenerateConnectorAction implements IObjectActionDelegate {
 		IFile manifest = PDEProject.getManifest(connectorProject);
 		String manifestContent = "Manifest-Version: 1.0\n" + "Bundle-ManifestVersion: 2\n" + "Bundle-Name: "
 				+ connectorProjectName + "\n" + "Bundle-SymbolicName: " + connectorProjectName + ";singleton:=true\n"
-				+ "Bundle-Version: 1.0.0.qualifier\n" + "Bundle-ClassPath: .\n" + "Bundle-Vendor: OCCIware\n" +
+				+ "Bundle-Version: 1.0.0.qualifier\n" + "Bundle-ClassPath: ., lib/JavaBIP-Framework.jar\n" + "Bundle-Vendor: OCCIware\n" +
 				// "Bundle-Localization: plugin\n" + // FIXME generate
 				// plugin.properties
 				"Bundle-RequiredExecutionEnvironment: JavaSE-1.8\n" + "Bundle-ActivationPolicy: lazy\n"
@@ -242,7 +242,7 @@ public class RegenerateConnectorAction implements IObjectActionDelegate {
 				+ "# - Philippe Merle <philippe.merle@inria.fr>\n"
 				+ "# - Faiez Zalila <faiez.zalila@inria.fr>\n" + "#\n" + "\n" 
 				+ "source.. = src-gen/\n"
-				+ "output.. = bin/\n" + "bin.includes = META-INF/, plugin.xml, .\n";
+				+ "output.. = bin/\n" + "bin.includes = META-INF/, plugin.xml, ., lib/JavaBIP-Framework.jar\n";
 		build.setContents(new ByteArrayInputStream(buildContent.getBytes()), true, false, monitor);
 
 		String pluginContent =

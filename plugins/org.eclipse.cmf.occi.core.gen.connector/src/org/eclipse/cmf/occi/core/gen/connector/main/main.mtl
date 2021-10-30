@@ -10,7 +10,7 @@
 [generateSingletonConfFile(extension, targetPackageName, extendedPackageName)/]
 [for (kind : Kind | extension.kinds)]
 [if not (kind.term.equalsIgnoreCase('specification') or (kind.term.equalsIgnoreCase('gluebuilder')) 
-		or (kind.term.contains('scenario')) or (kind.term.contains('specification'))) ]
+		or (kind.term.contains('scenario')) or (kind.term.contains('specification')) or (kind.term.contains('spec'))) ]
 	[generateConnectorClass(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [if (kind.term.equalsIgnoreCase('connectors')) or (kind.term.equalsIgnoreCase('gluebuilder')) or (kind.term.equalsIgnoreCase('Specification'))
@@ -19,9 +19,10 @@
 	[generateGlueBuilder(kind, extension, targetPackageName, extendedPackageName)/]
 [/if]
 [/for]
-[for (mixin : Mixin | extension.mixins)]
+
+[comment][for (mixin : Mixin | extension.mixins)]
 [generateConnectorClass(mixin, extension, targetPackageName, extendedPackageName)/]
-[/for]
+[/for][/comment]
 [generateLoggerProperties(targetPackageName)/]
 [/template]
 
@@ -205,13 +206,26 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
  */
 [let kindClassName : String = toU1Case(type.term)]
 @Ports({
+// [protected ('Ports')]
+	//Add permanent libs
+// [/protected]
 [if (type.oclIsTypeOf(Kind))]
 [for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions))) separator(', ')]
+[if (action.term.contains('s_'))]
+@Port(name = "[action.term/]", type = PortType.spontaneous)
+, @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)
+[else]
 @Port(name = "[action.term/]", type = PortType.enforceable)
+[/if]
 [/for]
 [else]
 [for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions)) separator(', ')]
+[if (action.term.contains('s_'))]
+@Port(name = "[action.term/]", type = PortType.spontaneous)
+, @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)
+[else]
 @Port(name = "[action.term/]", type = PortType.enforceable)
+[/if]
 [/for][/if]})
 [for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
 	[for (aState : State | myfsm.ownedState)]
@@ -226,7 +240,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	 * Initialize the logger.
 	 */
 	private static Logger LOGGER = LoggerFactory.getLogger([type.name/]Connector.class);
-	[toU1Case(extension.name)/]Singleton instance = [toU1Case(extension.name)/]Singleton.getInstance();
+	//[toU1Case(extension.name)/]Singleton instance = [toU1Case(extension.name)/]Singleton.getInstance();
 	// [protected ('variables')]
 	// Add permanent variable
 	// [/protected]
@@ -237,7 +251,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	 */
 	[type.name/]Connector()
 	{
-		final BIPActor executor = instance.engine.register(this, getTitle(), true);
+		//final BIPActor executor = instance.engine.register(this, getTitle(), true);
 		LOGGER.debug("Constructor called on " + this);
 		// TODO: Implement this constructor.
 	}
@@ -329,6 +343,82 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
      * - term: [action.term/]
      * - title: [action.title/]
 	 */
+	[if (action.term.contains('s_'))]
+	@Transitions({
+	[if (type.oclIsTypeOf(Kind))]
+		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[else]
+		[for (myfsm : FSM | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.fsm))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[/if]
+	})
+	@Override
+	//[protected (action.term)]
+	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	{
+		//instance.runningConfiguration();
+		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
+
+	[if (getStateAttribute(type).oclIsUndefined())]
+		// TODO: Implement how to [action.name/] this [type.name/].
+	[else]
+		// TODO: Implement how to [action.name/] this [type.name/].
+	[/if]
+	}
+	//[/protected]
+	
+	@Transitions({
+	[if (type.oclIsTypeOf(Kind))]
+		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_')+2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[else]
+		[for (myfsm : FSM | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.fsm))]
+		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
+		[for (trans : Transition | lisTrans)]
+			[if (trans.action.term.equalsIgnoreCase(action.term))]
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_')+2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+			[/if]
+		[/for]
+		[/let]
+		[/for]
+	[/if]
+	})
+	//[protected (action.term)]
+	public void [action.term.substring(action.term.indexOf('s_')+2)/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	{
+		//instance.runningConfiguration();
+		LOGGER.debug("Action [action.term.substring(action.term.indexOf('s_')+2)/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
+
+	[if (getStateAttribute(type).oclIsUndefined())]
+		// TODO: Implement how to [action.term.substring(action.term.indexOf('s_')+2)/] this [type.name/].
+	[else]
+		// TODO: Implement how to [action.term.substring(action.term.indexOf('s_')+2)/] this [type.name/].
+	[/if]
+	}
+	//[/protected]
+	[else]
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
 		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
@@ -356,7 +446,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	//[protected (action.term)]
 	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
-		instance.runningConfiguration();
+		//instance.runningConfiguration();
 		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
 
 [if (getStateAttribute(type).oclIsUndefined())]
@@ -398,6 +488,8 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 [/if]
 	}
 	//[/protected]
+	[/if]
+	
 [/template]
 
 
@@ -756,6 +848,8 @@ public class [toU1Case(extension.name)/]Test
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] [/comment]
 
 [query public createMainFunc() : String = 'public static void main (String[] args){'/]
+[query public genPseudo(action : String, source : String, target : String) : String = '@Transition(name = "' + action + '", source = "' + source + '", target = "' + target + '"),'/]
+
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
 
 [query public getJavaTypeName(attribute : Attribute) : String

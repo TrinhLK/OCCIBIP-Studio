@@ -119,13 +119,13 @@ public class ConnectorFactory extends [extendedPackageName/].impl.[toU1Case(exte
 {
 [for (kind : Kind | extension.kinds)]
 [if not (kind.term.equalsIgnoreCase('specification') or (kind.term.equalsIgnoreCase('gluebuilder')) 
-		or (kind.term.contains('scenario')) or (kind.term.contains('specification')) or (kind.term.contains('Spec'))) ]
+		or (kind.term.contains('scenario')) or (kind.term.contains('specification')) or (kind.term.contains('spec'))) ]
 [generateCreateKindMethod(kind, extension, extendedPackageName)/]
 [/if]
 [/for]
 [for (mixin : Mixin | extension.mixins)]
 [if not (mixin.term.equalsIgnoreCase('specification') or (mixin.term.equalsIgnoreCase('gluebuilder')) 
-		or (mixin.term.contains('scenario')) or (mixin.term.contains('specification')) or (mixin.term.contains('Spec'))) ]
+		or (mixin.term.contains('scenario')) or (mixin.term.contains('specification')) or (mixin.term.contains('spec'))) ]
 [generateCreateKindMethod(mixin, extension, extendedPackageName)/]
 [/if]
 [/for]
@@ -196,7 +196,7 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
 [/for]
 [/if]
 // [protected ('import')]
-	//Add permanent libs
+		// TODO Add permanent libs
 // [/protected]
 /**
  * Connector implementation for the OCCI kind:
@@ -207,7 +207,7 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
 [let kindClassName : String = toU1Case(type.term)]
 @Ports({
 // [protected ('Ports')]
-	//Add permanent libs
+		// TODO Add permanent libs
 // [/protected]
 [if (type.oclIsTypeOf(Kind))]
 [for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions))) separator(', ')]
@@ -242,7 +242,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	private static Logger LOGGER = LoggerFactory.getLogger([type.name/]Connector.class);
 	//[toU1Case(extension.name)/]Singleton instance = [toU1Case(extension.name)/]Singleton.getInstance();
 	// [protected ('variables')]
-	// Add permanent variable
+		// TODO Add permanent variable
 	// [/protected]
 
 	// [protected (kindClassName.concat('connector_constructor'))]
@@ -366,21 +366,18 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[/let]
 		[/for]
 	[/if]
+		//[protected ('Transition')]
+		//add more transitions
+		//[/protected]
 	})
 	@Override
-	//[protected (action.term)]
-	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	public void [action.name/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
-		//instance.runningConfiguration();
-		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
-
-	[if (getStateAttribute(type).oclIsUndefined())]
-		// TODO: Implement how to [action.name/] this [type.name/].
-	[else]
-		// TODO: Implement how to [action.name/] this [type.name/].
-	[/if]
+		//[protected (action.term)]
+		LOGGER.debug("");
+			//[/protected]
 	}
-	//[/protected]
+	
 	
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
@@ -388,7 +385,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term.substring(action.term.indexOf('s_')+2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -398,26 +395,28 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term.substring(action.term.indexOf('s_')+2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
 			[/if]
 		[/for]
 		[/let]
 		[/for]
 	[/if]
+		//[protected ('Transition')]
+		//add more transitions
+		//[/protected]
 	})
-	//[protected (action.term)]
-	public void [action.term.substring(action.term.indexOf('s_')+2)/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	
+	public void [action.term.substring(action.term.indexOf('s_') + 2)/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
-		//instance.runningConfiguration();
-		LOGGER.debug("Action [action.term.substring(action.term.indexOf('s_')+2)/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
+		//[protected ('real_'.concat(action.term))]
+		LOGGER.debug("Action [action.term.substring(action.term.indexOf('s_') + 2)/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
 
 	[if (getStateAttribute(type).oclIsUndefined())]
-		// TODO: Implement how to [action.term.substring(action.term.indexOf('s_')+2)/] this [type.name/].
+		// TODO: Implement how to [action.term.substring(action.term.indexOf('s_') + 2)/] this [type.name/].
 	[else]
-		// TODO: Implement how to [action.term.substring(action.term.indexOf('s_')+2)/] this [type.name/].
 	[/if]
+		//[/protected]
 	}
-	//[/protected]
 	[else]
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
@@ -441,6 +440,8 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[/let]
 		[/for]
 	[/if]
+		//[protected ('Transition')]
+		//[/protected]
 	})
 	@Override
 	//[protected (action.term)]
@@ -643,7 +644,6 @@ import org.javabip.glue.GlueBuilder;
 import akka.actor.ActorSystem;
 import org.apache.log4j.PropertyConfigurator;
 
-//[protected (toU1Case(extension.name))]
 public class [toU1Case(extension.name)/]Test
 {
 	private ActorSystem system;
@@ -708,7 +708,7 @@ public class [toU1Case(extension.name)/]Test
 		testTP.cleanup();
     }
 }
-//[/protected]
+
 [/file]
 [/template]
 
@@ -850,7 +850,6 @@ public class [toU1Case(extension.name)/]Test
 	= invoke('org.eclipse.cmf.occi.core.gen.connector.services.GenCode', 'generatingDetailConnector(org.eclipse.cmf.occi.core.Annotation)', Sequence{annotation})/] [/comment]
 
 [query public createMainFunc() : String = 'public static void main (String[] args){'/]
-[query public genPseudo(action : String, source : String, target : String) : String = '@Transition(name = "' + action + '", source = "' + source + '", target = "' + target + '"),'/]
 
 [query public getPackagePath(packageName : String) : String = packageName.replaceAll('\\.', '/') + '/' /]
 

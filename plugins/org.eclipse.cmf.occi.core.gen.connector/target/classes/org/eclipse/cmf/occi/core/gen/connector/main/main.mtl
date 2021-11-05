@@ -350,7 +350,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]"),
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -360,17 +360,14 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]"),
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
 		[/for]
 	[/if]
-		//[protected ('Transition')]
-		//add more transitions
-		//[/protected]
 	})
-	@Override
+	//@Override
 	public void [action.name/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
 		//[protected (action.term)]
@@ -378,14 +375,13 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 			//[/protected]
 	}
 	
-	
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
 		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term.substring(action.term.indexOf('s_') + 2)))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -395,15 +391,12 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", source = "['Pseudo'.concat(trans.target.literal.name)/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term.substring(action.term.indexOf('s_') + 2)))/]"),
 			[/if]
 		[/for]
 		[/let]
 		[/for]
 	[/if]
-		//[protected ('Transition')]
-		//add more transitions
-		//[/protected]
 	})
 	
 	public void [action.term.substring(action.term.indexOf('s_') + 2)/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
@@ -424,7 +417,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -434,16 +427,14 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]"),
+		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
 		[/for]
 	[/if]
-		//[protected ('Transition')]
-		//[/protected]
 	})
-	@Override
+	//@Override
 	//[protected (action.term)]
 	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
@@ -487,6 +478,13 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		}
 [/let]
 [/if]
+	}
+	//[/protected]
+	
+	//[protected ('can'.concat(toU1Case(action.term)))]
+	@Guard(name = "['can'.concat(toU1Case(action.term))/]")
+	public boolean ['can'.concat(toU1Case(action.term))/](){
+		return true;
 	}
 	//[/protected]
 	[/if]

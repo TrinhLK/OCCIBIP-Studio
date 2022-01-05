@@ -2,36 +2,52 @@ package org.eclipse.cmf.occi.core.gen.connector.services;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.StringJoiner;
 
 import org.eclipse.cmf.occi.core.Annotation;
 
 public class MainTree {
 
-//	private TreeNode root = new TreeNode("root.null", false, null);
-//	ArrayList<TreeNode> listNodes = new ArrayList<TreeNode>();
-	
 	public void test() {
 //		String connectorString = "[(p.1)`-(p.2)]`-(p.3)-[(p.4)`-[(p.5)`-(p.6)]]";
 //		String connectorString1 = "[(p.1)`-(p.2)]-(p.3)-[(p.4)-[(p.5)-(p.6)]]";
 //		String connectorString2 = "[(p.1)-(p.2)]-(p.3)-[(p.4)-(p.5)]";
-		String connectorString = "[(p.1)-(p.2)]-(p.3)`-[(p.4)-(p.5)]";
+//		String connectorString = "[(p.1)-(p.2)]-(p.3)`-[(p.4)-(p.5)]";
+		String connectorString = "[(p.1)-(p.1)]`-(p.3)";
 		String connectorString1 = "[(p.1)-(p.2)]-[(p.3)-(p.4)]";
+		String connectorString21 = "(p.1)-(p.2)-(p.3)-(p.4)";
+		String connectorString22 = "[(p.1)-(p.2)]-(p.3)-(p.4)";
 		String connectorString2 = "[(p.1)-(p.2)]`-(p.3)`-[(p.4)-(p.5)]";
 		String connectorString3 = "[(p.1)-(p.2)]`-(p.3)-(p.4)";
 		String connectorString4 = "(p.1)`-(p.2)-[(p.3)-(p.4)]";
 		String connectorString5 = "[(p.1)`-(p.2)]-(p.3)-[(p.4)`-[(p.5)`-(p.6)]]";
-		String connectorString6 = "[(p.1)`-(p.2)]-[(p.3)`-(p.4)]";
+		String connectorString6 = "[(p.1)`-(p.2)]-[(p.3)`-(p.4)`-(p.5)]-(p.6)";
 		String connectorString7 = "[(p.1)`-(p.2)]`-(p.3)-[(p.4)-(p.5)]";
 		String connectorString8 = "(p.1)`-(p.2)-[(p.3)`-(p.4)`]";
 		String connectorString9 = "(p.1)-[(p.2)`-(p.3)`]";
-		String connectorString10 = "(p.1)`-[[(p.2)`-[(p.2a)-(p.2b]]-[(p.3)`-(p.3a)]]";
+		String connectorString10 = "(p.1)`-[[(p.2)`-(p.21)`-[(p.2a)-(p.2b]]-[(p.3)`-(p.31)`-(p.3a)]]";
 		String connectorString11 = "(p.1)`-(p.2)`-(p.3)";
+		String connectorString12 = "[(p.1a)`-(p.1b)`-(p.1c)]-(p.2)-[(p.3a)`-[(p.3b)-(p.3c)]`-[(p.3d)-(p.3e)]]"
+				+ "-[(p.3a1)`-[(p.3b1)-(p.3c1)]`-[(p.3d1)-(p.3e1)]]";//[1a'-1b'-1c]-2-[3a'-[3b-3c]'-3d]
+		String connectorString13 = "[(p.1a)`-(p.1b)`-(p.1c)]-(p.2)-[(p.3a)`-[(p.3b)`-[(p.3c1)-(p.3c2)]`-(p.3e)]`-(p.3d)]";//[1a'-1b'-1c]-2-[3a'-[3b-3c]'-3d]
+		String connectorString14 = "[(p.1a)`-[(p.1b)-(p.1c)]`]`-[(p.3a)`-[(p.3b)-(p.3c)]`-(p.3d)]";
+		String connectorString15 = "[(p.1a)`-(p.1b)`-(p.1c)]-(p.2)-[(p.3a)`-[(p.3b)-(p.3c)]`-(p.3d)]";
+		String connectorString16 = "(MySQL.start)`-[(Tomcat.start)`-(Apache.start)]";
+		String connectorString17 = "[(MySQL.running)-(MySQL.running)-(Tomcat.running)-(MySQL.fail)]`-(Tomcat.start)";//[1a'-1b'-1c]-2-[3a'-[3b-3c]'-3d]
+		String connectorString18 = "(Monitor.add)-(Route.on)";//[1a'-1b'-1c]-2-[3a'-[3b-3c]'-3d]
+
 		
 		System.out.println("--- String 1: " + connectorString);
 		System.out.println(genMacroCode(connectorString));
 		
 		System.out.println("--- String 2: " + connectorString1);
 		System.out.println(genMacroCode(connectorString1));
+		
+		System.out.println("--- String 21: " + connectorString21);
+		System.out.println(genMacroCode(connectorString21));
+		
+		System.out.println("--- String 22: " + connectorString22);
+		System.out.println(genMacroCode(connectorString22));
 		
 		System.out.println("--- String 3: " + connectorString2);
 		System.out.println(genMacroCode(connectorString2));
@@ -62,11 +78,61 @@ public class MainTree {
 //		
 		System.out.println("--- String 12: " + connectorString11);
 		System.out.println(genMacroCode(connectorString11));
+//		
+		System.out.println("--- String 13: " + connectorString12);
+		System.out.println(genMacroCode(connectorString12));
+//		
+		System.out.println("--- String 14: " + connectorString13);
+		System.out.println(genMacroCode(connectorString13));
+//		
+		System.out.println("--- String 15: " + connectorString14);
+		System.out.println(genMacroCode(connectorString14));
+//		
+		System.out.println("--- String 16: " + connectorString15);
+		System.out.println(genMacroCode(connectorString15));
+//		
+		System.out.println("--- String 17: " + connectorString16);
+		System.out.println(genMacroCode(connectorString16));
+		
+		System.out.println("--- String 18: " + connectorString17);
+		System.out.println(genMacroCode(connectorString17));
+		
+		System.out.println("--- String 18r: " + connectorString18);
+		System.out.println(genMacroCode(connectorString18));
+	}
+	
+	public static void main(String[] args) {
+		MainTree testMT = new MainTree();
+		testMT.test();
+	}
+	
+	public String generatingMacroCodeAnno(Annotation anno) {
+		return genMacroCode(anno.getValue());
+	}
+	/**
+	 * Generate requires + accepts functions for Glue Builder
+	 * */
+	public String genMacroCode(String connectorString) {
+		TreeNode root = new TreeNode("root.null", false, null);
+		
+		createTree(root, connectorString, 0);
+		root.addExportedPort();
+		System.out.println("----Added Export list----");
+		root.traversal();
+		System.out.println("--------");
+		//--- Gen Accepts code
+		ArrayList<TreeNode> listLeaves = new ArrayList<TreeNode>();
+		tree2List(root, listLeaves);
+//		System.out.println("list Leave: " + listLeaves.size() + "\t" + listLeaves);
+//		TreeNode reducedTree = renewTree(root);
+//		reducedTree.traversal();
+//		return genAcceptsCode(listLeaves);
+		return root.genRequiresCode("") + "\n" + genAcceptsCode(listLeaves);
 	}
 	
 	public String generatingDataTransfer(Annotation annotation) {
 		//data: int x: Tracker-Peer
-		String input = annotation.getValue();
+		String input = annotation.getValue().trim();
 		String rs = "";
 		String[] parts = input.split(":");
 		String[] varInfor = parts[1].trim().split(" ");
@@ -76,154 +142,25 @@ public class MainTree {
 		return rs;
 	}
 	
-//	public String generatingMacroCode(String annotation) {
-//		ArrayList<String> listConnectors = readAnnotations(annotation);
-//		String rs = "";
-//		for (String con : listConnectors) {
-//			rs += genMacroCode(con);
-//		}
-//		return rs;
-//	}
-	
-	public String generatingMacroCodeAnno(Annotation annotation) {
-		ArrayList<String> listConnectors = readAnnotations(annotation.getValue());
-		System.out.println(annotation.getValue());
-		String rs = "";
-		for (String con : listConnectors) {
-			rs += genMacroCode(con);
-		}
-		System.out.println("----TEST ANNO: " + rs);
-		return rs;
-	}
-	
-	public ArrayList<String> readAnnotations(String annotation) {
-
-        String readLine = annotation.toString();
-        ArrayList<String> result = new ArrayList<String>();
-        System.out.println("Anno: " + annotation);
-
-    	if(readLine.contains("data:")) {
-    		
-    	}else if(readLine.contains("prop:")) {
-    		
-    	}
-    	else {
-    		if (readLine.contains("+")) {
-    			String[] subConnectors = readLine.split("\\+");
-              	 for (String con : subConnectors) {
-              		 String standardCon = con.trim();
-              		 result.add(standardCon);
-              	 }
-    		}else {
-    			String standardCon = readLine.trim();
-    			result.add(standardCon);
-    		}
-    	}
-    	return result;
-	}
-	
-	public String genMacroCode(String connectorString) {
-		TreeNode root = new TreeNode("root.null", false, null);
-		createTree(root, connectorString, 0);
-
-		TreeNode reducedTree = renewTree(root);
-//		reducedTree.traversal();
-		return reducedTree.printRequireMacro("") + "\n" + genAcceptsCode(connectorString);
-	}
-	
 	/**
 	 * Gen ACCEPTS Code
 	 * */
-	public String genAcceptsCode(String connectorString) {
+	public String genAcceptsCode(ArrayList<TreeNode> input) {
 		String rs = "";
-		TreeNode root = new TreeNode("root.null", false, null);
-		createTree(root, connectorString, 0);
-		TreeNode clone = root;
-		clone.markReduceTree();
-		ArrayList<TreeNode> lNodes = tree2List(clone);
-		for (int i=0 ; i<lNodes.size() ; i++) {
-			if (!lNodes.get(i).getContent().contains("null")) {
-				rs += "\t\tport(" + lNodes.get(i).getComponentTypeName() + "Connector.class, \"" + lNodes.get(i).getPortTypeName() + "\")"
-						+ ".accepts(";
-				for (int j=0 ; j<lNodes.size() ; j++) {
-					if (i != j) {
-						TreeNode portJ = lNodes.get(j);
-						if (!portJ.getContent().contains("null")) {
-							String s = portJ.getComponentTypeName() + "Connector.class, \"" + portJ.getPortTypeName() + "\"";
-							if (i != lNodes.size() - 1) {
-								if (j != lNodes.size() - 1) {
-									rs += s + ", ";
-								} else {
-									rs += s + ");\n";
-								}
-							} else {
-								if (j != lNodes.size() - 2) {
-									rs += s + ", ";
-								} else {
-									rs += s + ");\n";
-								}
-							}
-						}
-					}
+		for (int i=0 ; i<input.size() ; i++) {
+			rs += "\t\tport(" + input.get(i).getComponentTypeName() + "Connector.class, \"" + input.get(i).getPortTypeName() + "\")"
+					+ ".accepts(";
+			StringJoiner joiner = new StringJoiner(", ");
+			for (int j=0 ; j<input.size() ; j++) {
+				if (i != j) {
+					String s = input.get(j).getComponentTypeName() + "Connector.class, \"" + input.get(j).getPortTypeName() + "\"";
+					joiner.add(s);
 				}
 			}
+			rs += joiner.toString() + ");\n";
 		}
+		
 		return rs;
-	}
-	
-	public static void main(String[] args) {
-		MainTree testMT = new MainTree();
-		testMT.test();
-	}
-	
-	/**
-	 * Remove redundant nodes
-	 * Add the information of exported port
-	 * */
-	public TreeNode renewTree(TreeNode root) {
-		TreeNode clone = root;
-		clone.markReduceTree();
-		ArrayList<TreeNode> lNodes = tree2List(clone);
-		lNodes = List2Tree(lNodes);
-		lNodes.get(0).addExportedPort();
-		return lNodes.get(0);
-	}
-	
-	public ArrayList<TreeNode> tree2List(TreeNode root) {
-		ArrayList<TreeNode> rs = new ArrayList<TreeNode>();
-		removeRedundantNodes(root, rs);
-		return rs;
-	}
-	
-	public ArrayList<TreeNode> List2Tree(ArrayList<TreeNode> listNodes) {
-		for (int i=0 ; i<listNodes.size() ; i++) {
-			ArrayList<TreeNode> listChildren = new ArrayList<TreeNode>();
-			for (int j=i+1 ; j<listNodes.size() ; j++) {
-				if (listNodes.get(i).getContent().equals(listNodes.get(j).getParent().getContent())) {
-					listChildren.add(listNodes.get(j));
-				}
-			}
-			listNodes.get(i).setChildren(listChildren);
-		}
-		return listNodes;
-	}
-//	public TreeNode findReducable() {
-//        TreeNode root = null ? null : root.find(data);
-//        return root;
-//    }
-	public void removeRedundantNodes(TreeNode root, ArrayList<TreeNode> listNodes) {
-		//ArrayList<TreeNode> listChildren = new ArrayList<TreeNode>();
-		//System.out.println("Check list before: " + root.getChildren().size());
-		if (root.getContent().equalsIgnoreCase("root.null"))
-			listNodes.add(new TreeNode("root.null", false, null));
-		for (TreeNode child : root.getChildren()) {
-			if (child.isCanRemove() == false)
-				listNodes.add(child);
-		}
-
-		for (TreeNode child : root.getChildren()) {
-			removeRedundantNodes(child, listNodes);
-		}
 	}
 	
 	public void createTree(TreeNode root, String connectorString, int index){
@@ -270,14 +207,21 @@ public class MainTree {
 			
 			//the compound
 			String nextLevelConnector = connectorString.substring(pos + 1, q-1);
-//			System.out.println(connectorString);
+//			System.out.println("nextLevelConnector: " + connectorString);
 //			System.out.println(connectorString.indexOf("]"));
+			
+			
 			boolean isTrigger = false;
-			if (connectorString.indexOf("]`") > 0) {
-				isTrigger = true;
+//			System.out.println("test substr: " + connectorString);
+			if (q + 1 <= connectorString.length()) {
+				String temp = connectorString.substring(pos, q+1);
+				if (temp.charAt(temp.length()-1) == '`')
+					isTrigger = true;
 			}
-			TreeNode compound = new TreeNode("c" + index + ".null", isTrigger, root);
+			
+			TreeNode compound = new TreeNode("c" + pos + index + ".null", isTrigger, root);
 			root.getChildren().add(compound);
+//			System.out.println("nextLevelConnector: " + nextLevelConnector);
 			createTree(compound, nextLevelConnector, index+1);
 			
 			//after compound
@@ -291,5 +235,17 @@ public class MainTree {
 				createTree(root, remainStr, index+1);
 			}
 		}
+	}
+	
+	public void tree2List(TreeNode root, ArrayList<TreeNode> listNodes) {
+		
+		if (root.getChildren().size() == 0) {
+			listNodes.add(root);
+			return ;
+		}
+		for (TreeNode child : root.getChildren()) {
+			tree2List(child, listNodes);
+		}
+		
 	}
 }

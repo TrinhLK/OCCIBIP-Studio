@@ -410,6 +410,18 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	[/if]
 		//[/protected]
 	}
+	
+	//[protected ('can'.concat(toU1Case(action.term)))]
+	@Guard(name = "['can'.concat(toU1Case(action.term))/]")
+	public boolean ['can'.concat(toU1Case(action.term))/](){
+		return true;
+	}
+
+	@Guard(name = "['can'.concat(toU1Case(action.term.substring(action.term.indexOf('s_') + 2)))/]")
+	public boolean ['can'.concat(toU1Case(action.term.substring(action.term.indexOf('s_') + 2)))/](){
+		return true;
+	}
+	//[/protected]
 	[else]
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]

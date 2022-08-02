@@ -10,6 +10,9 @@ You can refer to the following materials in order to familiarize with OCCIwareBI
 
 # Configuration
 1. Go to "Eclipse/Help/Install New Software", choose the newest update site of Eclipse, install package "Modeling"
-2. Go to "Eclipse/Help/Install New Software", add and install package of "Epsilon"
-3. Go to "Eclipse/Help/Market Place", find and install "OCL"
-4. Right-click on the project, choose "Maven/Update Project"
+2. Go to "Eclipse/Help/Install New Software", search "sirius", install all packages
+3. Go to "Eclipse/Help/Install New Software", add and install package of "Epsilon"
+4. Go to "Eclipse/Help/Market Place", find and install "OCL"
+5. Right-click on the project, choose "Maven/Update Project"
+
+Note: Set JRE is 8 or 11. 17 doesn't work.

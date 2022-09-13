@@ -5,7 +5,7 @@ OCCIwareBIP-Studio is a set of Eclipse plugins implementing the [current Open Cl
 
 You can refer to the following materials in order to familiarize with OCCIwareBIP-Studio:
 
-* The OCCIwareBIP Studio tutorial is available <a href="https://drive.google.com/open?id=0B7zqdAuZr708VWZCYVZRZzY3YVE">here</a>.
+* The OCCIwareBIP Studio tutorial is available <a href="https://drive.google.com/file/d/1hPTCtCR6V3WIS4z276NpVxA2A-KVA5sT/view?usp=sharing">here</a>.
 * The necessary materials to ensure the hands-on experience with OCCI-Studio are available <a href="https://drive.google.com/file/d/1Y6cESS8v9BXJA4H_I6H8RVE1Xzrrx3x_/view?usp=sharing">here</a>.
 
 # Configuration

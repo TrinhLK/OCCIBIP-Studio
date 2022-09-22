@@ -211,20 +211,20 @@ import [action.eContainer().oclAsType(Type).getExtendedPackage()/].[getJavaTypeN
 // [/protected]
 [if (type.oclIsTypeOf(Kind))]
 [for (action : Action | type.oclAsType(Kind).actions->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.actions))) separator(', ')]
-[if (action.term.contains('s_'))]
-@Port(name = "[action.term/]", type = PortType.spontaneous)
-, @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)
+[if (action.title.toString().equalsIgnoreCase('spontaneous'))]
+@Port(name = "[action.name/]", type = PortType.spontaneous)
+[comment], @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)[/comment]
 [else]
-@Port(name = "[action.term/]", type = PortType.enforceable)
+@Port(name = "[action.name/]", type = PortType.enforceable)
 [/if]
 [/for]
 [else]
 [for (action : Action | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(m|m.oclAsType(Mixin).actions)) separator(', ')]
-[if (action.term.contains('s_'))]
-@Port(name = "[action.term/]", type = PortType.spontaneous)
-, @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)
+[if (action.title.toString().equalsIgnoreCase('spontaneous'))]
+@Port(name = "[action.name/]", type = PortType.spontaneous)
+[comment], @Port(name = "[action.term.substring(action.term.indexOf('s_') + 2)/]", type = PortType.enforceable)[/comment]
 [else]
-@Port(name = "[action.term/]", type = PortType.enforceable)
+@Port(name = "[action.name/]", type = PortType.enforceable)
 [/if]
 [/for][/if]})
 [for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
@@ -340,17 +340,17 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	/**
 	 * Implement OCCI action:
      * - scheme: [action.scheme/]
-     * - term: [action.term/]
+     * - term: [action.name/]
      * - title: [action.title/]
 	 */
-	[if (action.term.contains('s_'))]
+[comment]	[if (action.term.contains('s_'))]
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
 		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
+		@Transition(name = "[action.name/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -360,7 +360,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
+		@Transition(name = "[action.name/]", source = "[trans.source.literal.name/]", target = "['Pseudo'.concat(trans.target.literal.name)/]", guard = "['can'.concat(toU1Case(action.term))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -422,14 +422,14 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		return true;
 	}
 	//[/protected]
-	[else]
+	[else][/comment]
 	@Transitions({
 	[if (type.oclIsTypeOf(Kind))]
 		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term))/]"),
+		@Transition(name = "[action.name/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.name))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -439,7 +439,7 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
 			[if (trans.action.term.equalsIgnoreCase(action.term))]
-		@Transition(name = "[action.term/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.term))/]"),
+		@Transition(name = "[action.name/]", source = "[trans.source.literal.name/]", target = "[trans.target.literal.name/]", guard = "['can'.concat(toU1Case(action.name))/]"),
 			[/if]
 		[/for]
 		[/let]
@@ -447,11 +447,11 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	[/if]
 	})
 	//@Override
-	//[protected (action.term)]
-	public void [action.term/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
+	//[protected (action.name)]
+	public void [action.name/]([for (parameter : Attribute | action.attributes) separator(', ')]final [getJavaTypeName(parameter)/] [parameter.name/][/for])
 	{
 		//instance.runningConfiguration();
-		LOGGER.debug("Action [action.term/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
+		LOGGER.debug("Action [action.name/]([if (action.attributes->size() > 0)]"[for (parameter : Attribute | action.attributes)] + "[parameter.name/]=" + [parameter.name/][/for] + "[/if]) called on " + this);
 
 [if (getStateAttribute(type).oclIsUndefined())]
 		// TODO: Implement how to [action.name/] this [type.name/].
@@ -462,8 +462,8 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 [for (eEnumLiteral : EnumerationLiteral | getSourceStatesFromAnAction(action)->collect(state|state.oclAsType(State).literal))]
 
 		case [stateAttribute.type.name/].[eEnumLiteral.name.toUpperCase()/]_VALUE:
-			LOGGER.debug("Fire transition(state=[eEnumLiteral.name/], action=\"[action.term/]\")...");
-			// TODO Implement transition(state=[eEnumLiteral.name/], action="[action.term/]")
+			LOGGER.debug("Fire transition(state=[eEnumLiteral.name/], action=\"[action.name/]\")...");
+			// TODO Implement transition(state=[eEnumLiteral.name/], action="[action.name/]")
 [let targetLiterals : OrderedSet(EnumerationLiteral) = getTargetStatesFromAnAction(action)->collect(state|state.oclAsType(State).literal)->asOrderedSet()]
 [if targetLiterals->size()=1]
 			set[getJavaAttributeName(stateAttribute).toString().toU1Case()/]([stateAttribute.type.name/].[targetLiterals->first().oclAsType(EnumerationLiteral).name.toUpperCase()/]);
@@ -493,13 +493,13 @@ public class [type.name/]Connector extends [extendedPackageName/].impl.[kindClas
 	}
 	//[/protected]
 	
-	//[protected ('can'.concat(toU1Case(action.term)))]
-	@Guard(name = "['can'.concat(toU1Case(action.term))/]")
-	public boolean ['can'.concat(toU1Case(action.term))/](){
+	//[protected ('can'.concat(toU1Case(action.name)))]
+	@Guard(name = "['can'.concat(toU1Case(action.name))/]")
+	public boolean ['can'.concat(toU1Case(action.name))/](){
 		return true;
 	}
 	//[/protected]
-	[/if]
+[comment]	[/if][/comment]
 	
 [/template]
 
@@ -733,7 +733,7 @@ public class [toU1Case(extension.name)/]Test
 	[generateComponentsInfor(kind, extension, targetPackageName)/]
 	[/if]
 	[if kind.term.equalsIgnoreCase('Specification')]
-	<annotations name="specification">
+	<annotations name="Specification">
 		[for (anno : Annotation | kind.annotations)]
 			<annotation id="[anno.key/]">[anno.value/]</annotation>
 		[/for]
@@ -770,7 +770,7 @@ public class [toU1Case(extension.name)/]Test
 		[for (myfsm : FSM | type.fsm->union(type.oclAsType(Kind)->closure(parent)->collect(k|k.fsm)))]
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
-		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.term/]"/>
+		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.name/]"/>
 		[/for]
 		[/let]
 		[/for]
@@ -792,7 +792,7 @@ public class [toU1Case(extension.name)/]Test
 		[for (myfsm : FSM | type.oclAsType(Mixin).getAllDependsOnMixins()->collect(k|k.fsm))]
 		[let lisTrans : Sequence(Transition) = myfsm.ownedState.outgoingTransition]
 		[for (trans : Transition | lisTrans)]
-		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.term/]"/>
+		<transition from="[trans.source.literal.name/]" to="[trans.target.literal.name/]" action="[action.name/]"/>
 		[/for]
 		[/let]
 		[/for]

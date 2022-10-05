@@ -144,7 +144,6 @@
       </modules>
     </profile>
   </profiles>
-
   <properties>
     <tycho-version>1.0.0</tycho-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -171,7 +170,7 @@
     
     <repository>
     <id>epsilonrepository</id>  
-     <url>http://download.eclipse.org/epsilon/updates/</url> 
+     <url>http://download.eclipse.org/epsilon/updates/1.4</url> 
      <layout>p2</layout>
     </repository>
   </repositories>

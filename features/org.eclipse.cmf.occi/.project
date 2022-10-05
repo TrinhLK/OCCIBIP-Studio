@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>org.eclipse.cmf.occi</name>
-	<comment></comment>
+	<comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 	<projects>
+		<project>org.eclipse.cmf.examples</project>
+		<project>org.eclipse.cmf.occi.core</project>
+		<project>org.eclipse.cmf.occi.core.connector.jocci</project>
+		<project>org.eclipse.cmf.occi.core.edit</project>
+		<project>org.eclipse.cmf.occi.core.design</project>
+		<project>org.eclipse.cmf.occi.core.editor</project>
+		<project>org.eclipse.cmf.occi.core.gen.alloy</project>
+		<project>org.eclipse.cmf.occi.core.gen.alloy.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.connector</project>
+		<project>org.eclipse.cmf.occi.core.gen.connector.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.emf</project>
+		<project>org.eclipse.cmf.occi.core.gen.curl</project>
+		<project>org.eclipse.cmf.occi.core.gen.curl.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.design</project>
+		<project>org.eclipse.cmf.occi.core.gen.design.extended</project>
+		<project>org.eclipse.cmf.occi.core.gen.design.extended.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.design.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.emf.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.latex</project>
+		<project>org.eclipse.cmf.occi.core.gen.latex.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.textile</project>
+		<project>org.eclipse.cmf.occi.core.gen.textile.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.uris</project>
+		<project>org.eclipse.cmf.occi.core.gen.uris.ui</project>
+		<project>org.eclipse.cmf.occi.core.gen.xml</project>
+		<project>org.eclipse.cmf.occi.core.gen.xml.ui</project>
+		<project>org.eclipse.cmf.occi.core.ui</project>
+		<project>org.eclipse.cmf.occi.core.xtext</project>
+		<project>org.eclipse.cmf.occi.core.xtext.ide</project>
+		<project>org.eclipse.cmf.occi.core.xtext.tests</project>
+		<project>org.eclipse.cmf.occi.core.xtext.ui</project>
+		<project>org.eclipse.cmf.occi.core.xtext.ui.tests</project>
+		<project>org.eclipse.cmf.occi.crtp</project>
+		<project>org.eclipse.cmf.occi.infrastructure</project>
+		<project>org.eclipse.cmf.occi.crtp.connector.dummy</project>
+		<project>org.eclipse.cmf.occi.crtp.design</project>
+		<project>org.eclipse.cmf.occi.crtp.design.extended</project>
+		<project>org.eclipse.cmf.occi.crtp.edit</project>
+		<project>org.eclipse.cmf.occi.infrastructure.edit</project>
+		<project>org.eclipse.cmf.occi.crtp.editor</project>
+		<project>org.eclipse.cmf.occi.crtp.example</project>
+		<project>org.eclipse.cmf.occi.crtp.tests</project>
+		<project>org.eclipse.cmf.occi.infrastructure.editor</project>
+		<project>org.eclipse.cmf.occi.infrastructure.tests</project>
+		<project>org.eclipse.cmf.occi.infrastructure.design</project>
+		<project>org.eclipse.cmf.occi.infrastructure.connector.dummy</project>
+		<project>org.eclipse.cmf.occi.infrastructure.example</project>
+		<project>org.eclipse.cmf.occi.monitoring</project>
+		<project>org.eclipse.cmf.occi.monitoring.edit</project>
+		<project>org.eclipse.cmf.occi.monitoring.editor</project>
+		<project>org.eclipse.cmf.occi.monitoring.tests</project>
+		<project>org.eclipse.cmf.occi.monitoring.design</project>
+		<project>org.eclipse.cmf.occi.monitoring.connector.dummy</project>
+		<project>org.eclipse.cmf.occi.monitoring.example</project>
+		<project>org.eclipse.cmf.occi.platform</project>
+		<project>org.eclipse.cmf.occi.platform.edit</project>
+		<project>org.eclipse.cmf.occi.platform.editor</project>
+		<project>org.eclipse.cmf.occi.platform.tests</project>
+		<project>org.eclipse.cmf.occi.platform.design</project>
+		<project>org.eclipse.cmf.occi.platform.connector.dummy</project>
+		<project>org.eclipse.cmf.occi.platform.example</project>
+		<project>org.eclipse.cmf.occi.sla</project>
+		<project>org.eclipse.cmf.occi.sla.edit</project>
+		<project>org.eclipse.cmf.occi.sla.editor</project>
+		<project>org.eclipse.cmf.occi.sla.design</project>
+		<project>org.eclipse.cmf.occi.sla.tests</project>
+		<project>org.eclipse.cmf.occi.sla.connector.dummy</project>
+		<project>org.eclipse.cmf.occi.sla.example</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.eclipse.pde.FeatureBuilder</name>
+			<name>org.eclipse.jdt.core.javabuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -18,6 +86,6 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
-		<nature>org.eclipse.pde.FeatureNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>

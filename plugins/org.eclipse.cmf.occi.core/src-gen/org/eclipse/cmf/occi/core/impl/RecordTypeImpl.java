@@ -12,7 +12,6 @@
 package org.eclipse.cmf.occi.core.impl;
 
 import java.util.Collection;
-
 import org.eclipse.cmf.occi.core.OCCIPackage;
 import org.eclipse.cmf.occi.core.RecordField;
 import org.eclipse.cmf.occi.core.RecordType;
@@ -75,6 +74,7 @@ public class RecordTypeImpl extends DataTypeImpl implements RecordType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RecordField> getRecordFields() {
 		if (recordFields == null) {
 			recordFields = new EObjectContainmentEList<RecordField>(RecordField.class, this, OCCIPackage.RECORD_TYPE__RECORD_FIELDS);

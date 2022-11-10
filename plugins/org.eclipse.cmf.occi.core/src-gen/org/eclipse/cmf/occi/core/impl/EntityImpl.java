@@ -33,7 +33,6 @@ import org.eclipse.cmf.occi.core.OCCIPackage;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -53,17 +52,13 @@ import org.eclipse.ocl.pivot.StandardLibrary;
 import org.eclipse.ocl.pivot.evaluation.Executor;
 
 import org.eclipse.ocl.pivot.ids.IdResolver;
+import org.eclipse.ocl.pivot.ids.IdResolver.IdResolverExtension;
 import org.eclipse.ocl.pivot.ids.TypeId;
-
-import org.eclipse.ocl.pivot.internal.library.executor.ExecutorDoubleIterationManager;
+import org.eclipse.ocl.pivot.internal.library.executor.ExecutorMultipleIterationManager;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorSingleIterationManager;
-
-import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
-
 import org.eclipse.ocl.pivot.library.AbstractBinaryOperation;
-import org.eclipse.ocl.pivot.library.AbstractTernaryOperation;
-import org.eclipse.ocl.pivot.library.LibraryIteration;
-
+import org.eclipse.ocl.pivot.library.AbstractSimpleOperation;
+import org.eclipse.ocl.pivot.library.LibraryIteration.LibraryIterationExtension;
 import org.eclipse.ocl.pivot.library.classifier.ClassifierAllInstancesOperation;
 
 import org.eclipse.ocl.pivot.library.collection.CollectionAsSetOperation;
@@ -82,14 +77,14 @@ import org.eclipse.ocl.pivot.library.string.StringConcatOperation;
 import org.eclipse.ocl.pivot.messages.PivotMessages;
 
 import org.eclipse.ocl.pivot.oclstdlib.OCLstdlibTables;
-
-import org.eclipse.ocl.pivot.utilities.ClassUtil;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 
 import org.eclipse.ocl.pivot.values.IntegerValue;
 import org.eclipse.ocl.pivot.values.InvalidValueException;
 import org.eclipse.ocl.pivot.values.OrderedSetValue;
 import org.eclipse.ocl.pivot.values.SequenceValue;
+import org.eclipse.ocl.pivot.values.SequenceValue.Accumulator;
 import org.eclipse.ocl.pivot.values.SetValue;
 import org.eclipse.ocl.pivot.values.TupleValue;
 import org.slf4j.Logger;
@@ -246,6 +241,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -255,6 +251,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setId(String newId) {
 		String oldId = id;
 		id = newId;
@@ -267,6 +264,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
@@ -276,6 +274,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTitle(String newTitle) {
 		String oldTitle = title;
 		title = newTitle;
@@ -288,6 +287,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Kind getKind() {
 		if (kind != null && kind.eIsProxy()) {
 			InternalEObject oldKind = (InternalEObject)kind;
@@ -314,6 +314,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(Kind newKind) {
 		Kind oldKind = kind;
 		kind = newKind;
@@ -326,6 +327,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLocation() {
 		return location;
 	}
@@ -335,6 +337,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(String newLocation) {
 		String oldLocation = location;
 		location = newLocation;
@@ -440,16 +443,18 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+  @Override
 	public EList<Mixin> getMixins() {
 		/**
 		 * parts.mixin->asSet()
 		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
+		final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
 		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
 		final /*@NonInvalid*/ List<MixinBase> parts = this.getParts();
 		final /*@NonInvalid*/ OrderedSetValue BOXED_parts = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_MixinBase, parts);
-		/*@Thrown*/ SequenceValue.Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(OCCITables.SEQ_CLSSid_Mixin);
-		/*@NonNull*/ Iterator<Object> ITERATOR__1 = BOXED_parts.iterator();
+		/*@Thrown*/ Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(OCCITables.SEQ_CLSSid_Mixin);
+		Iterator<Object> ITERATOR__1 = BOXED_parts.iterator();
 		/*@NonInvalid*/ SequenceValue collect;
 		while (true) {
 			if (!ITERATOR__1.hasNext()) {
@@ -465,7 +470,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 			accumulator.add(mixin);
 		}
 		final /*@NonInvalid*/ SetValue asSet = CollectionAsSetOperation.INSTANCE.evaluate(collect);
-		final /*@NonInvalid*/ List<Mixin> ECORE_asSet = ((IdResolver.IdResolverExtension)idResolver).ecoreValueOfAll(Mixin.class, asSet);
+		final /*@NonInvalid*/ List<Mixin> ECORE_asSet = ((IdResolverExtension)idResolver).ecoreValueOfAll(Mixin.class, asSet);
 		return (EList<Mixin>)ECORE_asSet;
 	}
 
@@ -474,6 +479,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MixinBase> getParts() {
 		if (parts == null) {
 			parts = new EObjectContainmentWithInverseEList<MixinBase>(MixinBase.class, this, OCCIPackage.ENTITY__PARTS, OCCIPackage.MIXIN_BASE__ENTITY);
@@ -496,6 +502,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void occiRetrieve() {
 		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Entity!occiRetrieve()
 	}
@@ -505,6 +512,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void occiUpdate() {
 		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Entity!occiUpdate()
 	}
@@ -514,6 +522,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void occiDelete() {
 		throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Entity!occiDelete()
 	}
@@ -523,236 +532,64 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean AttributesNameUnique(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv AttributesNameUnique:
-		 *   let severity : Integer[1] = 'Entity::AttributesNameUnique'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let result : Boolean[1] = attributes->isUnique(name)
-		 *       in
-		 *         'Entity::AttributesNameUnique'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_Entity_c_c_AttributesNameUnique);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ boolean symbol_0;
-		if (le) {
-			symbol_0 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			final /*@NonInvalid*/ List<AttributeState> attributes = this.getAttributes();
-			final /*@NonInvalid*/ OrderedSetValue BOXED_attributes = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_AttributeState, attributes);
-			/*@Thrown*/ SetValue.Accumulator accumulator = ValueUtil.createSetAccumulatorValue(OCCITables.ORD_CLSSid_AttributeState);
-			/*@NonNull*/ Iterator<Object> ITERATOR__1 = BOXED_attributes.iterator();
-			/*@NonInvalid*/ boolean result;
-			while (true) {
-				if (!ITERATOR__1.hasNext()) {
-					result = ValueUtil.TRUE_VALUE;
-					break;
-				}
-				/*@NonInvalid*/ AttributeState _1 = (AttributeState)ITERATOR__1.next();
-				/**
-				 * name
-				 */
-				final /*@NonInvalid*/ String name = _1.getName();
-				//
-				if (accumulator.includes(name) == ValueUtil.TRUE_VALUE) {
-					result = ValueUtil.FALSE_VALUE;			// Abort after second find
-					break;
-				}
-				else {
-					accumulator.add(name);
-				}
+		final String constraintName = "Entity::AttributesNameUnique";
+		try {
+			/**
+			 *
+			 * inv AttributesNameUnique:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let result : Boolean[1] = attributes->isUnique(name)
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.ENTITY___ATTRIBUTES_NAME_UNIQUE__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
 			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_Entity_c_c_AttributesNameUnique, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, OCCITables.INT_0).booleanValue();
-			symbol_0 = logDiagnostic;
-		}
-		return Boolean.TRUE == symbol_0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean KindCompatibleWithOneAppliesOfEachMixin(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv KindCompatibleWithOneAppliesOfEachMixin:
-		 *   let
-		 *     severity : Integer[1] = 'Entity::KindCompatibleWithOneAppliesOfEachMixin'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let
-		 *         result : Boolean[?] = parts.mixin->forAll(m |
-		 *           m.applies->notEmpty() implies
-		 *           m.applies->exists(k | kind->closure(parent)->includes(k)))
-		 *       in
-		 *         'Entity::KindCompatibleWithOneAppliesOfEachMixin'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_Entity_c_c_KindCompatibleWithOneAppliesOfEachMixin);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ boolean symbol_1;
-		if (le) {
-			symbol_1 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			/*@Caught*/ /*@Nullable*/ Object CAUGHT_result;
-			try {
-				final /*@NonInvalid*/ List<MixinBase> parts = this.getParts();
-				final /*@NonInvalid*/ OrderedSetValue BOXED_parts = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_MixinBase, parts);
-				/*@Thrown*/ SequenceValue.Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(OCCITables.SEQ_CLSSid_Mixin);
-				/*@NonNull*/ Iterator<Object> ITERATOR__1 = BOXED_parts.iterator();
-				/*@NonInvalid*/ SequenceValue collect;
+			else {
+				final /*@NonInvalid*/ List<AttributeState> attributes = this.getAttributes();
+				final /*@NonInvalid*/ OrderedSetValue BOXED_attributes = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_AttributeState, attributes);
+				/*@Thrown*/ org.eclipse.ocl.pivot.values.SetValue.Accumulator accumulator = ValueUtil.createSetAccumulatorValue(OCCITables.ORD_CLSSid_AttributeState);
+				Iterator<Object> ITERATOR__1 = BOXED_attributes.iterator();
+				/*@NonInvalid*/ boolean result;
 				while (true) {
 					if (!ITERATOR__1.hasNext()) {
-						collect = accumulator;
+						result = true;
 						break;
 					}
-					/*@NonInvalid*/ MixinBase _1 = (MixinBase)ITERATOR__1.next();
+					/*@NonInvalid*/ AttributeState _1 = (AttributeState)ITERATOR__1.next();
 					/**
-					 * mixin
+					 * name
 					 */
-					final /*@NonInvalid*/ Mixin mixin = _1.getMixin();
+					final /*@NonInvalid*/ String name = _1.getName();
 					//
-					accumulator.add(mixin);
-				}
-				/*@Thrown*/ Object accumulator_0 = ValueUtil.TRUE_VALUE;
-				/*@NonNull*/ Iterator<Object> ITERATOR_m = collect.iterator();
-				/*@Thrown*/ Boolean result;
-				while (true) {
-					if (!ITERATOR_m.hasNext()) {
-						if (accumulator_0 == ValueUtil.TRUE_VALUE) {
-							result = ValueUtil.TRUE_VALUE;
-						}
-						else {
-							throw (InvalidValueException)accumulator_0;
-						}
-						break;
+					if (accumulator.includes(name) == ValueUtil.TRUE_VALUE) {
+						result = false;
+						break;			// Abort after second find
 					}
-					/*@NonInvalid*/ Mixin m = (Mixin)ITERATOR_m.next();
-					/**
-					 *
-					 * m.applies->notEmpty() implies
-					 * m.applies->exists(k | kind->closure(parent)->includes(k))
-					 */
-					/*@Caught*/ /*@NonNull*/ Object CAUGHT_implies;
-					try {
-						final /*@NonInvalid*/ List<Kind> applies_0 = m.getApplies();
-						final /*@NonInvalid*/ OrderedSetValue BOXED_applies_0 = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_Kind, applies_0);
-						final /*@NonInvalid*/ boolean notEmpty = CollectionNotEmptyOperation.INSTANCE.evaluate(BOXED_applies_0).booleanValue();
-						/*@Thrown*/ boolean implies;
-						if (notEmpty) {
-							/*@Thrown*/ Object accumulator_1 = ValueUtil.FALSE_VALUE;
-							/*@NonNull*/ Iterator<Object> ITERATOR_k = BOXED_applies_0.iterator();
-							/*@Thrown*/ boolean exists;
-							while (true) {
-								if (!ITERATOR_k.hasNext()) {
-									if (accumulator_1 == ValueUtil.FALSE_VALUE) {
-										exists = ValueUtil.FALSE_VALUE;
-									}
-									else {
-										throw (InvalidValueException)accumulator_1;
-									}
-									break;
-								}
-								/*@NonInvalid*/ Kind k = (Kind)ITERATOR_k.next();
-								/**
-								 * kind->closure(parent)->includes(k)
-								 */
-								final /*@NonInvalid*/ StandardLibrary standardLibrary = idResolver.getStandardLibrary();
-								/*@Caught*/ /*@NonNull*/ Object CAUGHT_includes;
-								try {
-									final /*@NonInvalid*/ Kind kind_0 = this.getKind();
-									final /*@NonInvalid*/ SetValue oclAsSet = OclAnyOclAsSetOperation.INSTANCE.evaluate(executor, OCCITables.SET_CLSSid_Kind, kind_0);
-									final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOf(oclAsSet);
-									final LibraryIteration.LibraryIterationExtension IMPL_closure_0 = (LibraryIteration.LibraryIterationExtension)TYPE_closure_0.lookupImplementation(standardLibrary, OCLstdlibTables.Operations._Set__closure);
-									final /*@NonNull*/ Object ACC_closure_0 = IMPL_closure_0.createAccumulatorValue(executor, OCCITables.SET_CLSSid_Kind, OCCITables.CLSSid_Kind);
-									/**
-									 * Implementation of the iterator body.
-									 */
-									final /*@NonNull*/ AbstractBinaryOperation BODY_closure_0 = new AbstractBinaryOperation() {
-										/**
-										 * parent
-										 */
-										@Override
-										public /*@Nullable*/ Object evaluate(final /*@NonNull*/ Executor executor, final /*@NonNull*/ TypeId typeId, final /*@Nullable*/ Object oclAsSet, final /*@NonInvalid*/ Object _1_0) {
-											final /*@NonInvalid*/ Kind symbol_0 = (Kind)_1_0;
-											if (symbol_0 == null) {
-												throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::Kind::parent\'");
-											}
-											final /*@Thrown*/ Kind parent = symbol_0.getParent();
-											return parent;
-										}
-									};
-									final /*@NonNull*/  ExecutorSingleIterationManager MGR_closure_0 = new ExecutorSingleIterationManager(executor, OCCITables.SET_CLSSid_Kind, BODY_closure_0, oclAsSet, ACC_closure_0);
-									final /*@Thrown*/ SetValue closure = ClassUtil.nonNullState((SetValue)IMPL_closure_0.evaluateIteration(MGR_closure_0));
-									final /*@Thrown*/ boolean includes = CollectionIncludesOperation.INSTANCE.evaluate(closure, k).booleanValue();
-									CAUGHT_includes = includes;
-								}
-								catch (Exception e) {
-									CAUGHT_includes = ValueUtil.createInvalidValue(e);
-								}
-								//
-								if (CAUGHT_includes == ValueUtil.TRUE_VALUE) {					// Normal successful body evaluation result
-									exists = ValueUtil.TRUE_VALUE;
-									break;														// Stop immediately
-								}
-								else if (CAUGHT_includes == ValueUtil.FALSE_VALUE) {				// Normal unsuccessful body evaluation result
-									;															// Carry on
-								}
-								else if (CAUGHT_includes instanceof InvalidValueException) {		// Abnormal exception evaluation result
-									accumulator_1 = CAUGHT_includes;									// Cache an exception failure
-								}
-								else {															// Impossible badly typed result
-									accumulator_1 = new InvalidValueException(PivotMessages.NonBooleanBody, "exists");
-								}
-							}
-							implies = exists;
-						}
-						else {
-							implies = ValueUtil.TRUE_VALUE;
-						}
-						CAUGHT_implies = implies;
-					}
-					catch (Exception e) {
-						CAUGHT_implies = ValueUtil.createInvalidValue(e);
-					}
-					//
-					if (CAUGHT_implies == ValueUtil.FALSE_VALUE) {					// Normal unsuccessful body evaluation result
-						result = ValueUtil.FALSE_VALUE;
-						break;														// Stop immediately
-					}
-					else if (CAUGHT_implies == ValueUtil.TRUE_VALUE) {				// Normal successful body evaluation result
-						;															// Carry on
-					}
-					else if (CAUGHT_implies instanceof InvalidValueException) {		// Abnormal exception evaluation result
-						accumulator_0 = CAUGHT_implies;									// Cache an exception failure
-					}
-					else {															// Impossible badly typed result
-						accumulator_0 = new InvalidValueException(PivotMessages.NonBooleanBody, "forAll");
+					else {
+						accumulator.add(name);
 					}
 				}
-				CAUGHT_result = result;
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, OCCITables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
 			}
-			catch (Exception e) {
-				CAUGHT_result = ValueUtil.createInvalidValue(e);
-			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_Entity_c_c_KindCompatibleWithOneAppliesOfEachMixin, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
-			symbol_1 = logDiagnostic;
+			return local_0;
 		}
-		return Boolean.TRUE == symbol_1;
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
 	}
 
 	/**
@@ -760,110 +597,212 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean DifferentMixins(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv DifferentMixins:
-		 *   let severity : Integer[1] = 'Entity::DifferentMixins'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let
-		 *         result : OclAny[1] = let
-		 *           status : Boolean[?] = self.parts->forAll(mixinBase1, mixinBase2 | mixinBase1 <> mixinBase2 implies mixinBase1.mixin <> mixinBase2.mixin)
-		 *         in
-		 *           if status = true
-		 *           then true
-		 *           else
-		 *             Tuple{status = status, message = 'Two instances of the same mixin are not allowed on the same Entity ' +
-		 *               self.oclAsType(Entity).id, severity = -1, quickfix = 'quickfix'
-		 *             }
-		 *           endif
-		 *       in
-		 *         'Entity::DifferentMixins'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-		final /*@NonInvalid*/ StandardLibrary standardLibrary = idResolver.getStandardLibrary();
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_Entity_c_c_DifferentMixins);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ Object symbol_6;
-		if (le) {
-			symbol_6 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			/*@Caught*/ /*@NonNull*/ Object CAUGHT_symbol_5;
-			try {
-				final /*@NonInvalid*/ List<MixinBase> parts = this.getParts();
-				final /*@NonInvalid*/ OrderedSetValue BOXED_parts = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_MixinBase, parts);
-				final org.eclipse.ocl.pivot.Class TYPE_status_0 = executor.getStaticTypeOf(BOXED_parts);
-				final LibraryIteration.LibraryIterationExtension IMPL_status_0 = (LibraryIteration.LibraryIterationExtension)TYPE_status_0.lookupImplementation(standardLibrary, OCLstdlibTables.Operations._Collection__0_forAll);
-				final /*@NonNull*/ Object ACC_status_0 = IMPL_status_0.createAccumulatorValue(executor, TypeId.BOOLEAN, TypeId.BOOLEAN);
-				/**
-				 * Implementation of the iterator body.
-				 */
-				final /*@NonNull*/ AbstractTernaryOperation BODY_status_0 = new AbstractTernaryOperation() {
-					/**
-					 * mixinBase1 <> mixinBase2 implies mixinBase1.mixin <> mixinBase2.mixin
-					 */
-					@Override
-					public /*@Nullable*/ Object evaluate(final /*@NonNull*/ Executor executor, final /*@NonNull*/ TypeId typeId, final /*@Nullable*/ Object BOXED_parts, final /*@NonInvalid*/ Object mixinBase1, final /*@NonInvalid*/ Object mixinBase2) {
-						/*@Caught*/ /*@NonNull*/ Object CAUGHT_implies;
-						try {
-							final /*@NonInvalid*/ MixinBase symbol_0 = (MixinBase)mixinBase1;
-							final /*@NonInvalid*/ MixinBase symbol_1 = (MixinBase)mixinBase2;
-							final /*@NonInvalid*/ boolean ne = (symbol_0 != null) ? !symbol_0.equals(symbol_1) : (symbol_1 != null);
-							/*@Thrown*/ boolean implies;
-							if (ne) {
-								if (symbol_0 == null) {
-									throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::MixinBase::mixin\'");
-								}
-								final /*@Thrown*/ Mixin mixin = symbol_0.getMixin();
-								if (symbol_1 == null) {
-									throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::MixinBase::mixin\'");
-								}
-								final /*@Thrown*/ Mixin mixin_0 = symbol_1.getMixin();
-								final /*@Thrown*/ boolean ne_0 = !mixin.equals(mixin_0);
-								implies = ne_0;
+	@Override
+	public boolean KindCompatibleWithOneAppliesOfEachMixin(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Entity::KindCompatibleWithOneAppliesOfEachMixin";
+		try {
+			/**
+			 *
+			 * inv KindCompatibleWithOneAppliesOfEachMixin:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let
+			 *         result : Boolean[?] = parts.mixin->forAll(m |
+			 *           m.applies->notEmpty() implies
+			 *           m.applies->exists(k | kind->closure(parent)->includes(k)))
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.ENTITY___KIND_COMPATIBLE_WITH_ONE_APPLIES_OF_EACH_MIXIN__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_1;
+			if (le) {
+				local_1 = true;
+			}
+			else {
+				/*@Caught*/ Object CAUGHT_result;
+				try {
+					final /*@NonInvalid*/ List<MixinBase> parts = this.getParts();
+					final /*@NonInvalid*/ OrderedSetValue BOXED_parts = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_MixinBase, parts);
+					/*@Thrown*/ Accumulator accumulator = ValueUtil.createSequenceAccumulatorValue(OCCITables.SEQ_CLSSid_Mixin);
+					Iterator<Object> ITERATOR__1 = BOXED_parts.iterator();
+					/*@NonInvalid*/ SequenceValue collect;
+					while (true) {
+						if (!ITERATOR__1.hasNext()) {
+							collect = accumulator;
+							break;
+						}
+						/*@NonInvalid*/ MixinBase _1 = (MixinBase)ITERATOR__1.next();
+						/**
+						 * mixin
+						 */
+						final /*@NonInvalid*/ Mixin mixin = _1.getMixin();
+						//
+						accumulator.add(mixin);
+					}
+					/*@Thrown*/ Object accumulator_0 = ValueUtil.TRUE_VALUE;
+					Iterator<Object> ITERATOR_m = collect.iterator();
+					/*@Thrown*/ Boolean result;
+					while (true) {
+						if (!ITERATOR_m.hasNext()) {
+							if (accumulator_0 == null) {
+								result = null;
+							}
+							else if (accumulator_0 == ValueUtil.TRUE_VALUE) {
+								result = ValueUtil.TRUE_VALUE;
 							}
 							else {
+								throw (InvalidValueException)accumulator_0;
+							}
+							break;
+						}
+						/*@NonInvalid*/ Mixin m = (Mixin)ITERATOR_m.next();
+						/**
+						 *
+						 * m.applies->notEmpty() implies
+						 * m.applies->exists(k | kind->closure(parent)->includes(k))
+						 */
+						/*@Caught*/ Object CAUGHT_implies;
+						try {
+							final /*@NonInvalid*/ List<Kind> applies = m.getApplies();
+							final /*@NonInvalid*/ OrderedSetValue BOXED_applies = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_Kind, applies);
+							final /*@NonInvalid*/ boolean notEmpty = CollectionNotEmptyOperation.INSTANCE.evaluate(BOXED_applies).booleanValue();
+							final /*@Thrown*/ Boolean implies;
+							if (!notEmpty) {
 								implies = ValueUtil.TRUE_VALUE;
+							}
+							else {
+								/*@Caught*/ Object CAUGHT_exists;
+								try {
+									/*@Thrown*/ Object accumulator_1 = ValueUtil.FALSE_VALUE;
+									Iterator<Object> ITERATOR_k = BOXED_applies.iterator();
+									/*@Thrown*/ Boolean exists;
+									while (true) {
+										if (!ITERATOR_k.hasNext()) {
+											if (accumulator_1 == ValueUtil.FALSE_VALUE) {
+												exists = ValueUtil.FALSE_VALUE;
+											}
+											else {
+												throw (InvalidValueException)accumulator_1;
+											}
+											break;
+										}
+										/*@NonInvalid*/ Kind k = (Kind)ITERATOR_k.next();
+										/**
+										 * kind->closure(parent)->includes(k)
+										 */
+										final /*@NonInvalid*/ StandardLibrary standardLibrary = idResolver.getStandardLibrary();
+										/*@Caught*/ Object CAUGHT_includes;
+										try {
+											final /*@NonInvalid*/ Kind kind_0 = this.getKind();
+											final /*@NonInvalid*/ SetValue oclAsSet = OclAnyOclAsSetOperation.INSTANCE.evaluate(executor, OCCITables.SET_CLSSid_Kind, kind_0);
+											final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+											final LibraryIterationExtension IMPL_closure_0 = (LibraryIterationExtension)TYPE_closure_0.lookupImplementation(standardLibrary, OCLstdlibTables.Operations._Set__closure);
+											final /*@NonNull*/ Object ACC_closure_0 = IMPL_closure_0.createAccumulatorValue(executor, OCCITables.SET_CLSSid_Kind, OCCITables.CLSSid_Kind);
+											/**
+											 * Implementation of the iterator body.
+											 */
+											final AbstractBinaryOperation BODY_closure_0 = new AbstractBinaryOperation() {
+												/**
+												 * parent
+												 */
+												@Override
+												public /*@Nullable*/ Object evaluate(final Executor executor, final TypeId typeId, final /*@Nullable*/ Object oclAsSet, final /*@NonInvalid*/ Object _1_0) {
+													final /*@NonInvalid*/ Kind local_0 = (Kind)_1_0;
+													if (local_0 == null) {
+														throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::Kind::parent\'");
+													}
+													final /*@Thrown*/ Kind parent = local_0.getParent();
+													return parent;
+												}
+											};
+											final ExecutorSingleIterationManager MGR_closure_0 = new ExecutorSingleIterationManager(executor, OCCITables.SET_CLSSid_Kind, BODY_closure_0, oclAsSet, ACC_closure_0);
+											final /*@Thrown*/ SetValue closure = (SetValue)IMPL_closure_0.evaluateIteration(MGR_closure_0);
+											final /*@Thrown*/ boolean includes = CollectionIncludesOperation.INSTANCE.evaluate(closure, k).booleanValue();
+											CAUGHT_includes = includes;
+										}
+										catch (Exception e) {
+											CAUGHT_includes = ValueUtil.createInvalidValue(e);
+										}
+										//
+										if (CAUGHT_includes == ValueUtil.TRUE_VALUE) {					// Normal successful body evaluation result
+											exists = ValueUtil.TRUE_VALUE;
+											break;														// Stop immediately
+										}
+										else if (CAUGHT_includes == ValueUtil.FALSE_VALUE) {				// Normal unsuccessful body evaluation result
+											;															// Carry on
+										}
+										else if (CAUGHT_includes instanceof InvalidValueException) {		// Abnormal exception evaluation result
+											accumulator_1 = CAUGHT_includes;									// Cache an exception failure
+										}
+										else {															// Impossible badly typed result
+											accumulator_1 = new InvalidValueException(PivotMessages.NonBooleanBody, "exists");
+										}
+									}
+									CAUGHT_exists = exists;
+								}
+								catch (Exception e) {
+									CAUGHT_exists = ValueUtil.createInvalidValue(e);
+								}
+								if (CAUGHT_exists == ValueUtil.TRUE_VALUE) {
+									implies = ValueUtil.TRUE_VALUE;
+								}
+								else {
+									if (CAUGHT_exists instanceof InvalidValueException) {
+										throw (InvalidValueException)CAUGHT_exists;
+									}
+									if (CAUGHT_exists == null) {
+										implies = null;
+									}
+									else {
+										implies = ValueUtil.FALSE_VALUE;
+									}
+								}
 							}
 							CAUGHT_implies = implies;
 						}
 						catch (Exception e) {
 							CAUGHT_implies = ValueUtil.createInvalidValue(e);
 						}
-						return CAUGHT_implies;
+						//
+						if (CAUGHT_implies == ValueUtil.FALSE_VALUE) {					// Normal unsuccessful body evaluation result
+							result = ValueUtil.FALSE_VALUE;
+							break;														// Stop immediately
+						}
+						else if (CAUGHT_implies == ValueUtil.TRUE_VALUE) {				// Normal successful body evaluation result
+							;															// Carry on
+						}
+						else if (CAUGHT_implies == null) {								// Abnormal null body evaluation result
+							if (accumulator_0 == ValueUtil.TRUE_VALUE) {
+								accumulator_0 = null;										// Cache a null failure
+							}
+						}
+						else if (CAUGHT_implies instanceof InvalidValueException) {		// Abnormal exception evaluation result
+							accumulator_0 = CAUGHT_implies;									// Cache an exception failure
+						}
+						else {															// Impossible badly typed result
+							accumulator_0 = new InvalidValueException(PivotMessages.NonBooleanBody, "forAll");
+						}
 					}
-				};
-				final /*@NonNull*/  ExecutorDoubleIterationManager MGR_status_0 = new ExecutorDoubleIterationManager(executor, TypeId.BOOLEAN, BODY_status_0, BOXED_parts, ACC_status_0);
-				final /*@Thrown*/ Boolean status = (Boolean)IMPL_status_0.evaluateIteration(MGR_status_0);
-				final /*@Thrown*/ boolean eq = status == Boolean.TRUE;
-				/*@Thrown*/ Object symbol_5;
-				if (eq) {
-					symbol_5 = ValueUtil.TRUE_VALUE;
+					CAUGHT_result = result;
 				}
-				else {
-					final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Entity_0 = idResolver.getClass(OCCITables.CLSSid_Entity, null);
-					final /*@Thrown*/ Entity oclAsType = ClassUtil.nonNullState((Entity)OclAnyOclAsTypeOperation.INSTANCE.evaluate(executor, this, TYP_occi_c_c_Entity_0));
-					final /*@Thrown*/ String id = oclAsType.getId();
-					final /*@Thrown*/ String sum = StringConcatOperation.INSTANCE.evaluate(OCCITables.STR_Two_32_instances_32_of_32_the_32_same_32_mixin_32_are_32_not_32_allowed_32_on_32_the_32_same_32_Enti, id);
-					final /*@NonInvalid*/ IntegerValue diff = (IntegerValue)NumericNegateOperation.INSTANCE.evaluate(OCCITables.INT_1);
-					final /*@Thrown*/ TupleValue symbol_4 = ValueUtil.createTupleOfEach(OCCITables.TUPLid__0, sum, OCCITables.STR_quickfix, diff, status);
-					symbol_5 = symbol_4;
+				catch (Exception e) {
+					CAUGHT_result = ValueUtil.createInvalidValue(e);
 				}
-				CAUGHT_symbol_5 = symbol_5;
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
+				local_1 = logDiagnostic;
 			}
-			catch (Exception e) {
-				CAUGHT_symbol_5 = ValueUtil.createInvalidValue(e);
-			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_Entity_c_c_DifferentMixins, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_symbol_5, OCCITables.INT_0).booleanValue();
-			symbol_6 = logDiagnostic;
+			return local_1;
 		}
-		return Boolean.TRUE == symbol_6;
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
 	}
 
 	/**
@@ -871,57 +810,200 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean IdUnique(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv IdUnique:
-		 *   let severity : Integer[1] = 'Entity::IdUnique'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let result : Boolean[1] = Entity.allInstances()->isUnique(id)
-		 *       in
-		 *         'Entity::IdUnique'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_Entity_c_c_IdUnique);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ boolean symbol_0;
-		if (le) {
-			symbol_0 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Entity_0 = idResolver.getClass(OCCITables.CLSSid_Entity, null);
-			final /*@NonInvalid*/ SetValue allInstances = ClassifierAllInstancesOperation.INSTANCE.evaluate(executor, OCCITables.SET_CLSSid_Entity, TYP_occi_c_c_Entity_0);
-			/*@Thrown*/ SetValue.Accumulator accumulator = ValueUtil.createSetAccumulatorValue(OCCITables.SET_CLSSid_Entity);
-			/*@NonNull*/ Iterator<Object> ITERATOR__1 = allInstances.iterator();
-			/*@NonInvalid*/ boolean result;
-			while (true) {
-				if (!ITERATOR__1.hasNext()) {
-					result = ValueUtil.TRUE_VALUE;
-					break;
-				}
-				/*@NonInvalid*/ Entity _1 = (Entity)ITERATOR__1.next();
-				/**
-				 * id
-				 */
-				final /*@NonInvalid*/ String id = _1.getId();
-				//
-				if (accumulator.includes(id) == ValueUtil.TRUE_VALUE) {
-					result = ValueUtil.FALSE_VALUE;			// Abort after second find
-					break;
-				}
-				else {
-					accumulator.add(id);
-				}
+	@Override
+	public boolean DifferentMixins(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Entity::DifferentMixins";
+		try {
+			/**
+			 *
+			 * inv DifferentMixins:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let
+			 *         result : OclAny[1] = let
+			 *           status : Boolean[?] = self.parts->forAll(mixinBase1, mixinBase2 | mixinBase1 <> mixinBase2 implies mixinBase1.mixin <> mixinBase2.mixin)
+			 *         in
+			 *           if status = true
+			 *           then true
+			 *           else
+			 *             Tuple{status = status, message = 'Two instances of the same mixin are not allowed on the same Entity ' +
+			 *               self.oclAsType(Entity).id, severity = -1, quickfix = 'quickfix'
+			 *             }
+			 *           endif
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ StandardLibrary standardLibrary = idResolver.getStandardLibrary();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.ENTITY___DIFFERENT_MIXINS__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_6;
+			if (le) {
+				local_6 = true;
 			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_Entity_c_c_IdUnique, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, OCCITables.INT_0).booleanValue();
-			symbol_0 = logDiagnostic;
+			else {
+				/*@Caught*/ Object CAUGHT_local_5;
+				try {
+					final /*@NonInvalid*/ List<MixinBase> parts = this.getParts();
+					final /*@NonInvalid*/ OrderedSetValue BOXED_parts = idResolver.createOrderedSetOfAll(OCCITables.ORD_CLSSid_MixinBase, parts);
+					final org.eclipse.ocl.pivot.Class TYPE_status_0 = executor.getStaticTypeOfValue(null, BOXED_parts);
+					final LibraryIterationExtension IMPL_status_0 = (LibraryIterationExtension)TYPE_status_0.lookupImplementation(standardLibrary, OCLstdlibTables.Operations._Collection__1_forAll);
+					final /*@NonNull*/ Object ACC_status_0 = IMPL_status_0.createAccumulatorValue(executor, TypeId.BOOLEAN, TypeId.BOOLEAN);
+					/**
+					 * Implementation of the iterator body.
+					 */
+					final AbstractSimpleOperation BODY_status_0 = new AbstractSimpleOperation() {
+						/**
+						 * mixinBase1 <> mixinBase2 implies mixinBase1.mixin <> mixinBase2.mixin
+						 */
+						@Override
+						public /*@Nullable*/ Object evaluate(final Executor executor, final TypeId typeId, final /*@Nullable*/ Object /*@NonNull*/ [] sourceAndArgumentValues) {
+							final /*@NonInvalid*/ OrderedSetValue BOXED_parts = (OrderedSetValue)sourceAndArgumentValues[0];
+							final /*@NonInvalid*/ Object mixinBase1 = sourceAndArgumentValues[1];
+							final /*@NonInvalid*/ Object mixinBase2 = sourceAndArgumentValues[2];
+							/*@Caught*/ Object CAUGHT_implies;
+							try {
+								final /*@NonInvalid*/ MixinBase local_0 = (MixinBase)mixinBase1;
+								final /*@NonInvalid*/ MixinBase local_1 = (MixinBase)mixinBase2;
+								final /*@NonInvalid*/ boolean ne = (local_0 != null) ? !local_0.equals(local_1) : (local_1 != null);
+								final /*@Thrown*/ Boolean implies;
+								if (!ne) {
+									implies = ValueUtil.TRUE_VALUE;
+								}
+								else {
+									/*@Caught*/ Object CAUGHT_ne_0;
+									try {
+										if (local_0 == null) {
+											throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::MixinBase::mixin\'");
+										}
+										final /*@Thrown*/ Mixin mixin = local_0.getMixin();
+										if (local_1 == null) {
+											throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::MixinBase::mixin\'");
+										}
+										final /*@Thrown*/ Mixin mixin_0 = local_1.getMixin();
+										final /*@Thrown*/ boolean ne_0 = !mixin.equals(mixin_0);
+										CAUGHT_ne_0 = ne_0;
+									}
+									catch (Exception e) {
+										CAUGHT_ne_0 = ValueUtil.createInvalidValue(e);
+									}
+									if (CAUGHT_ne_0 == ValueUtil.TRUE_VALUE) {
+										implies = ValueUtil.TRUE_VALUE;
+									}
+									else {
+										if (CAUGHT_ne_0 instanceof InvalidValueException) {
+											throw (InvalidValueException)CAUGHT_ne_0;
+										}
+										implies = ValueUtil.FALSE_VALUE;
+									}
+								}
+								CAUGHT_implies = implies;
+							}
+							catch (Exception e) {
+								CAUGHT_implies = ValueUtil.createInvalidValue(e);
+							}
+							return CAUGHT_implies;
+						}
+					};
+					final ExecutorMultipleIterationManager MGR_status_0 = new ExecutorMultipleIterationManager(executor, 2, TypeId.BOOLEAN, BODY_status_0, BOXED_parts, ACC_status_0);
+					final /*@Thrown*/ Boolean status = (Boolean)IMPL_status_0.evaluateIteration(MGR_status_0);
+					final /*@Thrown*/ boolean eq = status == Boolean.TRUE;
+					/*@Thrown*/ Object local_5;
+					if (eq) {
+						local_5 = ValueUtil.TRUE_VALUE;
+					}
+					else {
+						final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Entity_0 = idResolver.getClass(OCCITables.CLSSid_Entity, null);
+						final /*@Thrown*/ Entity oclAsType = (Entity)OclAnyOclAsTypeOperation.INSTANCE.evaluate(executor, this, TYP_occi_c_c_Entity_0);
+						final /*@Thrown*/ String id = oclAsType.getId();
+						final /*@Thrown*/ String sum = StringConcatOperation.INSTANCE.evaluate(OCCITables.STR_Two_32_instances_32_of_32_the_32_same_32_mixin_32_are_32_not_32_allowed_32_on_32_the_32_same_32_Enti, id);
+						final /*@NonInvalid*/ IntegerValue diff = (IntegerValue)NumericNegateOperation.INSTANCE.evaluate(OCCITables.INT_1);
+						final /*@Thrown*/ TupleValue local_4 = ValueUtil.createTupleOfEach(OCCITables.TUPLid__0, sum, OCCITables.STR_quickfix, diff, status);
+						local_5 = local_4;
+					}
+					CAUGHT_local_5 = local_5;
+				}
+				catch (Exception e) {
+					CAUGHT_local_5 = ValueUtil.createInvalidValue(e);
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_local_5, OCCITables.INT_0).booleanValue();
+				local_6 = logDiagnostic;
+			}
+			return local_6;
 		}
-		return Boolean.TRUE == symbol_0;
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean IdUnique(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+		final String constraintName = "Entity::IdUnique";
+		try {
+			/**
+			 *
+			 * inv IdUnique:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let result : Boolean[1] = Entity.allInstances()->isUnique(id)
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IdResolver idResolver = executor.getIdResolver();
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.ENTITY___ID_UNIQUE__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
+			}
+			else {
+				final /*@NonInvalid*/ org.eclipse.ocl.pivot.Class TYP_occi_c_c_Entity_0 = idResolver.getClass(OCCITables.CLSSid_Entity, null);
+				final /*@NonInvalid*/ SetValue allInstances = ClassifierAllInstancesOperation.INSTANCE.evaluate(executor, OCCITables.SET_CLSSid_Entity, TYP_occi_c_c_Entity_0);
+				/*@Thrown*/ org.eclipse.ocl.pivot.values.SetValue.Accumulator accumulator = ValueUtil.createSetAccumulatorValue(OCCITables.SET_CLSSid_Entity);
+				Iterator<Object> ITERATOR__1 = allInstances.iterator();
+				/*@NonInvalid*/ boolean result;
+				while (true) {
+					if (!ITERATOR__1.hasNext()) {
+						result = true;
+						break;
+					}
+					/*@NonInvalid*/ Entity _1 = (Entity)ITERATOR__1.next();
+					/**
+					 * id
+					 */
+					final /*@NonInvalid*/ String id = _1.getId();
+					//
+					if (accumulator.includes(id) == ValueUtil.TRUE_VALUE) {
+						result = false;
+						break;			// Abort after second find
+					}
+					else {
+						accumulator.add(id);
+					}
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, result, OCCITables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
+			}
+			return local_0;
+		}
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
 	}
 
 	/**

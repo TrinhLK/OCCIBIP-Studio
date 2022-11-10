@@ -16,9 +16,7 @@ import java.util.Map;
 import org.eclipse.cmf.occi.core.OCCIPackage;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.cmf.occi.core.StringType;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -26,14 +24,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.ocl.pivot.evaluation.Executor;
 import org.eclipse.ocl.pivot.ids.TypeId;
-import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
 import org.eclipse.ocl.pivot.library.oclany.OclComparableGreaterThanOperation;
 import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
 import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
 import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
 import org.eclipse.ocl.pivot.library.string.StringSizeOperation;
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 import org.eclipse.ocl.pivot.values.IntegerValue;
+import org.eclipse.ocl.pivot.values.InvalidValueException;
 
 /**
  * <!-- begin-user-doc -->
@@ -183,6 +182,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPattern() {
 		return pattern;
 	}
@@ -192,6 +192,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPattern(String newPattern) {
 		String oldPattern = pattern;
 		pattern = newPattern;
@@ -204,6 +205,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Integer getLength() {
 		return length;
 	}
@@ -213,6 +215,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLength(Integer newLength) {
 		Integer oldLength = length;
 		length = newLength;
@@ -227,6 +230,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetLength() {
 		Integer oldLength = length;
 		boolean oldLengthESet = lengthESet;
@@ -241,6 +245,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetLength() {
 		return lengthESet;
 	}
@@ -250,6 +255,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Integer getMinLength() {
 		return minLength;
 	}
@@ -259,6 +265,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinLength(Integer newMinLength) {
 		Integer oldMinLength = minLength;
 		minLength = newMinLength;
@@ -273,6 +280,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMinLength() {
 		Integer oldMinLength = minLength;
 		boolean oldMinLengthESet = minLengthESet;
@@ -287,6 +295,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMinLength() {
 		return minLengthESet;
 	}
@@ -296,6 +305,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Integer getMaxLength() {
 		return maxLength;
 	}
@@ -305,6 +315,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxLength(Integer newMaxLength) {
 		Integer oldMaxLength = maxLength;
 		maxLength = newMaxLength;
@@ -319,6 +330,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMaxLength() {
 		Integer oldMaxLength = maxLength;
 		boolean oldMaxLengthESet = maxLengthESet;
@@ -333,6 +345,7 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMaxLength() {
 		return maxLengthESet;
 	}
@@ -342,55 +355,64 @@ public class StringTypeImpl extends BasicTypeImpl implements StringType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean PatternMustBeNotEmpty(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv PatternMustBeNotEmpty:
-		 *   let
-		 *     severity : Integer[1] = 'StringType::PatternMustBeNotEmpty'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let
-		 *         result : Boolean[1] = if pattern <> null
-		 *         then pattern.size() > 0
-		 *         else true
-		 *         endif
-		 *       in
-		 *         'StringType::PatternMustBeNotEmpty'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_StringType_c_c_PatternMustBeNotEmpty);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ boolean symbol_0;
-		if (le) {
-			symbol_0 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			/*@Caught*/ /*@NonNull*/ Object CAUGHT_result;
-			try {
-				final /*@NonInvalid*/ String pattern = this.getPattern();
-				final /*@NonInvalid*/ boolean ne = pattern != null;
-				/*@Thrown*/ boolean result;
-				if (ne) {
-					final /*@Thrown*/ IntegerValue size = StringSizeOperation.INSTANCE.evaluate(pattern);
-					final /*@Thrown*/ boolean gt = OclComparableGreaterThanOperation.INSTANCE.evaluate(executor, size, OCCITables.INT_0).booleanValue();
-					result = gt;
-				}
-				else {
-					result = ValueUtil.TRUE_VALUE;
-				}
-				CAUGHT_result = result;
+		final String constraintName = "StringType::PatternMustBeNotEmpty";
+		try {
+			/**
+			 *
+			 * inv PatternMustBeNotEmpty:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let
+			 *         result : Boolean[1] = if pattern <> null
+			 *         then pattern.size() > 0
+			 *         else true
+			 *         endif
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.STRING_TYPE___PATTERN_MUST_BE_NOT_EMPTY__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
 			}
-			catch (Exception e) {
-				CAUGHT_result = ValueUtil.createInvalidValue(e);
+			else {
+				/*@Caught*/ Object CAUGHT_result;
+				try {
+					final /*@NonInvalid*/ String pattern = this.getPattern();
+					final /*@NonInvalid*/ boolean ne = pattern != null;
+					/*@Thrown*/ boolean result;
+					if (ne) {
+						if (pattern == null) {
+							throw new InvalidValueException("Null \'\'String\'\' rather than \'\'OclVoid\'\' value required");
+						}
+						final /*@Thrown*/ IntegerValue size = StringSizeOperation.INSTANCE.evaluate(pattern);
+						final /*@Thrown*/ boolean gt = OclComparableGreaterThanOperation.INSTANCE.evaluate(executor, size, OCCITables.INT_0).booleanValue();
+						result = gt;
+					}
+					else {
+						result = true;
+					}
+					CAUGHT_result = result;
+				}
+				catch (Exception e) {
+					CAUGHT_result = ValueUtil.createInvalidValue(e);
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
 			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_StringType_c_c_PatternMustBeNotEmpty, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
-			symbol_0 = logDiagnostic;
+			return local_0;
 		}
-		return Boolean.TRUE == symbol_0;
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
 	}
 
 	/**

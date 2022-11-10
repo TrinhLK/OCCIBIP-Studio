@@ -46,7 +46,6 @@ public interface Annotation extends EObject {
 	 * @see #setKey(String)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getAnnotation_Key()
 	 * @model dataType="org.eclipse.cmf.occi.core.String" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Annotation!key'"
 	 * @generated
 	 */
 	String getKey();
@@ -73,7 +72,6 @@ public interface Annotation extends EObject {
 	 * @see #setValue(String)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getAnnotation_Value()
 	 * @model dataType="org.eclipse.cmf.occi.core.String" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Annotation!value'"
 	 * @generated
 	 */
 	String getValue();

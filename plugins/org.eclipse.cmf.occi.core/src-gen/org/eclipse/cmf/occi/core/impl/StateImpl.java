@@ -24,10 +24,8 @@ import org.eclipse.cmf.occi.core.OCCIPackage;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.cmf.occi.core.State;
 import org.eclipse.cmf.occi.core.Transition;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
@@ -44,14 +42,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.ocl.pivot.evaluation.Executor;
 
 import org.eclipse.ocl.pivot.ids.TypeId;
-
-import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
-
 import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
 
 import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
 import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
 
+import org.eclipse.ocl.pivot.utilities.PivotUtil;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 
 import org.eclipse.ocl.pivot.values.IntegerValue;
@@ -159,6 +155,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral getLiteral() {
 		if (literal != null && literal.eIsProxy()) {
 			InternalEObject oldLiteral = (InternalEObject)literal;
@@ -185,6 +182,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLiteral(EnumerationLiteral newLiteral) {
 		EnumerationLiteral oldLiteral = literal;
 		literal = newLiteral;
@@ -197,6 +195,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isInitial() {
 		return initial;
 	}
@@ -206,6 +205,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitial(boolean newInitial) {
 		boolean oldInitial = initial;
 		initial = newInitial;
@@ -218,6 +218,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFinal() {
 		return final_;
 	}
@@ -227,6 +228,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinal(boolean newFinal) {
 		boolean oldFinal = final_;
 		final_ = newFinal;
@@ -239,6 +241,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FSM getOwningFSM() {
 		if (eContainerFeatureID() != OCCIPackage.STATE__OWNING_FSM) return null;
 		return (FSM)eInternalContainer();
@@ -259,6 +262,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningFSM(FSM newOwningFSM) {
 		if (newOwningFSM != eInternalContainer() || (eContainerFeatureID() != OCCIPackage.STATE__OWNING_FSM && newOwningFSM != null)) {
 			if (EcoreUtil.isAncestor(this, newOwningFSM))
@@ -280,6 +284,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getOutgoingTransition() {
 		if (outgoingTransition == null) {
 			outgoingTransition = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, OCCIPackage.STATE__OUTGOING_TRANSITION, OCCIPackage.TRANSITION__SOURCE);
@@ -292,49 +297,55 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean StateLiteralAlreadyDefinedInFSMAttributeType(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-		/**
-		 *
-		 * inv StateLiteralAlreadyDefinedInFSMAttributeType:
-		 *   let
-		 *     severity : Integer[1] = 'State::StateLiteralAlreadyDefinedInFSMAttributeType'.getSeverity()
-		 *   in
-		 *     if severity <= 0
-		 *     then true
-		 *     else
-		 *       let result : Boolean[1] = owningFSM.attribute.type = self.literal.enumerationType
-		 *       in
-		 *         'State::StateLiteralAlreadyDefinedInFSMAttributeType'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
-		 *     endif
-		 */
-		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
-		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCITables.STR_State_c_c_StateLiteralAlreadyDefinedInFSMAttributeType);
-		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
-		/*@NonInvalid*/ boolean symbol_0;
-		if (le) {
-			symbol_0 = ValueUtil.TRUE_VALUE;
-		}
-		else {
-			/*@Caught*/ /*@NonNull*/ Object CAUGHT_result;
-			try {
-				final /*@NonInvalid*/ FSM owningFSM = this.getOwningFSM();
-				final /*@NonInvalid*/ Attribute attribute = owningFSM.getAttribute();
-				final /*@NonInvalid*/ DataType type = attribute.getType();
-				final /*@NonInvalid*/ EnumerationLiteral literal = this.getLiteral();
-				if (literal == null) {
-					throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::EnumerationLiteral::enumerationType\'");
+		final String constraintName = "State::StateLiteralAlreadyDefinedInFSMAttributeType";
+		try {
+			/**
+			 *
+			 * inv StateLiteralAlreadyDefinedInFSMAttributeType:
+			 *   let severity : Integer[1] = constraintName.getSeverity()
+			 *   in
+			 *     if severity <= 0
+			 *     then true
+			 *     else
+			 *       let result : Boolean[1] = owningFSM.attribute.type = self.literal.enumerationType
+			 *       in
+			 *         constraintName.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)
+			 *     endif
+			 */
+			final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+			final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, OCCIPackage.Literals.STATE___STATE_LITERAL_ALREADY_DEFINED_IN_FSM_ATTRIBUTE_TYPE__DIAGNOSTICCHAIN_MAP);
+			final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, OCCITables.INT_0).booleanValue();
+			/*@NonInvalid*/ boolean local_0;
+			if (le) {
+				local_0 = true;
+			}
+			else {
+				/*@Caught*/ Object CAUGHT_result;
+				try {
+					final /*@NonInvalid*/ FSM owningFSM = this.getOwningFSM();
+					final /*@NonInvalid*/ Attribute attribute = owningFSM.getAttribute();
+					final /*@NonInvalid*/ DataType type = attribute.getType();
+					final /*@NonInvalid*/ EnumerationLiteral literal = this.getLiteral();
+					if (literal == null) {
+						throw new InvalidValueException("Null source for \'\'http://schemas.ogf.org/occi/core/ecore\'::EnumerationLiteral::enumerationType\'");
+					}
+					final /*@Thrown*/ EnumerationType enumerationType = literal.getEnumerationType();
+					final /*@Thrown*/ boolean result = enumerationType.equals(type);
+					CAUGHT_result = result;
 				}
-				final /*@Thrown*/ EnumerationType enumerationType = literal.getEnumerationType();
-				final /*@Thrown*/ boolean result = enumerationType.equals(type);
-				CAUGHT_result = result;
+				catch (Exception e) {
+					CAUGHT_result = ValueUtil.createInvalidValue(e);
+				}
+				final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, constraintName, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
+				local_0 = logDiagnostic;
 			}
-			catch (Exception e) {
-				CAUGHT_result = ValueUtil.createInvalidValue(e);
-			}
-			final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, OCCITables.STR_State_c_c_StateLiteralAlreadyDefinedInFSMAttributeType, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, OCCITables.INT_0).booleanValue();
-			symbol_0 = logDiagnostic;
+			return local_0;
 		}
-		return Boolean.TRUE == symbol_0;
+		catch (Throwable e) {
+			return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+		}
 	}
 
 	/**

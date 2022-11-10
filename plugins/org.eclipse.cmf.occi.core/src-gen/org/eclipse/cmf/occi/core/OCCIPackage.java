@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.eclipse.cmf.occi.core.OCCIFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore"
  * @generated
  */
 public interface OCCIPackage extends EPackage {
@@ -1133,13 +1134,22 @@ public interface OCCIPackage extends EPackage {
 	int ACTION__DESCRIPTION = CATEGORY__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Actiontype</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__ACTIONTYPE = CATEGORY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = CATEGORY_FEATURE_COUNT + 0;
+	int ACTION_FEATURE_COUNT = CATEGORY_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Attributes Name Unique</em>' operation.
@@ -3986,6 +3996,17 @@ public interface OCCIPackage extends EPackage {
 	EClass getAction();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.cmf.occi.core.Action#getActiontype <em>Actiontype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Actiontype</em>'.
+	 * @see org.eclipse.cmf.occi.core.Action#getActiontype()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Actiontype();
+
+	/**
 	 * Returns the meta object for the '{@link org.eclipse.cmf.occi.core.Action#containedAction(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Contained Action</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5796,6 +5817,14 @@ public interface OCCIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ACTION = eINSTANCE.getAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Actiontype</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__ACTIONTYPE = eINSTANCE.getAction_Actiontype();
 
 		/**
 		 * The meta object literal for the '<em><b>Contained Action</b></em>' operation.

@@ -80,6 +80,7 @@ public abstract class AnnotatedElementImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Annotation> getAnnotations() {
 		if (annotations == null) {
 			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, OCCIPackage.ANNOTATED_ELEMENT__ANNOTATIONS);

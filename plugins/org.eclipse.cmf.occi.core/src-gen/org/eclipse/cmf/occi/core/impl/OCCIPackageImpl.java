@@ -395,6 +395,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 		EValidator.Registry.INSTANCE.put
 			(theOCCIPackage,
 			 new EValidator.Descriptor() {
+				 @Override
 				 public EValidator getEValidator() {
 					 return OCCIValidator.INSTANCE;
 				 }
@@ -413,6 +414,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotatedElement() {
 		return annotatedElementEClass;
 	}
@@ -422,6 +424,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnnotatedElement_Annotations() {
 		return (EReference)annotatedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -431,6 +434,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnotation() {
 		return annotationEClass;
 	}
@@ -440,6 +444,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAnnotation_Key() {
 		return (EAttribute)annotationEClass.getEStructuralFeatures().get(0);
 	}
@@ -449,6 +454,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAnnotation_Value() {
 		return (EAttribute)annotationEClass.getEStructuralFeatures().get(1);
 	}
@@ -458,6 +464,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCategory() {
 		return categoryEClass;
 	}
@@ -467,6 +474,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCategory_Name() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(0);
 	}
@@ -476,6 +484,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCategory_Term() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(1);
 	}
@@ -485,6 +494,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCategory_Scheme() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(2);
 	}
@@ -494,6 +504,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCategory_Title() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(3);
 	}
@@ -503,6 +514,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCategory_Attributes() {
 		return (EReference)categoryEClass.getEStructuralFeatures().get(4);
 	}
@@ -512,6 +524,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCategory_Description() {
 		return (EAttribute)categoryEClass.getEStructuralFeatures().get(5);
 	}
@@ -521,6 +534,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getCategory__AttributesNameUnique__DiagnosticChain_Map() {
 		return categoryEClass.getEOperations().get(0);
 	}
@@ -530,6 +544,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getCategory__IdentityUnique__DiagnosticChain_Map() {
 		return categoryEClass.getEOperations().get(1);
 	}
@@ -539,6 +554,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getCategory__SchemeEndsWithSharp__DiagnosticChain_Map() {
 		return categoryEClass.getEOperations().get(2);
 	}
@@ -548,6 +564,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConstraint() {
 		return constraintEClass;
 	}
@@ -557,6 +574,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConstraint_Name() {
 		return (EAttribute)constraintEClass.getEStructuralFeatures().get(0);
 	}
@@ -566,6 +584,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConstraint_Description() {
 		return (EAttribute)constraintEClass.getEStructuralFeatures().get(1);
 	}
@@ -575,6 +594,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConstraint_Body() {
 		return (EAttribute)constraintEClass.getEStructuralFeatures().get(2);
 	}
@@ -584,6 +604,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -593,6 +614,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_Actions() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(0);
 	}
@@ -602,6 +624,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_Constraints() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(1);
 	}
@@ -611,6 +634,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_Fsm() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(2);
 	}
@@ -620,6 +644,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getType__ActionTermUnicity__DiagnosticChain_Map() {
 		return typeEClass.getEOperations().get(0);
 	}
@@ -629,6 +654,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getType__ConstraintNameUnique__DiagnosticChain_Map() {
 		return typeEClass.getEOperations().get(1);
 	}
@@ -638,6 +664,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFSM() {
 		return fsmEClass;
 	}
@@ -647,6 +674,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFSM_OwnedState() {
 		return (EReference)fsmEClass.getEStructuralFeatures().get(0);
 	}
@@ -656,6 +684,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFSM_Attribute() {
 		return (EReference)fsmEClass.getEStructuralFeatures().get(1);
 	}
@@ -665,6 +694,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getFSM__AttributeTypeMustBeEEnum__DiagnosticChain_Map() {
 		return fsmEClass.getEOperations().get(0);
 	}
@@ -674,6 +704,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getFSM__ContainedAttribute__DiagnosticChain_Map() {
 		return fsmEClass.getEOperations().get(1);
 	}
@@ -683,6 +714,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -692,6 +724,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_Literal() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(0);
 	}
@@ -701,6 +734,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getState_Initial() {
 		return (EAttribute)stateEClass.getEStructuralFeatures().get(1);
 	}
@@ -710,6 +744,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getState_Final() {
 		return (EAttribute)stateEClass.getEStructuralFeatures().get(2);
 	}
@@ -719,6 +754,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_OwningFSM() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(3);
 	}
@@ -728,6 +764,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_OutgoingTransition() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(4);
 	}
@@ -737,6 +774,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getState__StateLiteralAlreadyDefinedInFSMAttributeType__DiagnosticChain_Map() {
 		return stateEClass.getEOperations().get(0);
 	}
@@ -746,6 +784,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransition() {
 		return transitionEClass;
 	}
@@ -755,6 +794,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransition_Source() {
 		return (EReference)transitionEClass.getEStructuralFeatures().get(0);
 	}
@@ -764,6 +804,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransition_Target() {
 		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
 	}
@@ -773,6 +814,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransition_Action() {
 		return (EReference)transitionEClass.getEStructuralFeatures().get(2);
 	}
@@ -782,6 +824,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getTransition__ContainedActionMustBeDeclaredInTheAppropriateType__DiagnosticChain_Map() {
 		return transitionEClass.getEOperations().get(0);
 	}
@@ -791,6 +834,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -800,6 +844,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Name() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -809,6 +854,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Mutable() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -818,6 +864,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Required() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -827,6 +874,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Default() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
@@ -836,6 +884,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Description() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(4);
 	}
@@ -845,6 +894,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_Type() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(5);
 	}
@@ -854,6 +904,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAttribute__DefaultValueMustBeInstanceOfType__DiagnosticChain_Map() {
 		return attributeEClass.getEOperations().get(0);
 	}
@@ -863,6 +914,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getKind() {
 		return kindEClass;
 	}
@@ -872,6 +924,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getKind_Parent() {
 		return (EReference)kindEClass.getEStructuralFeatures().get(0);
 	}
@@ -881,6 +934,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getKind_Entities() {
 		return (EReference)kindEClass.getEStructuralFeatures().get(1);
 	}
@@ -890,6 +944,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getKind_Source() {
 		return (EReference)kindEClass.getEStructuralFeatures().get(2);
 	}
@@ -899,6 +954,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getKind_Target() {
 		return (EReference)kindEClass.getEStructuralFeatures().get(3);
 	}
@@ -908,6 +964,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__OcciIsKindOf__Kind() {
 		return kindEClass.getEOperations().get(0);
 	}
@@ -917,6 +974,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__NoCyclicInheritance__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(3);
 	}
@@ -926,6 +984,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__AttributesNameNotAlreadyDefinedInParent__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(5);
 	}
@@ -935,6 +994,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__SourceReferenceInvariant__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(6);
 	}
@@ -944,6 +1004,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__CorrectScheme__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(1);
 	}
@@ -953,6 +1014,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__TargetReferenceInvariant__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(2);
 	}
@@ -962,6 +1024,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKind__EntityKindIsRootParent__DiagnosticChain_Map() {
 		return kindEClass.getEOperations().get(4);
 	}
@@ -971,6 +1034,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAction() {
 		return actionEClass;
 	}
@@ -980,6 +1044,17 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EAttribute getAction_Actiontype() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EOperation getAction__ContainedAction__DiagnosticChain_Map() {
 		return actionEClass.getEOperations().get(0);
 	}
@@ -989,6 +1064,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAction__CorrectScheme__DiagnosticChain_Map() {
 		return actionEClass.getEOperations().get(1);
 	}
@@ -998,6 +1074,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMixin() {
 		return mixinEClass;
 	}
@@ -1007,6 +1084,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixin_Depends() {
 		return (EReference)mixinEClass.getEStructuralFeatures().get(0);
 	}
@@ -1016,6 +1094,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixin_Applies() {
 		return (EReference)mixinEClass.getEStructuralFeatures().get(1);
 	}
@@ -1025,6 +1104,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixin_Entities() {
 		return (EReference)mixinEClass.getEStructuralFeatures().get(2);
 	}
@@ -1034,6 +1114,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMixin__CorrectScheme__DiagnosticChain_Map() {
 		return mixinEClass.getEOperations().get(0);
 	}
@@ -1043,6 +1124,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMixin__NoCyclicInheritance__DiagnosticChain_Map() {
 		return mixinEClass.getEOperations().get(1);
 	}
@@ -1052,6 +1134,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMixin__AttributesNameNotAlreadyDefinedInDepends__DiagnosticChain_Map() {
 		return mixinEClass.getEOperations().get(2);
 	}
@@ -1061,6 +1144,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEntity() {
 		return entityEClass;
 	}
@@ -1070,6 +1154,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_Id() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1079,6 +1164,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_Title() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
 	}
@@ -1088,6 +1174,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Kind() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(2);
 	}
@@ -1097,6 +1184,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEntity_Location() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(3);
 	}
@@ -1106,6 +1194,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Attributes() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(4);
 	}
@@ -1115,6 +1204,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Mixins() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(5);
 	}
@@ -1124,6 +1214,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEntity_Parts() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(6);
 	}
@@ -1133,6 +1224,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__OcciCreate() {
 		return entityEClass.getEOperations().get(0);
 	}
@@ -1142,6 +1234,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__OcciRetrieve() {
 		return entityEClass.getEOperations().get(1);
 	}
@@ -1151,6 +1244,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__OcciUpdate() {
 		return entityEClass.getEOperations().get(2);
 	}
@@ -1160,6 +1254,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__OcciDelete() {
 		return entityEClass.getEOperations().get(3);
 	}
@@ -1169,6 +1264,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__AttributesNameUnique__DiagnosticChain_Map() {
 		return entityEClass.getEOperations().get(5);
 	}
@@ -1178,6 +1274,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__KindCompatibleWithOneAppliesOfEachMixin__DiagnosticChain_Map() {
 		return entityEClass.getEOperations().get(6);
 	}
@@ -1187,6 +1284,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__DifferentMixins__DiagnosticChain_Map() {
 		return entityEClass.getEOperations().get(7);
 	}
@@ -1196,6 +1294,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEntity__IdUnique__DiagnosticChain_Map() {
 		return entityEClass.getEOperations().get(4);
 	}
@@ -1205,6 +1304,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMixinBase() {
 		return mixinBaseEClass;
 	}
@@ -1214,6 +1314,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixinBase_Mixin() {
 		return (EReference)mixinBaseEClass.getEStructuralFeatures().get(0);
 	}
@@ -1223,6 +1324,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixinBase_Entity() {
 		return (EReference)mixinBaseEClass.getEStructuralFeatures().get(1);
 	}
@@ -1232,6 +1334,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMixinBase_Attributes() {
 		return (EReference)mixinBaseEClass.getEStructuralFeatures().get(2);
 	}
@@ -1241,6 +1344,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttributeState() {
 		return attributeStateEClass;
 	}
@@ -1250,6 +1354,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttributeState_Name() {
 		return (EAttribute)attributeStateEClass.getEStructuralFeatures().get(0);
 	}
@@ -1259,6 +1364,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttributeState_Value() {
 		return (EAttribute)attributeStateEClass.getEStructuralFeatures().get(1);
 	}
@@ -1268,6 +1374,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getResource() {
 		return resourceEClass;
 	}
@@ -1277,6 +1384,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getResource_Summary() {
 		return (EAttribute)resourceEClass.getEStructuralFeatures().get(0);
 	}
@@ -1286,6 +1394,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getResource_Links() {
 		return (EReference)resourceEClass.getEStructuralFeatures().get(1);
 	}
@@ -1295,6 +1404,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getResource_Rlinks() {
 		return (EReference)resourceEClass.getEStructuralFeatures().get(2);
 	}
@@ -1304,6 +1414,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getResource__ResourceKindIsInParent__DiagnosticChain_Map() {
 		return resourceEClass.getEOperations().get(0);
 	}
@@ -1313,6 +1424,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLink() {
 		return linkEClass;
 	}
@@ -1322,6 +1434,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLink_Source() {
 		return (EReference)linkEClass.getEStructuralFeatures().get(0);
 	}
@@ -1331,6 +1444,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLink_Target() {
 		return (EReference)linkEClass.getEStructuralFeatures().get(1);
 	}
@@ -1340,6 +1454,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getLink__LinkTargetInvariant__Kind_Kind() {
 		return linkEClass.getEOperations().get(0);
 	}
@@ -1349,6 +1464,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getLink__LinkSourceInvariant__Kind_Kind() {
 		return linkEClass.getEOperations().get(1);
 	}
@@ -1358,6 +1474,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getLink__SourceReferenceInvariant__DiagnosticChain_Map() {
 		return linkEClass.getEOperations().get(2);
 	}
@@ -1367,6 +1484,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getLink__TargetReferenceInvariant__DiagnosticChain_Map() {
 		return linkEClass.getEOperations().get(3);
 	}
@@ -1376,6 +1494,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getLink__LinkKindIsInParent__DiagnosticChain_Map() {
 		return linkEClass.getEOperations().get(4);
 	}
@@ -1385,6 +1504,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExtension() {
 		return extensionEClass;
 	}
@@ -1394,6 +1514,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExtension_Name() {
 		return (EAttribute)extensionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1403,6 +1524,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExtension_Scheme() {
 		return (EAttribute)extensionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1412,6 +1534,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExtension_Description() {
 		return (EAttribute)extensionEClass.getEStructuralFeatures().get(2);
 	}
@@ -1421,6 +1544,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExtension_Import() {
 		return (EReference)extensionEClass.getEStructuralFeatures().get(3);
 	}
@@ -1430,6 +1554,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExtension_Kinds() {
 		return (EReference)extensionEClass.getEStructuralFeatures().get(4);
 	}
@@ -1439,6 +1564,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExtension_Mixins() {
 		return (EReference)extensionEClass.getEStructuralFeatures().get(5);
 	}
@@ -1448,6 +1574,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getExtension_Types() {
 		return (EReference)extensionEClass.getEStructuralFeatures().get(6);
 	}
@@ -1457,6 +1584,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExtension_Specification() {
 		return (EAttribute)extensionEClass.getEStructuralFeatures().get(7);
 	}
@@ -1466,6 +1594,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__KindsSchemeValid__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(0);
 	}
@@ -1475,6 +1604,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__KindParentLocalOrImported__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(1);
 	}
@@ -1484,6 +1614,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__MixinsSchemeValid__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(2);
 	}
@@ -1493,6 +1624,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__TermUnicity__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(3);
 	}
@@ -1502,6 +1634,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__MixinAppliesLocalOrImported__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(4);
 	}
@@ -1511,6 +1644,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__SchemeUnique__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(5);
 	}
@@ -1520,6 +1654,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getExtension__MixinDependsLocalOrImported__DiagnosticChain_Map() {
 		return extensionEClass.getEOperations().get(6);
 	}
@@ -1529,6 +1664,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConfiguration() {
 		return configurationEClass;
 	}
@@ -1538,6 +1674,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConfiguration_Description() {
 		return (EAttribute)configurationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1547,6 +1684,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConfiguration_Location() {
 		return (EAttribute)configurationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1556,6 +1694,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConfiguration_Use() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1565,6 +1704,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConfiguration_Resources() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(3);
 	}
@@ -1574,6 +1714,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConfiguration_Mixins() {
 		return (EReference)configurationEClass.getEStructuralFeatures().get(4);
 	}
@@ -1583,6 +1724,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllMixinsAreTags__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(0);
 	}
@@ -1592,6 +1734,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllResourcesLinksTargetsInConfiguration__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(1);
 	}
@@ -1601,6 +1744,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllResourcesKindsInUse__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(2);
 	}
@@ -1610,6 +1754,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllResourcesLinksMixinsInUse__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(3);
 	}
@@ -1619,6 +1764,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllResourcesMixinsInUse__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(4);
 	}
@@ -1628,6 +1774,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConfiguration__AllResourcesLinksKindsInUse__DiagnosticChain_Map() {
 		return configurationEClass.getEOperations().get(5);
 	}
@@ -1637,6 +1784,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataType() {
 		return dataTypeEClass;
 	}
@@ -1646,6 +1794,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataType_Name() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1655,6 +1804,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataType_Documentation() {
 		return (EAttribute)dataTypeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1664,6 +1814,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getDataType__DataTypeNameRegex__DiagnosticChain_Map() {
 		return dataTypeEClass.getEOperations().get(0);
 	}
@@ -1673,6 +1824,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBasicType() {
 		return basicTypeEClass;
 	}
@@ -1682,6 +1834,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringType() {
 		return stringTypeEClass;
 	}
@@ -1691,6 +1844,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringType_Pattern() {
 		return (EAttribute)stringTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1700,6 +1854,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringType_Length() {
 		return (EAttribute)stringTypeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1709,6 +1864,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringType_MinLength() {
 		return (EAttribute)stringTypeEClass.getEStructuralFeatures().get(2);
 	}
@@ -1718,6 +1874,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringType_MaxLength() {
 		return (EAttribute)stringTypeEClass.getEStructuralFeatures().get(3);
 	}
@@ -1727,6 +1884,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getStringType__PatternMustBeNotEmpty__DiagnosticChain_Map() {
 		return stringTypeEClass.getEOperations().get(0);
 	}
@@ -1736,6 +1894,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEObjectType() {
 		return eObjectTypeEClass;
 	}
@@ -1745,6 +1904,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEObjectType_InstanceClassName() {
 		return (EAttribute)eObjectTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1754,6 +1914,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEObjectType__InstanceClassNameMustHaveValue__DiagnosticChain_Map() {
 		return eObjectTypeEClass.getEOperations().get(0);
 	}
@@ -1763,6 +1924,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanType() {
 		return booleanTypeEClass;
 	}
@@ -1772,6 +1934,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNumericType() {
 		return numericTypeEClass;
 	}
@@ -1781,6 +1944,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_Type() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1790,6 +1954,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_TotalDigits() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1799,6 +1964,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_MinExclusive() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(2);
 	}
@@ -1808,6 +1974,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_MaxExclusive() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(3);
 	}
@@ -1817,6 +1984,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_MinInclusive() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(4);
 	}
@@ -1826,6 +1994,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNumericType_MaxInclusive() {
 		return (EAttribute)numericTypeEClass.getEStructuralFeatures().get(5);
 	}
@@ -1835,6 +2004,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumerationType() {
 		return enumerationTypeEClass;
 	}
@@ -1844,6 +2014,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumerationType_Literals() {
 		return (EReference)enumerationTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1853,6 +2024,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumerationLiteral() {
 		return enumerationLiteralEClass;
 	}
@@ -1862,6 +2034,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEnumerationLiteral_Name() {
 		return (EAttribute)enumerationLiteralEClass.getEStructuralFeatures().get(0);
 	}
@@ -1871,6 +2044,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEnumerationLiteral_Documentation() {
 		return (EAttribute)enumerationLiteralEClass.getEStructuralFeatures().get(1);
 	}
@@ -1880,6 +2054,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnumerationLiteral_EnumerationType() {
 		return (EReference)enumerationLiteralEClass.getEStructuralFeatures().get(2);
 	}
@@ -1889,6 +2064,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getEnumerationLiteral__EnumerationLiteralNameRegex__DiagnosticChain_Map() {
 		return enumerationLiteralEClass.getEOperations().get(0);
 	}
@@ -1898,6 +2074,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecordType() {
 		return recordTypeEClass;
 	}
@@ -1907,6 +2084,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecordType_RecordFields() {
 		return (EReference)recordTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1916,6 +2094,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecordField() {
 		return recordFieldEClass;
 	}
@@ -1925,6 +2104,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getRecordField__TypeDifferentContainer__DiagnosticChain_Map() {
 		return recordFieldEClass.getEOperations().get(0);
 	}
@@ -1934,6 +2114,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getRecordField__RecordFieldNameRegex__DiagnosticChain_Map() {
 		return recordFieldEClass.getEOperations().get(1);
 	}
@@ -1943,6 +2124,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getRecordField__ContainerMustBeRecordType__DiagnosticChain_Map() {
 		return recordFieldEClass.getEOperations().get(2);
 	}
@@ -1952,6 +2134,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayType() {
 		return arrayTypeEClass;
 	}
@@ -1961,6 +2144,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayType_Type() {
 		return (EReference)arrayTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1970,6 +2154,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getArrayType__TypeDifferentContainer__DiagnosticChain_Map() {
 		return arrayTypeEClass.getEOperations().get(0);
 	}
@@ -1979,6 +2164,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getNumericTypeEnum() {
 		return numericTypeEnumEEnum;
 	}
@@ -1988,6 +2174,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getURI() {
 		return uriEDataType;
 	}
@@ -1997,6 +2184,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getOCL() {
 		return oclEDataType;
 	}
@@ -2006,6 +2194,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getString() {
 		return stringEDataType;
 	}
@@ -2015,6 +2204,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getInteger() {
 		return integerEDataType;
 	}
@@ -2024,6 +2214,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getBoolean() {
 		return booleanEDataType;
 	}
@@ -2033,6 +2224,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getAttributeName() {
 		return attributeNameEDataType;
 	}
@@ -2042,6 +2234,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getName_() {
 		return nameEDataType;
 	}
@@ -2051,6 +2244,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getScheme() {
 		return schemeEDataType;
 	}
@@ -2060,6 +2254,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OCCIFactory getOCCIFactory() {
 		return (OCCIFactory)getEFactoryInstance();
 	}
@@ -2156,6 +2351,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 		createEOperation(kindEClass, KIND___SOURCE_REFERENCE_INVARIANT__DIAGNOSTICCHAIN_MAP);
 
 		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__ACTIONTYPE);
 		createEOperation(actionEClass, ACTION___CONTAINED_ACTION__DIAGNOSTICCHAIN_MAP);
 		createEOperation(actionEClass, ACTION___CORRECT_SCHEME__DIAGNOSTICCHAIN_MAP);
 
@@ -2551,6 +2747,7 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Actiontype(), this.getString(), "actiontype", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getAction__ContainedAction__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "containedAction", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2992,6 +3189,8 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
 		createExtendedMetaDataAnnotations();
 	}
@@ -3128,6 +3327,334 @@ public class OCCIPackageImpl extends EPackageImpl implements OCCIPackage {
 		   source,
 		   new String[] {
 			   "constraints", "TypeDifferentContainer"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (getCategory__AttributesNameUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "attributes->isUnique(name)"
+		   });
+		addAnnotation
+		  (getCategory__IdentityUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Category.allInstances()->isUnique(scheme + term)"
+		   });
+		addAnnotation
+		  (getCategory__SchemeEndsWithSharp__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "scheme.substring(scheme.size(), scheme.size()) = \'#\'"
+		   });
+		addAnnotation
+		  (getType__ActionTermUnicity__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "actions->isUnique(term)"
+		   });
+		addAnnotation
+		  (getType__ConstraintNameUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "constraints->isUnique(name)"
+		   });
+		addAnnotation
+		  (getFSM__AttributeTypeMustBeEEnum__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "attribute.type.oclIsTypeOf(EnumerationType)"
+		   });
+		addAnnotation
+		  (getFSM__ContainedAttribute__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.oclContainer().oclAsType(Type).attributes->includes(self.attribute)"
+		   });
+		addAnnotation
+		  (getState__StateLiteralAlreadyDefinedInFSMAttributeType__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "owningFSM.attribute.type=self.literal.enumerationType"
+		   });
+		addAnnotation
+		  (getTransition__ContainedActionMustBeDeclaredInTheAppropriateType__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= let type: Type = self.oclContainer().oclAsType(State).oclContainer().oclAsType(FSM).oclContainer().oclAsType(Type) in \n\t\t\t\t\t\t\t\tif (self.action <> null) \n\t\t\t\t\t\t\t\t then \n\t\t\t\t\t\t\t\t \ttype.actions->union(type.oclAsType(Kind)->closure(parent)->flatten()->collect(k|k.actions)->flatten())->includes(self.action)\n\t\t\t\t\t\t\t\t else\n\t\t\t\t\t\t\t\t \tfalse\n\t\t\t\t\t\t\t\t endif,\n\t\t\t\tmessage: String =if (self.action <> null)  \n\t\t\t\t\t\t\t\t\tthen \'The action \'+ self.action.name +\' declared in \'+self.action.oclContainer().oclAsType(Type).name+\n\t\t\t\t\t\t\t\t \t\t\t\' kind/mixin cannot be used in the FSM of \'+self.oclContainer().oclAsType(State).oclContainer().oclAsType(FSM).oclContainer().oclAsType(Type).name+\' kind/mixin.\'\n\t\t\t\t\t\t\t\t \telse\n\t\t\t\t\t\t\t\t \t\t\'The action of Transition instance coming from the \"\'+ source.literal.name +\'\" state to the \"\' +target.literal.name + \'\" state in the FSM of \"\' + source.owningFSM.oclContainer().oclAsType(Type).name+ \'\" kind/mixin instance must be a set\'\n\t\t\t\t\t\t\t\t \tendif\n\t\t\t\t\t\t\t\t \t,\n\t\t\t\tseverity :Integer = -1\n\t\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getAttribute__DefaultValueMustBeInstanceOfType__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple{\n\t\t\t\tstatus : Boolean = \tif (default <> null)\n\t\t\t\t\t\t\t\t   \tthen \n\t\t\t\t\t\t\t\t   \t\tif (type.oclIsTypeOf(BooleanType))\n\t\t\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\t\t\tif (default.toLower() = \'true\' or default.toLower() = \'false\') \n\t\t\t\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\t\t\t\telse \n\t\t\t\t\t\t\t\t\t\t\t\tfalse\n\t\t\t\t\t\t\t\t\t\t\tendif \n\t\t\t\t\t\t\t\t\t\telse \n\t\t\t\t\t\t\t\t\t\t\tif (type.oclIsTypeOf(EnumerationType)) \n\t\t\t\t\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\t\t\t\t\tif (type.oclAsType(EnumerationType).literals->collect(l|l.name)->includes(default)) \n\t\t\t\t\t\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\t\t\t\t\t\telse \n\t\t\t\t\t\t\t\t\t\t\t\t\t\tfalse\n\t\t\t\t\t\t\t\t\t\t\t\t\tendif\n\t\t\t\t\t\t\t\t\t\t\t\telse \n\t\t\t\t\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\t\t\t\t\tendif\n\t\t\t\t\t\t\t\t\t\tendif \n\t\t\t\t\t\t\t\t\t\t\telse \n\t\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\t\tendif, \n\t\t\t\tmessage : String = \'The default value of the attribute \'+ name +\' is wrong\', \n\t\t\t\tseverity :\tInteger = - 1, \n\t\t\t\tquickfix : String = \'quickfix\'}\n\t\t\t\t.status"
+		   });
+		addAnnotation
+		  (getKind__OcciIsKindOf__Kind(),
+		   source,
+		   new String[] {
+			   "body", "\tif (self.parent <> null)\n\t\t\t\t\t\tthen\n\t\t\t\t\t\t\tif(kind <> null)\n\t\t\t\t\t\t\tthen\n\t\t\t\t\t\t\t\tif(self = kind)\n\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t\tif(self.parent = kind) \n\t\t\t\t\t\t\t\t\tthen\n\t\t\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\t\t\tself.parent.occiIsKindOf(kind)\n\t\t\t\t\t\t\t\t\tendif\n\t\t\t\t\t\t\t\tendif\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\tfalse\n\t\t\t\t\t\t\tendif\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tfalse\n\t\t\t\t\t\tendif"
+		   });
+		addAnnotation
+		  (getKind__CorrectScheme__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "scheme = self.oclContainer().oclAsType(Extension).scheme"
+		   });
+		addAnnotation
+		  (getKind__TargetReferenceInvariant__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= \n\t\t\t\t\t\t\t\tif(self.target->size() > 0)\n\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\tself->closure(parent)->exists(k |k.term = \'link\' and k.scheme = \'http://schemas.ogf.org/occi/core#\')\n\t\t\t\t\t\t\t\t\tand \n\t\t\t\t\t\t\t\t\tself.target->forAll(targetKind|targetKind->closure(parent)->exists(k |k.term = \'resource\' and k.scheme = \'http://schemas.ogf.org/occi/core#\'))\n\t\t\t\t\t\t\t\t else\n\t\t\t\t\t\t\t\t \ttrue \n\t\t\t\t\t\t\t\t endif,\n\t\t\t\tmessage: String =\'The target reference of \'+self.name +\' kind must connect a child of \"link\" Kind to a child of \"resource\" Kind\' ,\n\t\t\t\tseverity :Integer = -1,\n\t\t\t\tquickfix:String = \'quickfix\'\n\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getKind__NoCyclicInheritance__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "parent->closure(parent)->excludes(self)"
+		   });
+		addAnnotation
+		  (getKind__EntityKindIsRootParent__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self->closure(parent)->exists(k |\n\t\t\t\t\tk.term = \'entity\' and k.scheme = \'http://schemas.ogf.org/occi/core#\' and k.parent = null)"
+		   });
+		addAnnotation
+		  (getKind__AttributesNameNotAlreadyDefinedInParent__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "attributes.name->excludesAll(parent->closure(parent).attributes.name)"
+		   });
+		addAnnotation
+		  (getKind__SourceReferenceInvariant__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= \n\t\t\t\t\t\t\t\tif(self.source->size() > 0)\n\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\tself->closure(parent)->exists(k |k.term = \'link\' and k.scheme = \'http://schemas.ogf.org/occi/core#\')\n\t\t\t\t\t\t\t\t\tand \n\t\t\t\t\t\t\t\t\tself.source->forAll(sourceKind|sourceKind->closure(parent)->exists(k |k.term = \'resource\' and k.scheme = \'http://schemas.ogf.org/occi/core#\'))\n\t\t\t\t\t\t\t\t else\n\t\t\t\t\t\t\t\t \ttrue \n\t\t\t\t\t\t\t\t endif,\n\t\t\t\tmessage: String =\'The source reference of \'+self.name +\' kind must connect a child of \"link\" Kind to a child of \"resource\" Kind\' ,\n\t\t\t\tseverity :Integer = -1,\n\t\t\t\tquickfix:String = \'quickfix\'\n\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getAction__ContainedAction__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= \n\t\t\t\t\t\t\t\tif(self.oclContainer.oclIsTypeOf(Kind))\n\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t\tif (self.oclContainer().oclAsType(Kind).fsm <> null) \n\t\t\t\t\t\t\t\t\tthen \n\t\t\t\t\t\t\t\t \t\tself.oclContainer().oclAsType(Kind).fsm.ownedState.outgoingTransition.action->includes(self) \n\t\t\t\t\t\t\t\t \telse \n\t\t\t\t\t\t\t\t \t\ttrue \n\t\t\t\t\t\t\t\t \tendif\n\t\t\t\t\t\t\t\t else\n\t\t\t\t\t\t\t\t \ttrue \n\t\t\t\t\t\t\t\t endif,\n\t\t\t\tmessage: String =\'The action \'+name+\' doesn\\\'t appear in the FSM of \'+self.oclContainer().oclAsType(Kind).name +\' Kind\',\n\t\t\t\tseverity :Integer = 1,\n\t\t\t\tquickfix:String = \'quickfix\'\n\t\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getAction__CorrectScheme__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "let category = oclContainer().oclAsType(Category)\n\t\t\tin scheme = category.scheme.substring(1, category.scheme.size() - 1) + \'/\' + category.term + \'/action#\'"
+		   });
+		addAnnotation
+		  (getMixin__CorrectScheme__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\n\t\t\t/* Previously let ownerScheme = owner.oclAsType(Extension).scheme in scheme.substring(1,ownerScheme.size()-1) = ownerScheme.substring(1,ownerScheme.size()-1) */\n\t\t\tlet owner = self.oclContainer()\n\t\t\tin if owner.oclIsTypeOf(Extension)\n\t\t\t\tthen\n\t\t\tlet ownerScheme = owner.oclAsType(Extension).scheme\n\t\tin scheme.substring(1, ownerScheme.size() - 1) = ownerScheme.substring(1, ownerScheme.size() - 1) else true\n\t\t\tendif"
+		   });
+		addAnnotation
+		  (getMixin__NoCyclicInheritance__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "depends->closure(depends)->excludes(self)"
+		   });
+		addAnnotation
+		  (getMixin__AttributesNameNotAlreadyDefinedInDepends__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "attributes.name->excludesAll(depends->closure(depends).attributes.name)"
+		   });
+		addAnnotation
+		  (getEntity__IdUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Entity.allInstances()->isUnique(id)"
+		   });
+		addAnnotation
+		  (getEntity__AttributesNameUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "attributes->isUnique(name)"
+		   });
+		addAnnotation
+		  (getEntity__KindCompatibleWithOneAppliesOfEachMixin__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "parts.mixin->forAll(m |\n\t\t\t\tm.applies->notEmpty() implies m.applies->exists(k | kind->closure(parent)->includes(k)))"
+		   });
+		addAnnotation
+		  (getEntity__DifferentMixins__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= self.parts ->forAll(mixinBase1, mixinBase2 | mixinBase1 <> mixinBase2 implies mixinBase1.mixin <> mixinBase2.mixin),\n\t\t\t\tmessage: String =\'Two instances of the same mixin are not allowed on the same Entity \'+self.oclAsType(Entity).id,\n\t\t\t\tseverity: Integer = -1,\n\t\t\t\tquickfix: String = \'quickfix\'\n\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getResource__ResourceKindIsInParent__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "kind->closure(parent)->exists(k |\n\t\t\t\tk.term = \'resource\' and k.scheme = \'http://schemas.ogf.org/occi/core#\')"
+		   });
+		addAnnotation
+		  (getLink__LinkTargetInvariant__Kind_Kind(),
+		   source,
+		   new String[] {
+			   "body", "\t\n\t\t\t\t\t\t/* if target or source of the kind of this link instance exists */\n\t\t\t\t\t\tif (linkInstanceKind.target->size() > 0)\n\t\t\t\t\t\tthen\n\t\t\t\t\t\t\tlinkInstanceKind.target->exists (aTarget |resourcekind.occiIsKindOf(aTarget))\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tif(linkInstanceKind.parent <> null)\n\t\t\t\t\t\t\tthen\n\t\t\t\t\t\t\t\tLinkTargetInvariant(resourcekind, linkInstanceKind.parent)\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\tendif\n\t\t\t\t\t\tendif"
+		   });
+		addAnnotation
+		  (getLink__LinkSourceInvariant__Kind_Kind(),
+		   source,
+		   new String[] {
+			   "body", "\t\n\t\t\t\t\t\t/* if target or source of the kind of this link instance exists */\n\t\t\t\t\t\tif (linkInstanceKind.source->size() > 0)\n\t\t\t\t\t\tthen\n\t\t\t\t\t\t\tlinkInstanceKind.source->exists (aSource|resourcekind.occiIsKindOf(aSource))\n\t\t\t\t\t\telse\n\t\t\t\t\t\t\tif(linkInstanceKind.parent <> null)\n\t\t\t\t\t\t\tthen\n\t\t\t\t\t\t\t\tLinkSourceInvariant(resourcekind, linkInstanceKind.parent)\n\t\t\t\t\t\t\telse\n\t\t\t\t\t\t\t\ttrue\n\t\t\t\t\t\t\tendif\n\t\t\t\t\t\tendif"
+		   });
+		addAnnotation
+		  (getLink__SourceReferenceInvariant__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= LinkSourceInvariant(self.source.kind,self.oclAsType(Entity).kind),\n\t\t\t\tmessage: String =\'The kind of the source reference in the link instance \'+self.oclAsType(Entity).title+\' must be a kind of the source of the kind of this link\' ,\n\t\t\t\tseverity: Integer = -1,\n\t\t\t\tquickfix: String = \'quickfix\'\n\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getLink__TargetReferenceInvariant__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Tuple {\n\t\t\t\tstatus: Boolean= LinkTargetInvariant(self.target.kind,self.oclAsType(Entity).kind),\n\t\t\t\tmessage: String =\'The kind of the target reference in the link instance \'+self.oclAsType(Entity).title+\' must be a kind of the target of the kind of this link\' ,\n\t\t\t\tseverity: Integer = -1,\n\t\t\t\tquickfix: String = \'quickfix\'\n\t\t\t}.status"
+		   });
+		addAnnotation
+		  (getLink__LinkKindIsInParent__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "kind->closure(parent)->exists(k |\n\t\t\t\tk.term = \'link\' and k.scheme = \'http://schemas.ogf.org/occi/core#\')"
+		   });
+		addAnnotation
+		  (getExtension__KindsSchemeValid__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "kinds->forAll(k | k.scheme = self.scheme)"
+		   });
+		addAnnotation
+		  (getExtension__KindParentLocalOrImported__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "kinds->forAll(parent <> null implies let parentExtension = parent.oclContainer()\n\t\t\tin parentExtension = self or import->includes(parentExtension))"
+		   });
+		addAnnotation
+		  (getExtension__MixinsSchemeValid__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "mixins->forAll(m | m.scheme.substring(1, scheme.size() - 1) = scheme.substring(1,\n\t\t\t\t\tscheme.size() - 1))"
+		   });
+		addAnnotation
+		  (getExtension__TermUnicity__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "kinds.term->intersection(mixins.term)->isEmpty()"
+		   });
+		addAnnotation
+		  (getExtension__MixinAppliesLocalOrImported__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "mixins.applies->forAll(let extension = oclContainer()\n\t\t\tin extension = self or import->includes(extension))"
+		   });
+		addAnnotation
+		  (getExtension__SchemeUnique__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "Extension.allInstances()->isUnique(scheme)"
+		   });
+		addAnnotation
+		  (getExtension__MixinDependsLocalOrImported__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "mixins.depends->forAll(let extension = oclContainer()\n\t\t\tin extension = self or import->includes(extension))"
+		   });
+		addAnnotation
+		  (getConfiguration__AllMixinsAreTags__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "mixins->forAll(attributes->isEmpty() and actions->isEmpty() and depends->isEmpty())"
+		   });
+		addAnnotation
+		  (getConfiguration__AllResourcesLinksTargetsInConfiguration__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "resources.links.target->forAll(r | r.oclContainer() = self)"
+		   });
+		addAnnotation
+		  (getConfiguration__AllResourcesKindsInUse__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "use->includesAll(resources.kind.oclContainer())"
+		   });
+		addAnnotation
+		  (getConfiguration__AllResourcesLinksMixinsInUse__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\n\t\t/* Previously use->includesAll(resources.links.mixins.oclContainer()) */\n\t\t\tresources.links.parts.mixin->forAll(mo |\n\t\t\tlet mixinOwner = mo.oclContainer()\n\t\t\tin if mixinOwner.oclIsTypeOf(Extension)\n\t\t\t\tthen self.use->includes(mixinOwner.oclAsType(Extension)) else self.mixins->includes(mo) endif)"
+		   });
+		addAnnotation
+		  (getConfiguration__AllResourcesMixinsInUse__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "\n\n\t\t/* Previously use->includesAll(resources.mixins.oclContainer()) */\n\t\t\tresources.parts.mixin->forAll(mo |\n\t\t\tlet mixinOwner = mo.oclContainer()\n\t\t\tin if mixinOwner.oclIsTypeOf(Extension)\n\t\t\t\tthen self.use->includes(mixinOwner.oclAsType(Extension)) else self.mixins->includes(mo) endif)"
+		   });
+		addAnnotation
+		  (getConfiguration__AllResourcesLinksKindsInUse__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "use->includesAll(resources.links.kind.oclContainer())"
+		   });
+		addAnnotation
+		  (getDataType__DataTypeNameRegex__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.name.matches(\'[a-zA-Z_][a-zA-Z0-9_]*\')"
+		   });
+		addAnnotation
+		  (getStringType__PatternMustBeNotEmpty__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "if (pattern <> null)  then pattern.size() > 0 else true endif"
+		   });
+		addAnnotation
+		  (getEObjectType__InstanceClassNameMustHaveValue__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "instanceClassName.size() > 0"
+		   });
+		addAnnotation
+		  (getEnumerationLiteral__EnumerationLiteralNameRegex__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.name.matches(\'[a-zA-Z_][a-zA-Z0-9_]*\')"
+		   });
+		addAnnotation
+		  (getRecordField__TypeDifferentContainer__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.type <> self.oclContainer"
+		   });
+		addAnnotation
+		  (getRecordField__RecordFieldNameRegex__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.name.matches(\'[a-zA-Z][a-zA-Z0-9]*\')"
+		   });
+		addAnnotation
+		  (getRecordField__ContainerMustBeRecordType__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.oclContainer.oclIsTypeOf(occi::RecordType)"
+		   });
+		addAnnotation
+		  (getArrayType__TypeDifferentContainer__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "body", "self.type <> self"
 		   });
 	}
 

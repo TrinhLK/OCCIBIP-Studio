@@ -47,7 +47,6 @@ public interface AnnotatedElement extends EObject {
 	 * @return the value of the '<em>Annotations</em>' containment reference list.
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getAnnotatedElement_Annotations()
 	 * @model containment="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!AnnotatedElement!annotations'"
 	 * @generated
 	 */
 	EList<Annotation> getAnnotations();

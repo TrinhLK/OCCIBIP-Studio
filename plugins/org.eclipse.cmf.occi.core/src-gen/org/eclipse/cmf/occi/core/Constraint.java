@@ -44,7 +44,6 @@ public interface Constraint extends EObject {
 	 * @see #setName(String)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getConstraint_Name()
 	 * @model dataType="org.eclipse.cmf.occi.core.Name" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Constraint!name'"
 	 * @generated
 	 */
 	String getName();
@@ -71,7 +70,6 @@ public interface Constraint extends EObject {
 	 * @see #setDescription(String)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getConstraint_Description()
 	 * @model dataType="org.eclipse.cmf.occi.core.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Constraint!description'"
 	 * @generated
 	 */
 	String getDescription();
@@ -98,7 +96,6 @@ public interface Constraint extends EObject {
 	 * @see #setBody(String)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getConstraint_Body()
 	 * @model dataType="org.eclipse.cmf.occi.core.OCL" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!Constraint!body'"
 	 * @generated
 	 */
 	String getBody();

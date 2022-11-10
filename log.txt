@@ -1,0 +1,915 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/releases/photon/ (122B)
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/releases/photon/ (122B)
+[[1;34mINFO[m] Adding repository http://download.eclipse.org/releases/photon
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/technology/epp/packages/photon/ (142B)
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/technology/epp/packages/photon/ (142B)
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/releases/photon/201806271001/ (142B)
+[[1;34mINFO[m] Fetching p2.index from http://download.eclipse.org/releases/photon/201806271001/ (142B)
+[[1;34mINFO[m] Adding repository http://download.eclipse.org/epsilon/updates/1.4
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] org.eclipse.cmf.occi.parent                                        [pom]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core                               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.edit                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.editor                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.tests                    [eclipse-test-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.design                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.ui                            [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ide                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.tests                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui.tests                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf.ui                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.ui                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended.ui        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector.ui              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile.ui                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex.ui                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris.ui                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl.ui                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml.ui                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy.ui                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.connector.jocci               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.examples                                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.edit                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.editor              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.tests               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.design              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.connector.dummy     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.example             [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp                               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.edit                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.editor                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.tests                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design.extended               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.connector.dummy               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.example                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform                           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.edit                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.editor                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.tests                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.design                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.connector.dummy           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.example                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla                                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.edit                           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.editor                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.tests                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.design                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.connector.dummy                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.example                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.edit                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.editor                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.tests                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.design                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.connector.dummy         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.example                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi                                   [eclipse-feature]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.occiware:org.eclipse.cmf.occi.parent[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.parent 1.0.0-SNAPSHOT               [1/71][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36morg.eclipse.cmf.occi.parent[0;1m ---[m
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/pom.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.parent/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.parent-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.occiware:org.eclipse.cmf.occi.core[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.core 1.0.0-SNAPSHOT                 [2/71][m
+[[1;34mINFO[m] [1m---------------------------[ eclipse-plugin ]---------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Deleting /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.3.0:build-qualifier[m [1m(default-build-qualifier)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] The project's OSGi version is 1.0.0.202211081502
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.3.0:validate-id[m [1m(default-validate-id)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.3.0:validate-version[m [1m(default-validate-version)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:resources[m [1m(default-resources)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-compiler-plugin:1.3.0:compile[m [1m(default-compile)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Compiling 78 source files to /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] org.eclipse.cmf.occi.parent 1.0.0-SNAPSHOT ......... [1;32mSUCCESS[m [  0.065 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core .......................... [1;31mFAILURE[m [  1.045 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.edit ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.editor ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.tests .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.design ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.ui ....................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ide ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.tests .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui.tests ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf.ui ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.ui ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended ...... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended.ui ... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector.ui ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile.ui ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex.ui ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris.ui .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl.ui .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml.ui ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy.ui ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.connector.jocci .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.examples ........................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.edit ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.editor ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.tests .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.design ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.connector.dummy  [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.example ........ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp .......................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.edit ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.editor ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.tests .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design.extended .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.connector.dummy .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.example .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform ...................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.edit ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.editor ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.tests ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.design ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.connector.dummy ...... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.example .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla ........................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.edit ...................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.editor .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.tests ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.design .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.connector.dummy ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.example ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.edit ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.editor ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.tests .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.design ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.connector.dummy .... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.example ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi 1.0.0-SNAPSHOT ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 54.088 s
+[[1;34mINFO[m] Finished at: 2022-11-08T16:02:54+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.eclipse.tycho:tycho-compiler-plugin:1.3.0:compile[m [1m(default-compile)[m on project [36morg.eclipse.cmf.occi.core[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TransitionImpl.java:[319] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(TransitionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TransitionImpl.java:[349] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TransitionImpl.java:[468] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, TransitionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[339] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(CategoryImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[378] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, CategoryImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[406] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(CategoryImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[447] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, CategoryImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[476] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(CategoryImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/CategoryImpl.java:[501] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, CategoryImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/StateImpl.java:[317] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(StateImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/StateImpl.java:[347] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, StateImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[399] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[448] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[478] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[633] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[662] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[734] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[762] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[815] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[844] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[963] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[991] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[1030] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[1059] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ExtensionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ExtensionImpl.java:[1178] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ExtensionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/DataTypeImpl.java:[179] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(DataTypeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/DataTypeImpl.java:[195] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, DataTypeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EnumerationLiteralImpl.java:[228] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EnumerationLiteralImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EnumerationLiteralImpl.java:[244] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EnumerationLiteralImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/AttributeImpl.java:[408] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(AttributeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/AttributeImpl.java:[542] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, AttributeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EObjectTypeImpl.java:[134] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EObjectTypeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EObjectTypeImpl.java:[151] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EObjectTypeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/StringTypeImpl.java:[379] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(StringTypeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/StringTypeImpl.java:[414] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, StringTypeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ActionImpl.java:[180] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ActionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ActionImpl.java:[280] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ActionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ActionImpl.java:[311] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ActionImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ActionImpl.java:[349] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ActionImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/FSMImpl.java:[190] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(FSMImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/FSMImpl.java:[216] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, FSMImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/FSMImpl.java:[245] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(FSMImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/FSMImpl.java:[274] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, FSMImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TypeImpl.java:[212] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(TypeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TypeImpl.java:[251] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, TypeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TypeImpl.java:[277] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(TypeImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/TypeImpl.java:[316] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, TypeImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ResourceImpl.java:[212] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ResourceImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ResourceImpl.java:[226] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ResourceImpl.java:[348] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ResourceImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[238] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(LinkImpl) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[333] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(LinkImpl) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[441] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(LinkImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[481] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, LinkImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[518] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(LinkImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[558] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, LinkImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[586] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(LinkImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[600] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/LinkImpl.java:[722] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, LinkImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/RecordFieldImpl.java:[123] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(RecordFieldImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/RecordFieldImpl.java:[139] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, RecordFieldImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/RecordFieldImpl.java:[166] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(RecordFieldImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/RecordFieldImpl.java:[191] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, RecordFieldImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/OCCITables.java:[56] 
+[[1;31mERROR[m] 	import org.eclipse.ocl.pivot.utilities.AbstractTables;
+[[1;31mERROR[m] 	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The import org.eclipse.ocl.pivot.utilities.AbstractTables cannot be resolved
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/OCCITables.java:[67] 
+[[1;31mERROR[m] 	public class OCCITables extends AbstractTables
+[[1;31mERROR[m] 	                                ^^^^^^^^^^^^^^
+[[1;31mERROR[m] AbstractTables cannot be resolved to a type
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/OCCITables.java:[3244] 
+[[1;31mERROR[m] 	public EClass /*@NonNull*/ [] basicGetAllInstancesClasses() {
+[[1;31mERROR[m] 	                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method basicGetAllInstancesClasses() of type OCCITables must override or implement a supertype method
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[57] 
+[[1;31mERROR[m] 	import org.eclipse.ocl.pivot.internal.library.executor.ExecutorMultipleIterationManager;
+[[1;31mERROR[m] 	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The import org.eclipse.ocl.pivot.internal.library.executor.ExecutorMultipleIterationManager cannot be resolved
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[60] 
+[[1;31mERROR[m] 	import org.eclipse.ocl.pivot.library.AbstractSimpleOperation;
+[[1;31mERROR[m] 	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The import org.eclipse.ocl.pivot.library.AbstractSimpleOperation cannot be resolved
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[452] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EntityImpl) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[552] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EntityImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[591] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EntityImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[620] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EntityImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[705] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[804] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EntityImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[840] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EntityImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[854] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_status_0 = executor.getStaticTypeOfValue(null, BOXED_parts);
+[[1;31mERROR[m] 	                                                           ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, OrderedSetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[860] 
+[[1;31mERROR[m] 	final AbstractSimpleOperation BODY_status_0 = new AbstractSimpleOperation() {
+[[1;31mERROR[m] 	      ^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] AbstractSimpleOperation cannot be resolved to a type
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[860] 
+[[1;31mERROR[m] 	final AbstractSimpleOperation BODY_status_0 = new AbstractSimpleOperation() {
+[[1;31mERROR[m] 	                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] AbstractSimpleOperation cannot be resolved to a type
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[865] 
+[[1;31mERROR[m] 	public /*@Nullable*/ Object evaluate(final Executor executor, final TypeId typeId, final /*@Nullable*/ Object /*@NonNull*/ [] sourceAndArgumentValues) {
+[[1;31mERROR[m] 	                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method evaluate(Executor, TypeId, Object[]) of type new AbstractSimpleOperation(){} must override or implement a supertype method
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[913] 
+[[1;31mERROR[m] 	final ExecutorMultipleIterationManager MGR_status_0 = new ExecutorMultipleIterationManager(executor, 2, TypeId.BOOLEAN, BODY_status_0, BOXED_parts, ACC_status_0);
+[[1;31mERROR[m] 	      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] ExecutorMultipleIterationManager cannot be resolved to a type
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[913] 
+[[1;31mERROR[m] 	final ExecutorMultipleIterationManager MGR_status_0 = new ExecutorMultipleIterationManager(executor, 2, TypeId.BOOLEAN, BODY_status_0, BOXED_parts, ACC_status_0);
+[[1;31mERROR[m] 	                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] ExecutorMultipleIterationManager cannot be resolved to a type
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[940] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EntityImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[966] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(EntityImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/EntityImpl.java:[1005] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, EntityImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[292] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[401] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[429] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[512] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[539] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[608] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[642] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[783] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[817] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[939] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[967] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(ConfigurationImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/ConfigurationImpl.java:[1055] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, ConfigurationImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[195] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[338] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[352] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[386] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[414] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[446] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[521] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[564] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[585] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_1 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[733] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0_0 = executor.getStaticTypeOfValue(null, oclAsSet_0);
+[[1;31mERROR[m] 	                                                              ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[921] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[949] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[977] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1020] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1041] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_1 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1189] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0_0 = executor.getStaticTypeOfValue(null, oclAsSet_0);
+[[1;31mERROR[m] 	                                                              ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1377] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1405] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(KindImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1418] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, oclAsSet);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, SetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/KindImpl.java:[1582] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, KindImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[168] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(MixinImpl) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[245] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(MixinImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[291] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, MixinImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[319] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(MixinImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[333] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, BOXED_depends);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, OrderedSetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[368] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, MixinImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[396] 
+[[1;31mERROR[m] 	final /*@NonInvalid*/ Executor executor = PivotUtil.getExecutor(this, context);
+[[1;31mERROR[m] 	                                                    ^^^^^^^^^^^
+[[1;31mERROR[m] The method getExecutor(MixinImpl, Map<Object,Object>) is undefined for the type PivotUtil
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[428] 
+[[1;31mERROR[m] 	final org.eclipse.ocl.pivot.Class TYPE_closure_0 = executor.getStaticTypeOfValue(null, BOXED_depends);
+[[1;31mERROR[m] 	                                                            ^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method getStaticTypeOfValue(null, OrderedSetValue) is undefined for the type Executor
+[[1;31mERROR[m] /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src-gen/org/eclipse/cmf/occi/core/impl/MixinImpl.java:[501] 
+[[1;31mERROR[m] 	return ValueUtil.validationFailedDiagnostic(constraintName, this, diagnostics, context, e);
+[[1;31mERROR[m] 	                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[1;31mERROR[m] The method validationFailedDiagnostic(String, MixinImpl, DiagnosticChain, Map<Object,Object>, Throwable) is undefined for the type ValueUtil
+[[1;31mERROR[m] 125 problems (125 errors)
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <goals> -rf :org.eclipse.cmf.occi.core[m

@@ -162,6 +162,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annotation createAnnotation() {
 		AnnotationImpl annotation = new AnnotationImpl();
 		return annotation;
@@ -172,6 +173,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createConstraint() {
 		ConstraintImpl constraint = new ConstraintImpl();
 		return constraint;
@@ -182,6 +184,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FSM createFSM() {
 		FSMImpl fsm = new FSMImpl();
 		return fsm;
@@ -192,6 +195,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State createState() {
 		StateImpl state = new StateImpl();
 		return state;
@@ -202,6 +206,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
@@ -212,6 +217,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute createAttribute() {
 		AttributeImpl attribute = new AttributeImpl();
 		return attribute;
@@ -222,6 +228,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Kind createKind() {
 		KindImpl kind = new KindImpl();
 		return kind;
@@ -232,6 +239,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
@@ -242,6 +250,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mixin createMixin() {
 		MixinImpl mixin = new MixinImpl();
 		return mixin;
@@ -252,6 +261,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MixinBase createMixinBase() {
 		MixinBaseImpl mixinBase = new MixinBaseImpl();
 		return mixinBase;
@@ -262,6 +272,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AttributeState createAttributeState() {
 		AttributeStateImpl attributeState = new AttributeStateImpl();
 		return attributeState;
@@ -272,6 +283,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Resource createResource() {
 		ResourceImpl resource = new ResourceImpl();
 		return resource;
@@ -282,6 +294,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Link createLink() {
 		LinkImpl link = new LinkImpl();
 		return link;
@@ -292,6 +305,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension createExtension() {
 		ExtensionImpl extension = new ExtensionImpl();
 		return extension;
@@ -302,6 +316,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Configuration createConfiguration() {
 		ConfigurationImpl configuration = new ConfigurationImpl();
 		return configuration;
@@ -312,6 +327,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringType createStringType() {
 		StringTypeImpl stringType = new StringTypeImpl();
 		return stringType;
@@ -322,6 +338,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObjectType createEObjectType() {
 		EObjectTypeImpl eObjectType = new EObjectTypeImpl();
 		return eObjectType;
@@ -332,6 +349,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanType createBooleanType() {
 		BooleanTypeImpl booleanType = new BooleanTypeImpl();
 		return booleanType;
@@ -342,6 +360,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NumericType createNumericType() {
 		NumericTypeImpl numericType = new NumericTypeImpl();
 		return numericType;
@@ -352,6 +371,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationType createEnumerationType() {
 		EnumerationTypeImpl enumerationType = new EnumerationTypeImpl();
 		return enumerationType;
@@ -362,6 +382,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral createEnumerationLiteral() {
 		EnumerationLiteralImpl enumerationLiteral = new EnumerationLiteralImpl();
 		return enumerationLiteral;
@@ -372,6 +393,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RecordType createRecordType() {
 		RecordTypeImpl recordType = new RecordTypeImpl();
 		return recordType;
@@ -382,6 +404,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RecordField createRecordField() {
 		RecordFieldImpl recordField = new RecordFieldImpl();
 		return recordField;
@@ -392,6 +415,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayType createArrayType() {
 		ArrayTypeImpl arrayType = new ArrayTypeImpl();
 		return arrayType;
@@ -566,6 +590,7 @@ public class OCCIFactoryImpl extends EFactoryImpl implements OCCIFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OCCIPackage getOCCIPackage() {
 		return (OCCIPackage)getEPackage();
 	}

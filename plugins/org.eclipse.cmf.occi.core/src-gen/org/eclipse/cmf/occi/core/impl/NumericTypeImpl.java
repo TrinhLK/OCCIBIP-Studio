@@ -229,6 +229,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NumericTypeEnum getType() {
 		return type;
 	}
@@ -238,6 +239,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(NumericTypeEnum newType) {
 		NumericTypeEnum oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -250,6 +252,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Integer getTotalDigits() {
 		return totalDigits;
 	}
@@ -259,6 +262,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTotalDigits(Integer newTotalDigits) {
 		Integer oldTotalDigits = totalDigits;
 		totalDigits = newTotalDigits;
@@ -273,6 +277,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetTotalDigits() {
 		Integer oldTotalDigits = totalDigits;
 		boolean oldTotalDigitsESet = totalDigitsESet;
@@ -287,6 +292,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetTotalDigits() {
 		return totalDigitsESet;
 	}
@@ -296,6 +302,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMinExclusive() {
 		return minExclusive;
 	}
@@ -305,6 +312,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinExclusive(String newMinExclusive) {
 		String oldMinExclusive = minExclusive;
 		minExclusive = newMinExclusive;
@@ -319,6 +327,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMinExclusive() {
 		String oldMinExclusive = minExclusive;
 		boolean oldMinExclusiveESet = minExclusiveESet;
@@ -333,6 +342,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMinExclusive() {
 		return minExclusiveESet;
 	}
@@ -342,6 +352,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMaxExclusive() {
 		return maxExclusive;
 	}
@@ -351,6 +362,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxExclusive(String newMaxExclusive) {
 		String oldMaxExclusive = maxExclusive;
 		maxExclusive = newMaxExclusive;
@@ -365,6 +377,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMaxExclusive() {
 		String oldMaxExclusive = maxExclusive;
 		boolean oldMaxExclusiveESet = maxExclusiveESet;
@@ -379,6 +392,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMaxExclusive() {
 		return maxExclusiveESet;
 	}
@@ -388,6 +402,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMinInclusive() {
 		return minInclusive;
 	}
@@ -397,6 +412,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinInclusive(String newMinInclusive) {
 		String oldMinInclusive = minInclusive;
 		minInclusive = newMinInclusive;
@@ -411,6 +427,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMinInclusive() {
 		String oldMinInclusive = minInclusive;
 		boolean oldMinInclusiveESet = minInclusiveESet;
@@ -425,6 +442,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMinInclusive() {
 		return minInclusiveESet;
 	}
@@ -434,6 +452,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getMaxInclusive() {
 		return maxInclusive;
 	}
@@ -443,6 +462,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxInclusive(String newMaxInclusive) {
 		String oldMaxInclusive = maxInclusive;
 		maxInclusive = newMaxInclusive;
@@ -457,6 +477,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetMaxInclusive() {
 		String oldMaxInclusive = maxInclusive;
 		boolean oldMaxInclusiveESet = maxInclusiveESet;
@@ -471,6 +492,7 @@ public class NumericTypeImpl extends BasicTypeImpl implements NumericType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetMaxInclusive() {
 		return maxInclusiveESet;
 	}

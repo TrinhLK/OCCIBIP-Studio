@@ -89,7 +89,9 @@
         <genParameters ecoreParameter="OCCI.ecore#//Kind/occiIsKindOf/kind"/>
       </genOperations>
     </genClasses>
-    <genClasses ecoreClass="OCCI.ecore#//Action"/>
+    <genClasses ecoreClass="OCCI.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OCCI.ecore#//Action/actiontype"/>
+    </genClasses>
     <genClasses ecoreClass="OCCI.ecore#//Mixin">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Mixin/depends"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OCCI.ecore#//Mixin/applies"/>

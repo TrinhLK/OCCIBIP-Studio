@@ -97,6 +97,7 @@ public class MixinBaseImpl extends MinimalEObjectImpl.Container implements Mixin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mixin getMixin() {
 		if (mixin != null && mixin.eIsProxy()) {
 			InternalEObject oldMixin = (InternalEObject)mixin;
@@ -123,6 +124,7 @@ public class MixinBaseImpl extends MinimalEObjectImpl.Container implements Mixin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMixin(Mixin newMixin) {
 		Mixin oldMixin = mixin;
 		mixin = newMixin;
@@ -135,6 +137,7 @@ public class MixinBaseImpl extends MinimalEObjectImpl.Container implements Mixin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Entity getEntity() {
 		if (eContainerFeatureID() != OCCIPackage.MIXIN_BASE__ENTITY) return null;
 		return (Entity)eInternalContainer();
@@ -155,6 +158,7 @@ public class MixinBaseImpl extends MinimalEObjectImpl.Container implements Mixin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEntity(Entity newEntity) {
 		if (newEntity != eInternalContainer() || (eContainerFeatureID() != OCCIPackage.MIXIN_BASE__ENTITY && newEntity != null)) {
 			if (EcoreUtil.isAncestor(this, newEntity))
@@ -176,6 +180,7 @@ public class MixinBaseImpl extends MinimalEObjectImpl.Container implements Mixin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AttributeState> getAttributes() {
 		if (attributes == null) {
 			attributes = new EObjectContainmentEList<AttributeState>(AttributeState.class, this, OCCIPackage.MIXIN_BASE__ATTRIBUTES);

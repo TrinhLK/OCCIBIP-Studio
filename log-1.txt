@@ -1,0 +1,546 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Fetching p2.index from https://download.eclipse.org/releases/2022-03/202203161000/ (140B)
+[[1;34mINFO[m] Adding repository https://download.eclipse.org/releases/2022-03/202203161000
+[[1;34mINFO[m] Adding repository http://download.eclipse.org/epsilon/updates/1.4
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ide:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ide/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.xtext.ui.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.xtext.ui.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.emf.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.emf.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.design.extended.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.design.extended.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.connector.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.textile.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.textile.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.latex.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.latex.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.uris.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.uris.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.curl.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.curl.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.xml.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.xml.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.gen.alloy.ui:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.alloy.ui/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.core.connector.jocci:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.examples:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.examples/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.infrastructure.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.infrastructure.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.design.extended:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.design.extended/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.crtp.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.crtp.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.platform.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.platform.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.sla.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.sla.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.edit:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.edit/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.editor:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.editor/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.tests:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.tests/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.design:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.design/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.connector.dummy:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.connector.dummy/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi.monitoring.example:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.monitoring.example/pom.xml
+[[1;34mINFO[m] Computing target platform for MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] Resolving dependencies of MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] Resolving class path of MavenProject: org.occiware:org.eclipse.cmf.occi:1.0.0-SNAPSHOT @ /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/features/org.eclipse.cmf.occi/pom.xml
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] org.eclipse.cmf.occi.parent                                        [pom]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core                               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.edit                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.editor                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.tests                    [eclipse-test-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.design                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.ui                            [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ide                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.tests                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui.tests                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf.ui                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.ui                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended.ui        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector.ui              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile.ui                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex.ui                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris.ui                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl.ui                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml.ui                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy.ui                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.connector.jocci               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.examples                                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.edit                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.editor              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.tests               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.design              [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.connector.dummy     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.example             [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp                               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.edit                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.editor                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.tests                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design.extended               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.connector.dummy               [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.example                       [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform                           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.edit                      [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.editor                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.tests                     [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.design                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.connector.dummy           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.example                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla                                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.edit                           [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.editor                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.tests                          [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.design                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.connector.dummy                [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.example                        [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring                         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.edit                    [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.editor                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.tests                   [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.design                  [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.connector.dummy         [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.example                 [eclipse-plugin]
+[[1;34mINFO[m] org.eclipse.cmf.occi                                   [eclipse-feature]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.occiware:org.eclipse.cmf.occi.parent[0;1m >--------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.parent 1.0.0-SNAPSHOT               [1/71][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36morg.eclipse.cmf.occi.parent[0;1m ---[m
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/pom.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.parent/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.parent-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36morg.occiware:org.eclipse.cmf.occi.core[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.core 1.0.0-SNAPSHOT                 [2/71][m
+[[1;34mINFO[m] [1m---------------------------[ eclipse-plugin ]---------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Deleting /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:build-qualifier[m [1m(default-build-qualifier)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] The project's OSGi version is 1.0.0.202211100946
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-id[m [1m(default-validate-id)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-version[m [1m(default-validate-version)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:resources[m [1m(default-resources)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-compiler-plugin:1.4.0:compile[m [1m(default-compile)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Compiling 78 source files to /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:testResources[m [1m(default-testResources)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtarget-platform-configuration:1.4.0:target-platform[m [1m(default-target-platform)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:package-plugin[m [1m(default-package-plugin)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:p2-metadata-default[m [1m(default-p2-metadata-default)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.3.1:install[m [1m(default-install)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT.jar to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/pom.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/p2content.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT-p2metadata.xml
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core/target/p2artifacts.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core-1.0.0-SNAPSHOT-p2artifacts.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:update-local-index[m [1m(default-update-local-index)[m @ [36morg.eclipse.cmf.occi.core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.occiware:org.eclipse.cmf.occi.core.edit[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.core.edit 1.0.0-SNAPSHOT            [3/71][m
+[[1;34mINFO[m] [1m---------------------------[ eclipse-plugin ]---------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Deleting /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:build-qualifier[m [1m(default-build-qualifier)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] The project's OSGi version is 1.0.0.202211100946
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-id[m [1m(default-validate-id)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-version[m [1m(default-validate-version)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:resources[m [1m(default-resources)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-compiler-plugin:1.4.0:compile[m [1m(default-compile)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Compiling 32 source files to /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:testResources[m [1m(default-testResources)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtarget-platform-configuration:1.4.0:target-platform[m [1m(default-target-platform)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:package-plugin[m [1m(default-package-plugin)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:p2-metadata-default[m [1m(default-p2-metadata-default)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.3.1:install[m [1m(default-install)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT.jar to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.edit/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/pom.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.edit/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target/p2content.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.edit/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT-p2metadata.xml
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.edit/target/p2artifacts.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.edit/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.edit-1.0.0-SNAPSHOT-p2artifacts.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:update-local-index[m [1m(default-update-local-index)[m @ [36morg.eclipse.cmf.occi.core.edit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36morg.occiware:org.eclipse.cmf.occi.core.editor[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.core.editor 1.0.0-SNAPSHOT          [4/71][m
+[[1;34mINFO[m] [1m---------------------------[ eclipse-plugin ]---------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Deleting /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:build-qualifier[m [1m(default-build-qualifier)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] The project's OSGi version is 1.0.0.202211100946
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-id[m [1m(default-validate-id)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-version[m [1m(default-validate-version)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:resources[m [1m(default-resources)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-compiler-plugin:1.4.0:compile[m [1m(default-compile)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Compiling 4 source files to /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:testResources[m [1m(default-testResources)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtarget-platform-configuration:1.4.0:target-platform[m [1m(default-target-platform)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:package-plugin[m [1m(default-package-plugin)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:p2-metadata-default[m [1m(default-p2-metadata-default)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.3.1:install[m [1m(default-install)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT.jar to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.editor/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/pom.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.editor/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target/p2content.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.editor/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT-p2metadata.xml
+[[1;34mINFO[m] Installing /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.editor/target/p2artifacts.xml to /Users/trinhlk/.m2/repository/org/occiware/org.eclipse.cmf.occi.core.editor/1.0.0-SNAPSHOT/org.eclipse.cmf.occi.core.editor-1.0.0-SNAPSHOT-p2artifacts.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:update-local-index[m [1m(default-update-local-index)[m @ [36morg.eclipse.cmf.occi.core.editor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.occiware:org.eclipse.cmf.occi.core.tests[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding org.eclipse.cmf.occi.core.tests 1.0.0-SNAPSHOT           [5/71][m
+[[1;34mINFO[m] [1m------------------------[ eclipse-test-plugin ]-------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Deleting /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:build-qualifier[m [1m(default-build-qualifier)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] The project's OSGi version is 1.0.0.202211100946
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-id[m [1m(default-validate-id)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:validate-version[m [1m(default-validate-version)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:resources[m [1m(default-resources)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-compiler-plugin:1.4.0:compile[m [1m(default-compile)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Compiling 33 source files to /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.4.3:testResources[m [1m(default-testResources)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtarget-platform-configuration:1.4.0:target-platform[m [1m(default-target-platform)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-packaging-plugin:1.4.0:package-plugin[m [1m(default-package-plugin)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Building jar: /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/org.eclipse.cmf.occi.core.tests-1.0.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-p2-plugin:1.4.0:p2-metadata-default[m [1m(default-p2-metadata-default)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtycho-surefire-plugin:1.4.0:test[m [1m(default-test)[m @ [36morg.eclipse.cmf.occi.core.tests[0;1m ---[m
+[[1;34mINFO[m] Expected eclipse log file: /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work/data/.metadata/.log
+[[1;34mINFO[m] Command line:
+	[/opt/homebrew/Cellar/openjdk@11/11.0.16.1_1/libexec/openjdk.jdk/Contents/Home/bin/java, -Dosgi.noShutdown=false, -Dosgi.os=macosx, -Dosgi.ws=carbon, -Dosgi.arch=aarch64, -Dosgi.clean=true, -jar, /Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.launcher/1.6.400.v20210924-0641/org.eclipse.equinox.launcher-1.6.400.v20210924-0641.jar, -data, /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work/data, -install, /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work, -configuration, /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work/configuration, -application, org.eclipse.tycho.surefire.osgibooter.headlesstest, -testproperties, /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/surefire.properties]
+An error has occurred. See the log file
+/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work/configuration/1668073624196.log.
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] org.eclipse.cmf.occi.parent 1.0.0-SNAPSHOT ......... [1;32mSUCCESS[m [  0.060 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core .......................... [1;32mSUCCESS[m [  1.546 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.edit ..................... [1;32mSUCCESS[m [  0.192 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.editor ................... [1;32mSUCCESS[m [  0.296 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.tests .................... [1;31mFAILURE[m [  1.415 s]
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.design ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.ui ....................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ide ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.tests .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.xtext.ui.tests ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.emf.ui ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.ui ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended ...... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.design.extended.ui ... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.connector.ui ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.textile.ui ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.latex.ui ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.uris.ui .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.curl.ui .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.xml.ui ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.gen.alloy.ui ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.core.connector.jocci .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.examples ........................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.edit ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.editor ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.tests .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.design ......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.connector.dummy  [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.infrastructure.example ........ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp .......................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.edit ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.editor ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.tests .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.design.extended .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.connector.dummy .......... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.crtp.example .................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform ...................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.edit ................. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.editor ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.tests ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.design ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.connector.dummy ...... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.platform.example .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla ........................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.edit ...................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.editor .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.tests ..................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.design .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.connector.dummy ........... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.sla.example ................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring .................... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.edit ............... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.editor ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.tests .............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.design ............. [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.connector.dummy .... [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi.monitoring.example ............ [1;33mSKIPPED[m
+[[1;34mINFO[m] org.eclipse.cmf.occi 1.0.0-SNAPSHOT ................ [1;33mSKIPPED[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 26.533 s
+[[1;34mINFO[m] Finished at: 2022-11-10T10:47:04+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.eclipse.tycho:tycho-surefire-plugin:1.4.0:test[m [1m(default-test)[m on project [36morg.eclipse.cmf.occi.core.tests[m: [1;31mAn unexpected error occured while launching the test runtime (return code 13). See log /Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.tests/target/work/data/.metadata/.log for details.[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <goals> -rf :org.eclipse.cmf.occi.core.tests[m

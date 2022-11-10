@@ -38,3 +38,4 @@ Bundle-ClassPath: .,
 Import-Package: com.google.common.base
 Export-Package: org.eclipse.cmf.occi.core.connector.jocci.services,
  org.eclipse.cmf.occi.core.connector.jocci.wizards
+Automatic-Module-Name: org.eclipse.cmf.occi.core.connector.jocci

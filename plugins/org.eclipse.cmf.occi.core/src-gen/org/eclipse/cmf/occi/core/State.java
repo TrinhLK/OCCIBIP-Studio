@@ -49,7 +49,6 @@ public interface State extends EObject {
 	 * @see #setLiteral(EnumerationLiteral)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getState_Literal()
 	 * @model extendedMetaData="name='State'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!State!literal'"
 	 * @generated
 	 */
 	EnumerationLiteral getLiteral();
@@ -77,7 +76,6 @@ public interface State extends EObject {
 	 * @see #setInitial(boolean)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getState_Initial()
 	 * @model default="false" dataType="org.eclipse.cmf.occi.core.Boolean" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!State!initial'"
 	 * @generated
 	 */
 	boolean isInitial();
@@ -105,7 +103,6 @@ public interface State extends EObject {
 	 * @see #setFinal(boolean)
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getState_Final()
 	 * @model default="false" dataType="org.eclipse.cmf.occi.core.Boolean" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!State!final'"
 	 * @generated
 	 */
 	boolean isFinal();
@@ -134,7 +131,6 @@ public interface State extends EObject {
 	 * @see org.eclipse.cmf.occi.core.OCCIPackage#getState_OwningFSM()
 	 * @see org.eclipse.cmf.occi.core.FSM#getOwnedState
 	 * @model opposite="ownedState" required="true" transient="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!State!owningFSM'"
 	 * @generated
 	 */
 	FSM getOwningFSM();
@@ -164,7 +160,6 @@ public interface State extends EObject {
 	 * @see org.eclipse.cmf.occi.core.Transition#getSource
 	 * @model opposite="source" containment="true"
 	 *        extendedMetaData="name='State'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://schemas.ogf.org/occi/core/ecore!State!outgoingTransition'"
 	 * @generated
 	 */
 	EList<Transition> getOutgoingTransition();
@@ -172,7 +167,7 @@ public interface State extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='/**\n *\n * inv StateLiteralAlreadyDefinedInFSMAttributeType:\n *   let\n *     severity : Integer[1] = \'State::StateLiteralAlreadyDefinedInFSMAttributeType\'.getSeverity()\n *   in\n *     if severity &lt;= 0\n *     then true\n *     else\n *       let result : Boolean[1] = owningFSM.attribute.type = self.literal.enumerationType\n *       in\n *         \'State::StateLiteralAlreadyDefinedInFSMAttributeType\'.logDiagnostic(self, null, diagnostics, context, null, severity, result, 0)\n *     endif\n \052/\nfinal /*@NonInvalid\052/ &lt;%org.eclipse.ocl.pivot.evaluation.Executor%&gt; executor = &lt;%org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal%&gt;.getExecutor(this);\nfinal /*@NonInvalid\052/ &lt;%org.eclipse.ocl.pivot.values.IntegerValue%&gt; severity_0 = &lt;%org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation%&gt;.INSTANCE.evaluate(executor, &lt;%org.eclipse.cmf.occi.core.OCCITables%&gt;.STR_State_c_c_StateLiteralAlreadyDefinedInFSMAttributeType);\nfinal /*@NonInvalid\052/ boolean le = &lt;%org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation%&gt;.INSTANCE.evaluate(executor, severity_0, &lt;%org.eclipse.cmf.occi.core.OCCITables%&gt;.INT_0).booleanValue();\n/*@NonInvalid\052/ boolean symbol_0;\nif (le) {\n\tsymbol_0 = &lt;%org.eclipse.ocl.pivot.utilities.ValueUtil%&gt;.TRUE_VALUE;\n}\nelse {\n\t/*@Caught\052/ /*@NonNull\052/ &lt;%java.lang.Object%&gt; CAUGHT_result;\n\ttry {\n\t\tfinal /*@NonInvalid\052/ &lt;%org.eclipse.cmf.occi.core.FSM%&gt; owningFSM = this.getOwningFSM();\n\t\tfinal /*@NonInvalid\052/ &lt;%org.eclipse.cmf.occi.core.Attribute%&gt; attribute = owningFSM.getAttribute();\n\t\tfinal /*@NonInvalid\052/ &lt;%org.eclipse.cmf.occi.core.DataType%&gt; type = attribute.getType();\n\t\tfinal /*@NonInvalid\052/ &lt;%org.eclipse.cmf.occi.core.EnumerationLiteral%&gt; literal = this.getLiteral();\n\t\tif (literal == null) {\n\t\t\tthrow new &lt;%org.eclipse.ocl.pivot.values.InvalidValueException%&gt;(\"Null source for \\\'\\\'http://schemas.ogf.org/occi/core/ecore\\\'::EnumerationLiteral::enumerationType\\\'\");\n\t\t}\n\t\tfinal /*@Thrown\052/ &lt;%org.eclipse.cmf.occi.core.EnumerationType%&gt; enumerationType = literal.getEnumerationType();\n\t\tfinal /*@Thrown\052/ boolean result = enumerationType.equals(type);\n\t\tCAUGHT_result = result;\n\t}\n\tcatch (&lt;%java.lang.Exception%&gt; e) {\n\t\tCAUGHT_result = &lt;%org.eclipse.ocl.pivot.utilities.ValueUtil%&gt;.createInvalidValue(e);\n\t}\n\tfinal /*@NonInvalid\052/ boolean logDiagnostic = &lt;%org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation%&gt;.INSTANCE.evaluate(executor, &lt;%org.eclipse.ocl.pivot.ids.TypeId%&gt;.BOOLEAN, &lt;%org.eclipse.cmf.occi.core.OCCITables%&gt;.STR_State_c_c_StateLiteralAlreadyDefinedInFSMAttributeType, this, (Object)null, diagnostics, context, (Object)null, severity_0, CAUGHT_result, &lt;%org.eclipse.cmf.occi.core.OCCITables%&gt;.INT_0).booleanValue();\n\tsymbol_0 = logDiagnostic;\n}\nreturn Boolean.TRUE == symbol_0;'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='owningFSM.attribute.type=self.literal.enumerationType'"
 	 * @generated
 	 */
 	boolean StateLiteralAlreadyDefinedInFSMAttributeType(DiagnosticChain diagnostics, Map<Object, Object> context);

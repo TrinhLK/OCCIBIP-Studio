@@ -12,7 +12,6 @@
 package org.eclipse.cmf.occi.core.impl;
 
 import java.util.Collection;
-
 import org.eclipse.cmf.occi.core.EnumerationLiteral;
 import org.eclipse.cmf.occi.core.EnumerationType;
 import org.eclipse.cmf.occi.core.OCCIPackage;
@@ -75,6 +74,7 @@ public class EnumerationTypeImpl extends DataTypeImpl implements EnumerationType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EnumerationLiteral> getLiterals() {
 		if (literals == null) {
 			literals = new EObjectContainmentWithInverseEList<EnumerationLiteral>(EnumerationLiteral.class, this, OCCIPackage.ENUMERATION_TYPE__LITERALS, OCCIPackage.ENUMERATION_LITERAL__ENUMERATION_TYPE);

@@ -17,7 +17,6 @@ import org.eclipse.cmf.occi.core.*;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
@@ -867,36 +866,6 @@ public class OCCIValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Validates the EntityKindIsRootParent constraint of '<em>Kind</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateKind_EntityKindIsRootParent(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return kind.EntityKindIsRootParent(diagnostics, context);
-	}
-
-	/**
-	 * Validates the NoCyclicInheritance constraint of '<em>Kind</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateKind_NoCyclicInheritance(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return kind.NoCyclicInheritance(diagnostics, context);
-	}
-
-	/**
-	 * Validates the AttributesNameNotAlreadyDefinedInParent constraint of '<em>Kind</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateKind_AttributesNameNotAlreadyDefinedInParent(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return kind.AttributesNameNotAlreadyDefinedInParent(diagnostics, context);
-	}
-
-	/**
 	 * Validates the CorrectScheme constraint of '<em>Kind</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -914,6 +883,36 @@ public class OCCIValidator extends EObjectValidator {
 	 */
 	public boolean validateKind_targetReferenceInvariant(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return kind.targetReferenceInvariant(diagnostics, context);
+	}
+
+	/**
+	 * Validates the NoCyclicInheritance constraint of '<em>Kind</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKind_NoCyclicInheritance(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return kind.NoCyclicInheritance(diagnostics, context);
+	}
+
+	/**
+	 * Validates the EntityKindIsRootParent constraint of '<em>Kind</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKind_EntityKindIsRootParent(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return kind.EntityKindIsRootParent(diagnostics, context);
+	}
+
+	/**
+	 * Validates the AttributesNameNotAlreadyDefinedInParent constraint of '<em>Kind</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateKind_AttributesNameNotAlreadyDefinedInParent(Kind kind, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return kind.AttributesNameNotAlreadyDefinedInParent(diagnostics, context);
 	}
 
 	/**

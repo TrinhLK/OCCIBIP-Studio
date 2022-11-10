@@ -146,12 +146,6 @@
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.slf4j.api/1.7.2.v20121108-1250/org.slf4j.api-1.7.2.v20121108-1250.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.ocl.pivot/1.4.0.v20180611-1119/org.eclipse.ocl.pivot-1.4.0.v20180611-1119.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.ocl.examples.codegen/2.4.0.v20180611-1119/org.eclipse.ocl.examples.codegen-2.4.0.v20180611-1119.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/bcprov-jdk16-1.46.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/httpclient-4.5.1.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/jocci-api-0.2.3-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.connector.jocci/lib/jocci-core-0.2.3-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.sirius.common.acceleo.mtl/6.0.0.201806111309/org.eclipse.sirius.common.acceleo.mtl-6.0.0.201806111309.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.sirius.common/6.0.0.201806111309/org.eclipse.sirius.common-6.0.0.201806111309.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.sirius.common.ui/6.0.0.201806111309/org.eclipse.sirius.common.ui-6.0.0.201806111309.jar"/>
@@ -159,7 +153,6 @@
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.pde.ui/3.10.200.v20180604-1325/org.eclipse.pde.ui-3.10.200.v20180604-1325.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.emf.edit/2.13.0.v20180421-1151/org.eclipse.emf.edit-2.13.0.v20180421-1151.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.ocl/3.9.0.v20180611-1119/org.eclipse.ocl-3.9.0.v20180611-1119.jar"/>
-	<classpathentry kind="lib" path="/Volumes/Personal Disk/PhD Projects/OCCIBIP-Studio/plugins/org.eclipse.cmf.occi.core.gen.connector/lib/JavaBIP-Framework.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen.ecore/2.14.0.v20180418-0836/org.eclipse.emf.codegen.ecore-2.14.0.v20180418-0836.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen.ecore.ui/2.14.0.v20180418-0836/org.eclipse.emf.codegen.ecore.ui-2.14.0.v20180418-0836.jar"/>
 	<classpathentry kind="lib" path="/Users/trinhlk/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.8.0.v20180426-1327/org.eclipse.equinox.registry-3.8.0.v20180426-1327.jar"/>
